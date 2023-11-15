@@ -32,4 +32,4 @@ print(setZeroes([[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]))
 
 # Optimal Solution
 # Time Coplexicity = ( m * n ) + ( m * n ) = O(n2) => Result = Accepted
-# Space Complexity = O(M) + O(N) - using extra space
+# Space Complexity = O(1) - using extra space
