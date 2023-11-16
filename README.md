@@ -10,6 +10,7 @@
 ![Screenshot from 2023-11-16 18-05-02](https://github.com/sanjay9616/Striver_180/assets/87460579/5d20474d-666c-4551-b59f-f48b73e5e1b7)
 
 **Input**: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+
 **Output**: [[1,0,1],[0,0,0],[1,0,1]]
 
 
@@ -18,6 +19,7 @@
 ![Screenshot from 2023-11-16 18-07-23](https://github.com/sanjay9616/Striver_180/assets/87460579/b0ed383d-c43f-4770-be3c-fe5e4ded302d)
 
 **Input**: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+
 **Output**: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
 **Constraints**:
