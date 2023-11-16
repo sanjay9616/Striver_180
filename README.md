@@ -1,14 +1,13 @@
-<h2><a href="https://leetcode.com/problems/happy-number/">1. Set Matrix Zeroes</a></h2>
+<h2><a href="https://leetcode.com/problems/set-matrix-zeroes/description/">1. Set Matrix Zeroes</a></h2>
 
 **Given an m x n integer matrix, if an element is 0, set its entire row and column to 0's.**
-
 **You must do it in place.**
 
 
 **Example 1:**
+![Screenshot from 2023-11-16 18-05-02](https://github.com/sanjay9616/Striver_180/assets/87460579/5d20474d-666c-4551-b59f-f48b73e5e1b7)
 
 **Input**: matrix = [[1,1,1],[1,0,1],[1,1,1]]
-
 **Output**: [[1,0,1],[0,0,0],[1,0,1]]
 
 
