@@ -5,6 +5,8 @@
 
 
 **Example 1:**
+
+
 ![Screenshot from 2023-11-16 18-05-02](https://github.com/sanjay9616/Striver_180/assets/87460579/5d20474d-666c-4551-b59f-f48b73e5e1b7)
 
 **Input**: matrix = [[1,1,1],[1,0,1],[1,1,1]]
