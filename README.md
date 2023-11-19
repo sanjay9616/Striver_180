@@ -1,6 +1,7 @@
 <h2><a href="https://leetcode.com/problems/pascals-triangle/description/">2. Pascal's Triangle</a></h2>
 
-**In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:.**
+**In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:.**![Screenshot from 2023-11-19 16-04-39](https://github.com/sanjay9616/Striver_180/assets/87460579/d3664cdc-f096-403e-ba77-b5136b74cc6d)
+
 
 
 **Example 1:**
