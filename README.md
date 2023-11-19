@@ -25,5 +25,5 @@
 Find (i<sup>th</sup>, j<sup>th</sup>)
 
 <h2>Solution</h2>
-<sup>i-1</sup>C<sub>j-1</sub> = ( i - 2 )! / ( ( j - 1 )! * ( i - j )! )
+<sup>i-1</sup>C<sub>j-1</sub> = ( i - 2 )! / ( ( j - 1 )! * ( i - j )! ) = ( ( i -1 ) * ( i - 1 - 1) * ... ( j - 1) times ) / ( ( j-1 ) * ( j - 1 -2 ) * ... * 1 )
 
