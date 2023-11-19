@@ -1,5 +1,10 @@
 def generate(numRows):
-    return
+    if (numRows == 0):
+            return []
+    l = [[1]]
+    for i in range(numRows-1):
+        l.append([sum(i) for i in zip(l[-1]+[0], [0]+l[-1])])
+    return l
 
 
 print(generate(5))
