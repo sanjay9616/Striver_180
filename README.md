@@ -21,3 +21,9 @@
 
     • 1 <= numRows <= 30
 
+<h2>Problem 1: </h2>
+Find (i<sup>th</sup>, j<sup>th</sup>)
+
+<h2>Solution</h2>
+<sup>i-1</sup>C<sub>j-1</sub>
+
