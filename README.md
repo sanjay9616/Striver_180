@@ -1,25 +1,44 @@
-<h2><a href="https://leetcode.com/problems/pascals-triangle/description/">2. Pascal's Triangle</a></h2>
+<h2><a href="https://leetcode.com/problems/next-permutation/description/">3. Next Permutation</a></h2>
 
-**In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:.**![Screenshot from 2023-11-19 16-04-39](https://github.com/sanjay9616/Striver_180/assets/87460579/d3664cdc-f096-403e-ba77-b5136b74cc6d)
+A permutation of an array of integers is an arrangement of its members into a sequence or linear order.
+
+    • For example, for arr = [1,2,3], the following are all the permutations of arr: [1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1].
+
+The next permutation of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the next permutation of that array is the permutation that follows it in the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).
+
+    • For example, the next permutation of arr = [1,2,3] is [1,3,2].
+    • Similarly, the next permutation of arr = [2,3,1] is [3,1,2].
+    • While the next permutation of arr = [3,2,1] is [1,2,3] because [3,2,1] does not have a lexicographical larger rearrangement.
+
+Given an array of integers nums, find the next permutation of nums.
+
+The replacement must be in place and use only constant extra memory.
 
 
 
 **Example 1:**
 
-**Input**: numRows = 5
+**Input**: nums = [1,2,3]
 
-**Output**: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+**Output**: [1,3,2]
 
 
 **Example 2:**
 
-**Input**: numRows = 1
+**Input**: nums = [3,2,1]
 
-**Output**: [[1]]
+**Output**: [1,2,3]
+
+**Example 3:**
+
+**Input**: nums = [1,1,5]
+
+**Output**: [1,5,1]
 
 **Constraints**:
 
-    • 1 <= numRows <= 30
+    • 1 <= nums.length <= **100**
+    • 0 <= nums[i] <= 100
 
 <h2>Problem 1: </h2>
 Find (i<sup>th</sup>, j<sup>th</sup>)
