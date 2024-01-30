@@ -40,9 +40,4 @@ The replacement must be in place and use only constant extra memory.
     • 1 <= nums.length <= **100**
     • 0 <= nums[i] <= 100
 
-<h2>Problem 1: </h2>
-Find (i<sup>th</sup>, j<sup>th</sup>)
-
-<h2>Solution</h2>
-<sup>i-1</sup>C<sub>j-1</sub> = ( i - 2 )! / ( ( j - 1 )! * ( i - j )! ) = ( ( i -1 ) * ( i - 1 - 1) * ... ( j - 1) times ) / ( ( j-1 ) * ( j - 1 -2 ) * ... * 1 )
 
