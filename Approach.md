@@ -27,8 +27,8 @@
 
 | Algorithm       | Time Complexity               | Space Complexity (Worst Case) |
 |---------------- | ----------------------------- | ----------------------------- |
-| Counting Sort   | O(N log N)                    | O(K)                          |
-| Bucket Sort     | O(N log N) / O(N<sup>2</sup>) | O(N)                          |
+| Counting Sort   | O(N + K)                      | O(K)                          |
+| Bucket Sort     | O(N + K) / O(N<sup>2</sup>)   | O(N)                          |
 
 
 ### Approach 4: Optimised
