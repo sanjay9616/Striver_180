@@ -1,29 +1,30 @@
-<h2><a href="https://leetcode.com/problems/maximum-subarray/description/">4. Maximum Subarray</a></h2>
+<h2><a href="https://leetcode.com/problems/sort-colors/description/">4. Maximum Subarray</a></h2>
 
-Given an integer array nums, find the subarray with the largest sum, and return its sum.
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+
+You must solve this problem without using the library's sort function.
 
 **Example 1:**
 
-**Input**: nums = [-2,1,-3,4,-1,2,1,-5,4]
+**Input**: nums = [2,0,2,1,1,0]
 
-**Output**: 6
+**Output**: [0,0,1,1,2,2]
 
 
 **Example 2:**
 
-**Input**: nums = [1]
+**Input**: nums = [2,0,1]
 
-**Output**: 1
+**Output**: [0,1,2]
 
-**Example 3:**
-
-**Input**: nums = [5,4,-1,7,8]
-
-**Output**: 23
 
 **Constraints**:
 
-    • 1 <= nums.length <= 10<sub>5</sub>
-    • -10<sub>4</sub> <= nums[i] <= 10<sub>4</sub>
+    • n == nums.length
+    • 1 <= n <= 300
+    • nums[i] is either 0, 1, or 2.
+
 
 

@@ -1,15 +1,20 @@
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        maxSum = float('-inf')
-        currSum = 0
-        for i in range(0, len(nums)):
-            currSum += nums[i]
-            if(currSum > maxSum):
-                maxSum = currSum
-            if(currSum < 0):
-                currSum = 0
-        return maxSum
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        low, mid, high = 0, 0, len(nums) - 1
+        while(mid <= high):
+            if(nums[mid] == 0):
+                nums[low], nums[mid] = nums[mid], nums[low]
+                low += 1
+                mid += 1
+            elif(nums[mid] == 1):
+                mid += 1
+            elif(nums[mid] == 2):
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
 
-# Kadane’s Algorithm
-# Time Coplexicity = (n) = O(n) => Result = Success
+# Efficient approach using single scan: Three-way partitioning - divide into four sections.
+# Time Coplexicity = (n + n) = O(2n) => Result = Success
 # Space Complexity = O(1)
