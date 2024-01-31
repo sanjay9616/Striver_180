@@ -1,10 +1,10 @@
-### Approach 1: Time Complexity O(N<sub>2</sub>)
+### Approach 1: Time Complexity O(N<sup>2</sup>)
 
 | Algorithm       | Time Complexity   | Space Complexity (Worst Case) |
 |---------------- | ----------------- | ----------------------------- |
-| Bubble Sort     | O(N<sub>2</sub>)  | O(1)                          |
-| Selection Sort  | O(N<sub>2</sub>)  | O(1)                          |
-| Insertion Sort  | O(N<sub>2</sub>)  | O(1)                          |
+| Bubble Sort     | O(N<sup>2</sup>)  | O(1)                          |
+| Selection Sort  | O(N<sup>2</sup>)  | O(1)                          |
+| Insertion Sort  | O(N<sup>2</sup>)  | O(1)                          |
 
 
 ### Approach 2: Time ComplexityO(N * K)
@@ -19,16 +19,16 @@
 | Algorithm       | Time Complexity               | Space Complexity (Worst Case) |
 |---------------- | ----------------------------- | ----------------------------- |
 | Merge Sort      | O(N log N)                    | O(N)                          |
-| Quick Sort      | O(N log N) / O(N<sub>2</sub>)  | O(N)                          |
+| Quick Sort      | O(N log N) / O(N<sup>2</sup>)  | O(N)                          |
 | Heap Sort       | O(N log N)                    | O(1)                          |
 
 
 ### Approach 4: Time Complexity O(N + K)
 
-| Algorithm       | Time Complexity      | Space Complexity (Worst Case) |
-|---------------- | -------------------- | ----------------------------- |
-| Counting Sort   | O(N log N)           | O(K)                          |
-| Bucket Sort     | O(N log N) / O(N^2)  | O(N)                          |
+| Algorithm       | Time Complexity               | Space Complexity (Worst Case) |
+|---------------- | ----------------------------- | ----------------------------- |
+| Counting Sort   | O(N log N)                    | O(K)                          |
+| Bucket Sort     | O(N log N) / O(N<sup>2</sup>) | O(N)                          |
 
 
 ### Approach 4: Optimised
