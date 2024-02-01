@@ -1,20 +1,12 @@
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        low, mid, high = 0, 0, len(nums) - 1
-        while(mid <= high):
-            if(nums[mid] == 0):
-                nums[low], nums[mid] = nums[mid], nums[low]
-                low += 1
-                mid += 1
-            elif(nums[mid] == 1):
-                mid += 1
-            elif(nums[mid] == 2):
-                nums[mid], nums[high] = nums[high], nums[mid]
-                high -= 1
+    def maxProfit(self, prices: List[int]) -> int:
+        maxProfit = 0
+        from itertools import combinations
+        for p in combinations(prices, 2):
+            maxProfit = max(maxProfit, p[1]-p[0])
+        return maxProfit
 
-# Efficient approach using single scan: Three-way partitioning - divide into four sections.
-# Time Coplexicity = (n + n) = O(2n) => Result = Success
+
+# Brute Force - Using python functions
+# Time Coplexicity = (n * n) = O(n^2) => Result = TLE
 # Space Complexity = O(1)
