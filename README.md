@@ -1,33 +1,28 @@
-<h2><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/">6. Best Time to Buy and Sell Stock</a></h2>
+<h2><a href="https://leetcode.com/problems/rotate-image/description/">7. Rotate Image</a></h2>
 
-You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 
-You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-
-Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
 
 **Example 1:**
 
-**Input**: prices = [7,1,5,3,6,4]
+**Input**: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 
-**Output**: 5
+**Output**: [[7,4,1],[8,5,2],[9,6,3]]
 
-**Explanation**: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 **Example 2:**
 
-**Input**: prices = [7,6,4,3,1]
+**Input**: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 
-**Output**: 0
-
-**Explanation**: In this case, no transactions are done and the max profit = 0.
+**Output**: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 
 
 **Constraints**:
 
-    • 1 <= prices.length <= 10<sup>5</sup>
-    • 0 <= prices[i] <= 10<sup>4</sup>
+    • n == matrix.length == matrix[i].length
+    • 1 <= n <= 20
+    • -1000 <= matrix[i][j] <= 1000
 
 
 
