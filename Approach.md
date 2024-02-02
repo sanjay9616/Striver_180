@@ -3,11 +3,14 @@
 We first transpose the given matrix, and then reverse the content of individual rows to get the resultant 90 degree clockwise rotated matrix.
 
 
-1  2  3         1  4  7            7  4  1
+|1  2  3    |     1  4  7       |      7  4  1|
+-----------------------------------------------
 
-4  5  6         2  5  8            8  5  2
+|4  5  6    |     2  5  8       |      8  5  2|
+-----------------------------------------------
 
-7  8  9         3  6  9            9  6  3
+|7  8  9    |     3  6  9       |      9  6  3|
+------------------------------------------------
 
 
 
