@@ -1,30 +1,31 @@
-<h2><a href="https://leetcode.com/problems/merge-intervals/description/">8. Merge Intervals</a></h2>
+<h2><a href="https://leetcode.com/problems/merge-intervals/description/">9. Find the Duplicate Number</a></h2>
 
-Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+
+There is only one repeated number in nums, return this repeated number.
+
+You must solve the problem without modifying the array nums and uses only constant extra space.
 
 **Example 1:**
 
-**Input**: intervals = [[1,3],[2,6],[8,10],[15,18]]
+**Input**: nums = [1,3,4,2,2]
 
-**Output**: [[1,6],[8,10],[15,18]]
-
-**Expanation**: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+**Output**: 2
 
 
 **Example 2:**
 
-**Input**: intervals = [[1,4],[4,5]]
+**Input**: nums = [3,1,3,4,2]
 
-**Output**: [[1,5]]
-
-**Expanation**: Intervals [1,4] and [4,5] are considered overlapping.
+**Output**: 3
 
 
 **Constraints**:
 
-    • 1 <= intervals.length <= 10^4
-    • intervals[i].length == 2
-    • 0 <= starti <= endi <= 104
+    • 1 <= n <= 10^5
+    • nums.length == n + 1
+    • 1 <= nums[i] <= n
+    • All the integers in nums appear only once except for precisely one integer which appears two or more times.
 
 
 
