@@ -7,6 +7,6 @@ class Solution:
                 return nums[i]
 
 
-# Transpose then Reverse individual rows
+# First sort Array and then compare adjucent
 # Time Coplexicity = (n * log(n)) = O(n * log(n)) => Result = Success
 # Space Complexity = O(1)

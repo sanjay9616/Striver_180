@@ -12,6 +12,6 @@ class Solution:
                 return i
 
 
-# Transpose then Reverse individual rows
+# Using HasMap
 # Time Coplexicity = (n)) = O(n) => Result = Success
 # Space Complexity = O(N)

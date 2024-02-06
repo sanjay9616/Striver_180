@@ -18,3 +18,10 @@
 | Algorithm                              | Time Complexity   | Space Complexity  |
 |--------------------------------------- | ----------------- | ----------------- |
 | Sort then Compare (Optimized - space)  | O(N*log(N))       | O(1)              |
+
+### Approach 3:  Linked List cycle method
+
+
+| Algorithm                              | Time Complexity   | Space Complexity  |
+|--------------------------------------- | ----------------- | ----------------- |
+| Linked List cycle method               | O(N)              | O(1)              |

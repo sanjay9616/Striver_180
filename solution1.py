@@ -8,6 +8,6 @@ class Solution:
                     return nums[i]
 
 
-# Brute Force Approach
+# Brute Force Approach using Linear Search
 # Time Coplexicity = (n*n) = O(n^2) => Result = TLE
 # Space Complexity = O(1)
