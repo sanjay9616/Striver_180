@@ -1,18 +1,15 @@
 class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
-        n = len(matrix)
-        for i in range(n // 2):
-            for j in range(i, n - i - 1):
-                temp = matrix[i][j]
-                matrix[i][j] = matrix[n - 1 - j][i]
-                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j]
-                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i]
-                matrix[j][n - 1 - i] = temp
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        index = 0
+        for i in range(1, len(intervals)):
+            if (intervals[index][1] >= intervals[i][0]):
+                intervals[index][1] = max(intervals[index][1], intervals[i][1])
+            else:
+                index = index + 1
+                intervals[index] = intervals[i]
+        return intervals[:index+1]
 
 
-# Rotate Cycle Wise
-# Time Coplexicity = (n * n) = O(n^2) => Result = Success
+# Merge Overlapping Intervals using Sorting (time & Space Optimized)
+# Time Coplexicity = (n * log(n)) = O(n*logg(n)) => Result = Success
 # Space Complexity = O(1)

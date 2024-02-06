@@ -1,24 +1,24 @@
-### Approach 1: Brute Force Approach
+### Approach 1: Brute Force Approach using Sorting
+
+A simple approach is to start from the first interval and compare it with all other intervals for overlapping, if it overlaps with any other interval, then remove the other interval from the list and merge the other into the first interval. Repeat the same steps for the remaining intervals after the first. This approach cannot be implemented in better than O(n^2) time.
 
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Transpose->Reverse     | O(N<sup>2</sup>)  | O(N<sup>2</sup>)              |
+| Brute Force            | O(N<sup>2</sup>)  | O(N)              |
 
-### Approach 2: Transpose then Reverse individual rows
+### Approach 2: Merge Overlapping Intervals using Sorting (Optimized Approach)
 
-We first transpose the given matrix, and then reverse the content of individual rows to get the resultant 90 degree clockwise rotated matrix.
+Same Approah as 1st Approach
 
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Transpose->Reverse     | O(N<sup>2</sup>)  | O(1)              |
+| Algorithm                       | Time Complexity   | Space Complexity  |
+|-------------------------------- | ----------------- | ----------------- |
+| Brute Force (Optimized - time)  | O(N*log(N))       | O(N)              |
 
-### Approach 3: Rotate Cycle Wise
+### Approach 3: Merge Overlapping Intervals using Sorting (Space Optimized)
 
-Print the elements of the cycle in a clockwise direction i.e. An N x N matrix will have floor(N/2) square cycles.
+The above solution requires O(n) extra space for the stack. We can avoid the use of extra space by doing merge operations in place. Below are detailed steps.
 
-For each square cycle, we swap the elements involved with the corresponding cell in the matrix in the clockwise direction. We just need a temporary variable for this.
-
-| Algorithm              | Time Complexity   | Space Complexity |
-|----------------------- | ----------------- | ---------------- |
-| Rotate Cycle Wise | O(N<sup>2</sup>)  | O(1)             |
+| Algorithm                                  | Time Complexity   | Space Complexity |
+|------------------------------------------- | ----------------- | ---------------- |
+| Brute Force (Optimized - time & space)     | O(N*log(N))       | O(1)             |
