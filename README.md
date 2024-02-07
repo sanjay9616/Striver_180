@@ -15,11 +15,15 @@ You must write a solution in O(log(m * n)) time complexity.
 
 **Example 1:**
 
+![Screenshot from 2024-02-07 22-36-39](https://github.com/sanjay9616/Striver_180/assets/87460579/206eff28-78da-4966-99f5-7d0c7065d528)
+
 **Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 
 **Output**: true
 
-**Example 1:**
+**Example 2:**
+
+![Screenshot from 2024-02-07 22-38-06](https://github.com/sanjay9616/Striver_180/assets/87460579/a0cf7ded-b085-46db-9ebb-a016c6ed409c)
 
 **Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
 
