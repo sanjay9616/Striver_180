@@ -1,34 +1,36 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/count-inversions_615">11. Count Inversions</a></h2>
+<h2><a href="https://leetcode.com/problems/search-a-2d-matrix/description/">12. Search a 2D Matrix</a></h2>
 
-For a given integer array/list 'ARR' of size 'N' containing all distinct values, find the total number of 'Inversions' that may exist.
+You are given an m x n integer matrix matrix with the following two properties:
 
 An inversion is defined for a pair of integers in the array/list when the following two conditions are met.
 
 A pair ('ARR[i]', 'ARR[j]') is said to be an inversion when:
 
-1. 'ARR[i] > 'ARR[j]'</br>
-2. 'i' < 'j'</br>
+1. Each row is sorted in non-decreasing order.</br>
+2. The first integer of each row is greater than the last integer of the previous row.</br>
+
+Given an integer target, return true if target is in matrix or false otherwise.
+
+You must write a solution in O(log(m * n)) time complexity.
 
 **Example 1:**
 
-**Input**: n = 3, arr = [3, 2, 1]
+**Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 
-**Output**: 3
-
-**Explanation**: We have a total of 3 pairs which satisfy the condition of inversion. (3, 2), (2, 1) and (3, 1).
+**Output**: true
 
 **Example 1:**
 
-**Input**: n = 5, arr = [2, 5, 1, 3, 4]
+**Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
 
-**Output**: 4
-
-**Explanation**: We have a total of 4 pairs which satisfy the condition of inversion. (2, 1), (5, 1), (5, 3) and (5, 4).
+**Output**: false
 
 
 **Constraints**:
 
-    • 1 <= N <= 10^5
-    • 1 <= ARR[i] <= 10^9
+    • m == matrix.length
+    • n == matrix[i].length
+    • 1 <= m, n <= 100
+    • -10^4 <= matrix[i][j], target <= 10^4
 
 
