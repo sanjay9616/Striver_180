@@ -2,10 +2,6 @@
 
 You are given an m x n integer matrix matrix with the following two properties:
 
-An inversion is defined for a pair of integers in the array/list when the following two conditions are met.
-
-A pair ('ARR[i]', 'ARR[j]') is said to be an inversion when:
-
 1. Each row is sorted in non-decreasing order.</br>
 2. The first integer of each row is greater than the last integer of the previous row.</br>
 
