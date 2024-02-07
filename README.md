@@ -1,24 +1,25 @@
-<h2><a href="https://leetcode.com/problems/merge-intervals/description/">9. Find the Duplicate Number</a></h2>
+<h2><a href="https://www.interviewbit.com/problems/repeat-and-missing-number-array/">10. Repeat and Missing Number Array</a></h2>
 
-Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+You are given a read only array of n integers from 1 to n.
 
-There is only one repeated number in nums, return this repeated number.
+Each integer appears exactly once except A which appears twice and B which is missing.
 
-You must solve the problem without modifying the array nums and uses only constant extra space.
+Return A and B.
+
+Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+Note that in your output A should precede B.
 
 **Example 1:**
 
-**Input**: nums = [1,3,4,2,2]
+**Input**: [3 1 2 5 3]
 
-**Output**: 2
+**Output**: [3, 4]
+
+A = 3, B = 4
 
 
-**Example 2:**
-
-**Input**: nums = [3,1,3,4,2]
-
-**Output**: 3
-
+**Try Another Solution**
 
 **Constraints**:
 
