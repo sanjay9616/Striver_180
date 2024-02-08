@@ -1,36 +1,34 @@
-<h2><a href="https://leetcode.com/problems/search-a-2d-matrix/description/">12. Search a 2D Matrix</a></h2>
+<h2><a href="https://leetcode.com/problems/powx-n/description/">13. Pow(x, n)</a></h2>
 
-You are given an m x n integer matrix matrix with the following two properties:
-
-1. Each row is sorted in non-decreasing order.</br>
-2. The first integer of each row is greater than the last integer of the previous row.</br>
-
-Given an integer target, return true if target is in matrix or false otherwise.
-
-You must write a solution in O(log(m * n)) time complexity.
+Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).
 
 **Example 1:**
 
-![Screenshot from 2024-02-07 22-36-39](https://github.com/sanjay9616/Striver_180/assets/87460579/206eff28-78da-4966-99f5-7d0c7065d528)
+**Input**: x = 2.00000, n = 10
 
-**Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
-
-**Output**: true
+**Output**: 1024.00000
 
 **Example 2:**
 
-![Screenshot from 2024-02-07 22-38-06](https://github.com/sanjay9616/Striver_180/assets/87460579/a0cf7ded-b085-46db-9ebb-a016c6ed409c)
+**Input**: x = 2.10000, n = 3
 
-**Input**: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
+**Output**: 9.26100
 
-**Output**: false
+**Example 3:**
+
+**Input**: x = 2.00000, n = -2
+
+**Output**: 0.25000
+
+**Explanation**: 2^-2 = 1/2^2 = 1/4 = 0.25
 
 
 **Constraints**:
 
-    • m == matrix.length
-    • n == matrix[i].length
-    • 1 <= m, n <= 100
-    • -10^4 <= matrix[i][j], target <= 10^4
+    • -100.0 < x < 100.0
+    • -2^31 <= n <= 2^31-1
+    • n is an integer.
+    • Either x is not zero or n > 0.
+    • -10^4 <= xn <= 10^4
 
 
