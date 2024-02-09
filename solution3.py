@@ -1,20 +1,21 @@
-# Approach 2: Using Binary Search
+# Approach 4: Using HasMap
 class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        m, n = len(matrix), len(matrix[0])
-        low, high = 0, m * n - 1
-        while (low <= high):
-            mid = (low + high) // 2
-            row = mid // 2
-            col = mid % 2
-            if (matrix[row][col] == target):
-                return True
-            elif (matrix[row][col] < target):
-                high = mid - 1
-            elif (matrix[row][col] > target):
-                high = mid + 1
-        return False
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        res = []
+        hasMap, n = {}, len(nums)
+        if (n == 1 or n == 2):
+            return list(set(nums))
+        for i in nums:
+            if (i not in hasMap):
+                hasMap[i] = 1
+            else:
+                hasMap[i] += 1
+        for i in hasMap:
+            if (hasMap[i] > n//3 and i not in res):
+                res.append(i)
+        return res
 
-# Flatten 2d into 1d -> apply Binary Search
-# Time Coplexicity = (log(m*n)) = O(log(m*n)) => Result = Success
-# Space Complexity = O(1)
+
+# Using Binary Search
+# Time Coplexicity = (N) = O(N) => Result = Success
+# Space Complexity = O(N)

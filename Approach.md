@@ -1,20 +1,28 @@
-### Approach 1: Brute Force Approach using Linear Search
+### Approach 1: Brute Force Approach
 
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(M * N)          | O(1)              |
+| Brute Force            | O(N^2)            | O(1)              |
 
-### Approach 2: Using Binary Search
+### Approach 2: Using Recursion
+
+
+| Algorithm              | Time Complexity          | Space Complexity  |
+|----------------------- | ------------------------ | ----------------- |
+| Recursion              | O(N*log(N))              | O(log(N))         |
+
+
+### Approach 3: Using HasMap
 
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(M) + log(N)     | O(1)              |
+| Hashing                | O(N)              | O(N)              |
 
-### Approach 3: Flatten 2d matrix into 1d array, then apply Binary Search
+### Approach 4: Using Moore’s Voting Algorithm
 
 
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Brute Force            | log(M * N)        | O(1)              |
+| Algorithm                     | Time Complexity   | Space Complexity  |
+|------------------------------ | ----------------- | ----------------- |
+| Moore’s Voting Algorithm      | O(N)              | O(1)              |
