@@ -1,11 +1,14 @@
-# Approach 1: Brute Force Approach Usign Recursion
+# Approach 1: Brute Force
 class Solution:
-    def uniquePaths(self, m: int, n: int) -> int:
-        if(m==1 or n==1):
-            return 1
-        return self.uniquePaths(m-1, n) + self.uniquePaths(m, n-1)
-
+    def reversePairs(self, nums: List[int]) -> int:
+        c =0
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if(nums[i] > nums[j]*2):
+                    c += 1
+        return c
+        
 
 # Brute Force Approach Using Recursion
-# Time Coplexicity = O(2^N) => Result = TLE
-# Space Complexity = O(N+M)
+# Time Coplexicity = O(N^2) => Result = TLE
+# Space Complexity = O(1)
