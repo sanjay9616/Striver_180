@@ -1,20 +1,7 @@
-### Approach 1: Brute Force
+### Approach 1: Most Optimal Solution
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N^2)            | O(1)            |
+| Most Optimal           | O(N^3)            | O(1)            |
 
-### Approach 2: Using Sort
-
-
-| Algorithm              | Time Complexity          | Space Complexity  |
-|----------------------- | ------------------------ | ----------------- |
-| Recursion              | O(N * log(N))            | O(N)              |
-
-### Approach 2: Using HasMap
-
-
-| Algorithm              | Time Complexity          | Space Complexity  |
-|----------------------- | ------------------------ | ----------------- |
-| Recursion              | O(N)                     | O(N)              |
 
