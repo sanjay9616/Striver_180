@@ -1,21 +1,16 @@
-# Approach 4: Using HasMap
+# Approach 4:  Using DP
 class Solution:
-    def majorityElement(self, nums: List[int]) -> List[int]:
-        res = []
-        hasMap, n = {}, len(nums)
-        if (n == 1 or n == 2):
-            return list(set(nums))
-        for i in nums:
-            if (i not in hasMap):
-                hasMap[i] = 1
-            else:
-                hasMap[i] += 1
-        for i in hasMap:
-            if (hasMap[i] > n//3 and i not in res):
-                res.append(i)
-        return res
+    def uniquePaths(self, m: int, n: int) -> int:
+        res = [[0 for i in range(n)] for j in range(m)]
+        for i in range(m):
+            res[i][0] = 1
+        for i in range(n):
+            res[0][i] = 1
+        for i in range(1, m):
+            for j in range(1, n):
+                res[i][j] = res[i-1][j] + res[i][j-1]
+        return res[m-1][n-1]
 
-
-# Using Binary Search
-# Time Coplexicity = (N) = O(N) => Result = Success
-# Space Complexity = O(N)
+#  Using DP
+# Time Coplexicity = O(M * N) => Result = Success
+# Space Complexity = O(M * N)

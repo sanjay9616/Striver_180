@@ -1,9 +1,9 @@
-# Approach 2: Using Recursion Approach
+# Approach 2: Using Memoization
 
 '''
 Implement
 '''
 
 # Using Recursion Approach
-# Time Coplexicity = O(N*log(N)) => Result = Success
-# Space Complexity = O(log(N))
+# Time Coplexicity = O(N * M) => Result = Success
+# Space Complexity = O(N * M)
