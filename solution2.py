@@ -1,30 +1,20 @@
-# Approach 2: Using Merge Sort
-
+# Approach 2: Using Sort
 class Solution:
-    def reversePairs(self, nums: List[int]) -> int:
-        def merge_sort(start: int, end: int) -> int:
-            if start >= end:
-                return 0
-            mid = (start + end) // 2
-            count = merge_sort(start, mid) + merge_sort(mid + 1, end)
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        l1 = []
+        for i in range(len(nums)):
+            l1.append([nums[i], i])
+        l1.sort()
+        i, j = 0, len(nums)-1
+        while(i<j):
+            sum = l1[i][0]+l1[j][0]
+            if(sum == target):
+                return [l1[i][1], l1[j][1]]
+            if(target > sum):
+                i += 1
+            else:
+                j -= 1
 
-            # Count the number of reverse pairs between two sorted halves
-            i = start
-            j = mid + 1
-            while i <= mid and j <= end:
-                if nums[i] > 2 * nums[j]:
-                    count += mid - i + 1
-                    j += 1
-                else:
-                    i += 1
-
-            # Merge two sorted halves
-            nums[start:end + 1] = sorted(nums[start:end + 1])
-
-            return count
-
-        return merge_sort(0, len(nums) - 1)
-
-# Using Merge Sort Approach
-# Time Coplexicity = O(N * M) => Result = Success
-# Space Complexity = O(N * M)
+# Using Sort
+# Time Coplexicity = O(N * log(N)) => Result = Success
+# Space Complexity = O(N)

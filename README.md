@@ -1,35 +1,37 @@
-<h2><a href="https://leetcode.com/problems/reverse-pairs/description/">17. Reverse Pairs</a></h2>
+<h2><a href="https://leetcode.com/problems/two-sum/description/">18. Two Sum</a></h2>
 
-Given an integer array nums, return the number of reverse pairs in the array.
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-A reverse pair is a pair (i, j) where: </br>
-1. 0 <= i < j < nums.length and </br>
-2. nums[i] > 2 * nums[j]
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-**Example 1:**
-
-**Input**: nums = [1,3,2,3,1]
-
-**Output**: 2
-
-**Explanation**: The reverse pairs are: </br>
-1. (1, 4) --> nums[1] = 3, nums[4] = 1, 3 > 2 * 1 </br>
-2. (3, 4) --> nums[3] = 3, nums[4] = 1, 3 > 2 * 1 </br>
-
+You can return the answer in any order.
 
 **Example 1:**
 
-**Input**: nums = [2,4,3,5,1]
+**Input**: nums = [2,7,11,15], target = 9
 
-**Output**: 3
+**Output**: [0,1]
 
-**Explanation**: The reverse pairs are: </br>
-1. (1, 4) --> nums[1] = 4, nums[4] = 1, 4 > 2 * 1 </br>
-2. (2, 4) --> nums[2] = 3, nums[4] = 1, 3 > 2 * 1 </br>
-3. (3, 4) --> nums[3] = 5, nums[4] = 1, 5 > 2 * 1 </br>
+**Explanation**: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+
+**Example 2:**
+
+**Input**: nums = [3,2,4], target = 6
+
+**Output**: [1,2]
+
+
+**Example 3:**
+
+**Input**: nums = [3,3], target = 6
+
+**Output**: [0,1]
 
 
 **Constraints**:
 
-    • 1 <= nums.length <= 5 * 10^4
-    • -2^31 <= nums[i] <= 2^31 - 1
+    • 2 <= nums.length <= 10^4
+    • -10^9 <= nums[i] <= 10^9
+    • -10^9 <= target <= 10^9
+    • Only one valid answer exists.
