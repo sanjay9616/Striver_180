@@ -1,21 +1,21 @@
-<h2><a href="https://leetcode.com/problems/4sum/description/">19. Trapping Rain Water</a></h2>
+<h2><a href="https://leetcode.com/problems/longest-consecutive-sequence/description/">20. Longest Consecutive Sequence</a></h2>
 
-Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+
+You must write an algorithm that runs in O(n) time.
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png" alt="not found">
+**Input**: nums = [100,4,200,1,3,2]
 
-**Input**: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+**Output**: 4
 
-**Output**: 6
-
-**Explanation**: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+**Explanation**: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
 
 **Example 2:**
 
-**Input**: height = [4,2,0,3,2,5]
+**Input**: nums = [0,3,7,2,5,8,4,6,0,1]
 
 **Output**: 9
 
@@ -23,6 +23,5 @@ Given n non-negative integers representing an elevation map where the width of e
 
 **Constraints**:
 
-    • n == height.length
-    • 1 <= n <= 2 * 10^4
-    • 0 <= height[i] <= 10^5
+    • 0 <= nums.length <= 10^5
+    • -10^9 <= nums[i] <= 10^9
