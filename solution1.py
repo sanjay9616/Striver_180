@@ -1,15 +1,18 @@
 # Approach 1: Brute Force
-class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
-        res = 0
-        for i in range(len(nums)):
-            nextElement = nums[i]+1
-            c = 1
-            while(nextElement in nums):
-                c += 1
-                nextElement += 1
-            res = max(res, c)
-        return res
+def subarraysWithSumK(a: [int], b: int) -> int:
+    # Write your code here
+    n = len(a)
+    res = 0
+    for i in range(n):
+        xor = 0
+        for j in range(i, n):
+            xor = xor ^ a[j]
+            if(xor == b):
+                res += 1
+    return res
+
+    pass
+
 
 
 # Brute Force

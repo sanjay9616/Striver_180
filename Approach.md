@@ -1,4 +1,4 @@
-### Approach 1: Brute Force - Solve in 2nd GO
+### Approach 1: Brute Force
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
