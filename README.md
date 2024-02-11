@@ -1,23 +1,18 @@
-<h2><a href="https://leetcode.com/problems/longest-consecutive-sequence/description/">20. Longest Consecutive Sequence</a></h2>
+<h2>Day 4, 4th Question</h2>
 
-Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+<h2><a href="https://www.codingninjas.com/studio/problems/920321?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">Coding Ninjas - 21. Longest Subarray Zero Sum</a></h2>
 
-You must write an algorithm that runs in O(n) time.
+<h2><a href="https://www.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1">GFG - 21. Longest Subarray Zero Sum</a></h2>
+
+Given an array having both positive and negative integers. The task is to compute the length of the largest subarray with sum 0
 
 **Example 1:**
 
-**Input**: nums = [100,4,200,1,3,2]
+**Input**: nums = [15,-2,2,-8,1,7,10,23]
 
-**Output**: 4
+**Output**: 5
 
-**Explanation**: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
-
-
-**Example 2:**
-
-**Input**: nums = [0,3,7,2,5,8,4,6,0,1]
-
-**Output**: 9
+**Explanation**: The largest subarray with sum 0 will be -2 2 -8 1 7.
 
 
 
