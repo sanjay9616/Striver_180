@@ -5,4 +5,4 @@
 | Brute Force            | O(N^2)            | O(1)              |
 
 
-
+### Approach 2: Solve in 2nd GO
