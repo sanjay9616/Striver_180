@@ -1,33 +1,37 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/subarrays-with-xor-k_6826258?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM">22. Subarrays with XOR ‘K’</a></h2>
+<h2><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/description/">23. Longest Substring Without Repeating Characters</a></h2>
 
-Given an array ‘A’ consisting of ‘N’ integers and an integer ‘B’, find the number of subarrays of array ‘A’ whose bitwise XOR( ⊕ ) of all elements is equal to ‘B’.
-
-A subarray of an array is obtained by removing some(zero or more) elements from the front and back of the array.
-
+Given a string s, find the length of the longest substring without repeating characters.
 
 **Example 1:**
 
-**Input**: a = [1, 2, 3, 2], b = 2
+**Input**: s = "abcabcbb"
 
 **Output**: 3
 
-**Explanation**: Explanation: Subarrays have bitwise xor equal to ‘2’ are: [1, 2, 3, 2], [2], [2].
+**Explanation**: The answer is "abc", with the length of 3.
+
 
 **Example 2:**
 
-**Input**: a = [1, 2, 3, 3], b = 3
+**Input**: s = "bbbbb"
 
-**Output**: 4
+**Output**: 1
 
-**Example 3:**
+**Explanation**: The answer is "b", with the length of 1.
 
-**Input**: a = [1, 3, 3, 3, 5], b = 6
 
-**Output**: 2
+**Example 2:**
+
+**Input**: s = "pwwkew"
+
+**Output**: 3
+
+**Explanation**: The answer is "wke", with the length of 3.</br>
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 
 
 **Constraints**:
 
-    • 1 <= N <= 10^3
-    • 1 <= A[i], B <= 10^9
+    • 0 <= s.length <= 5 * 10^4
+    • s consists of English letters, digits, symbols and spaces.
