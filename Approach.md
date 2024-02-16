@@ -1,30 +1,26 @@
-### Approach 1: Using Sliding Window in O(N^3) time
+### Approach 1: Using Iterative Method
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N^3)            | O(1)              |
+| Iterative Method       | O(N)              | O(1)              |
+
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/RGIF2.gif" alt="not found">
 
 
-### Approach 2: Using Sliding Window in O(N^2) time
-
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N^2)            | O(1)              |
-
-### Approach 3: Using Binary Search  ############# Need to Inplement
+### Approach 2: Using Recursion
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N * log(N))     | O(1)              |
+| Recursion              | O(N)              | O(N)              |
 
-### Approach 4: Using Sliding Window in O(N) time ############# Need to Inplement
-
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N)              | O(N)              |
-
-### Approach 4: Using Using the last Index
+### Approach 3: Using Tail Recursive ### Need to Implement
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N)              | O(N)              |
+| Tail Recursive         | O(N)              | O(N)              |
+
+### Approach 4: Using Stack
+
+| Algorithm              | Time Complexity   | Space Complexity  |
+|----------------------- | ----------------- | ----------------- |
+| Tail Recursive         | O(N)              | O(N)              |

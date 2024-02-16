@@ -1,37 +1,31 @@
-<h2><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/description/">23. Longest Substring Without Repeating Characters</a></h2>
+<h2><a href="https://leetcode.com/problems/reverse-linked-list/description/">24. Reverse Linked List</a></h2>
 
-Given a string s, find the length of the longest substring without repeating characters.
+Given the head of a singly linked list, reverse the list, and return the reversed list.
 
 **Example 1:**
 
-**Input**: s = "abcabcbb"
+**Input**: head = [1,2,3,4,5]
 
-**Output**: 3
-
-**Explanation**: The answer is "abc", with the length of 3.
+**Output**: [5,4,3,2,1]
 
 
 **Example 2:**
 
-**Input**: s = "bbbbb"
+**Input**: head = [1,2]
 
-**Output**: 1
-
-**Explanation**: The answer is "b", with the length of 1.
+**Output**: [2,1]
 
 
 **Example 2:**
 
-**Input**: s = "pwwkew"
+**Input**: head = []
 
-**Output**: 3
-
-**Explanation**: The answer is "wke", with the length of 3.</br>
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+**Output**: []
 
 
 
 **Constraints**:
 
-    • 0 <= s.length <= 5 * 10^4
-    • s consists of English letters, digits, symbols and spaces.
+    • The number of nodes in the list is the range [0, 5000].
+    • -5000 <= Node.val <= 5000
+    • A linked list can be reversed either iteratively or recursively. Could you implement both?
