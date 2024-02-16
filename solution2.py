@@ -1,4 +1,4 @@
-# Approach 1: Using Using Recursion
+# Approach 1: Brute Force(Space Optimized)
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -10,4 +10,4 @@ class Solution:
         return rest
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(N)
+# Space Complexity = O(1)

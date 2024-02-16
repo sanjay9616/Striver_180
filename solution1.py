@@ -1,17 +1,17 @@
-# Approach 1: Using Iterative Method
+# Approach 1: Brute Force
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        prev = None
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        nodeValue = []
         while(head):
-            nxt = head.next
-            head.next = prev
-            prev = head
-            head = nxt
-        # return prev
-        # OR
-        head = prev
-        return head
+            nodeValue.append(head.val)
+            head = head.next
+        head = curr = ListNode(-1)
+        n = len(nodeValue)
+        for i in range(n//2, n, 1):
+            curr.next = ListNode(nodeValue[i])
+            curr = curr.next
+        return head.next
 
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(1)
+# Space Complexity = O(N)
