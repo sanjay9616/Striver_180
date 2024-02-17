@@ -1,7 +1,7 @@
-# Approach 3: By Reversing the Lists
+# Approach 3: Using Recursion
 
 ### Need To Implement  ##
 
-# Time Coplexicity = O(N + M) => Result = Success
-# Space Complexity = O(N + M)
+# Time Coplexicity = O(N) => Result = Success
+# Space Complexity = O(N)
 
