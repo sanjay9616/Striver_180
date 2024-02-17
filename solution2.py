@@ -1,13 +1,18 @@
-# Approach 1: Brute Force(Space Optimized)
+# Approach 2: Using Recursion
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if(head is None or head.next is None):
-            return head
-        rest = self.reverseList(head.next)
-        head.next.next = head
-        head.next = None
-        return rest
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        if list1 is None:
+            return list2
+        elif list2 is None:
+            return list1
+        if list1.val <= list2.val:
+            list1.next = self.mergeTwoLists(list1.next, list2)
+            return list1
+        else:
+            list2.next = self.mergeTwoLists(list1, list2.next)
+            return list2
 
-# Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(1)
+
+# Time Coplexicity = O(N + M) => Result = Success
+# Space Complexity = O(N + M)
