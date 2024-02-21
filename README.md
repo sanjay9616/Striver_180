@@ -1,48 +1,59 @@
-<h2><a href="https://leetcode.com/problems/delete-node-in-a-linked-list/description/">28. Delete Node in a Linked List</a></h2>
+<h2><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/">30. Intersection of Two Linked Lists</a></h2>
 
-There is a singly-linked list head and we want to delete a node node in it.
+Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
 
-You are given the node to be deleted node. You will not be given access to the first node of head.
+For example, the following two linked lists begin to intersect at node c1:
 
-All the values of the linked list are unique, and it is guaranteed that the given node node is not the last node in the linked list.
+<img src="https://assets.leetcode.com/uploads/2021/03/05/160_statement.png" alt="Not Found">
 
-Delete the given node. Note that by deleting the node, we do not mean removing it from memory. We mean:
+The test cases are generated such that there are no cycles anywhere in the entire linked structure.
 
-1. The value of the given node should not exist in the linked list. </br>
-2. The number of nodes in the linked list should decrease by one. </br>
-3. All the values before node should be in the same order. </br>
-4. All the values after node should be in the same order. </br>
+Note that the linked lists must retain their original structure after the function returns.
 
-**Custom testing:**
+**Custom Judge:** The inputs to the judge are given as follows (your program is not given these inputs):
 
-1. For the input, you should provide the entire linked list head and the node to be given node. node should not be the last node of the list and should be an actual node in the list.</br>
-2. We will build the linked list and pass the node to your function.</br>
-3. The output will be the entire list after calling your function.</br>
+    • intersectVal - The value of the node where the intersection occurs. This is 0 if there is no intersected node.
+    • listA - The first linked list.
+    • listB - The second linked list.
+    • skipA - The number of nodes to skip ahead in listA (starting from the head) to get to the intersected node.
+    • skipB - The number of nodes to skip ahead in listB (starting from the head) to get to the intersected node.
+
+The judge will then create the linked structure based on these inputs and pass the two heads, headA and headB to your program. If you correctly return the intersected node, then your solution will be accepted.
+
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2020/09/01/node1.jpg" alt="Not Found">
+<img src="https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png" alt="Not Found">
 
-**Input**: head = [4,5,1,9], node = 5
+**Input**: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 
-**Output**: [4,1,9]
+**Output**: Intersected at '8'
 
-**Explanation**: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.
+**Explanation**: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
+- Note that the intersected node's value is not 1 because the nodes with value 1 in A and B (2nd node in A and 3rd node in B) are different node references. In other words, they point to two different locations in memory, while the nodes with value 8 in A and B (3rd node in A and 4th node in B) point to the same location in memory.
 
 **Example 2:**
 
-<img src="https://assets.leetcode.com/uploads/2020/09/01/node2.jpg" alt="Not Found">
+<img src="https://assets.leetcode.com/uploads/2021/03/05/160_example_3.png" alt="Not Found">
 
-**Input**: head = [4,5,1,9], node = 1
+**Input**: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
 
-**Output**: [4,5,9]
+**Output**: No intersection
 
-**Explanation**: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
+**Explanation**: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Explanation: The two lists do not intersect, so return null.
 
 
 **Constraints**:
 
-    • The number of the nodes in the given list is in the range [2, 1000].
-    • -1000 <= Node.val <= 1000
-    • The value of each node in the list is unique.
-    • The node to be deleted is in the list and is not a tail node.
+    • The number of nodes of listA is in the m.
+    • The number of nodes of listB is in the n.
+    • 1 <= m, n <= 3 * 10^4
+    • 1 <= Node.val <= 10^5
+    • 0 <= skipA < m
+    • 0 <= skipB < n
+    • intersectVal is 0 if listA and listB do not intersect.
+    • intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
+
+**Follow up:** Could you write a solution that runs in O(m + n) time and use only O(1) memory?

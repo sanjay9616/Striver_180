@@ -1,14 +1,15 @@
-# Approach 1: Node assignment
+# Approach 1: Using Two Nested Loops (Brute Force)
 
 class Solution:
-    def deleteNode(self, node):
-        """
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """
-        node.val = node.next.val
-        node.next = node.next.next
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        while(headA):
+            tempB = headB
+            while(tempB):
+                if(headA == tempB):
+                    return tempB
+                tempB = tempB.next
+            headA = headA.next
+        return None
 
-
-# Time Coplexicity = O(1) => Result = Success
+# Time Coplexicity = O(M * N) => Result = TLE
 # Space Complexity = O(1)
