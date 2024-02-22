@@ -1,20 +1,13 @@
-# Approach 3: Using Two Pointer Technique
-
+# Approach 3: Using Floyd’s Cycle-Finding Algorithm
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        curr1, curr2 = headA, headB
-        if (curr1 is None or curr2 is None):
-            return None
-        while (curr1 != curr2):
-            curr1 = curr1.next
-            curr2 = curr2.next
-            if (curr1 == curr2):
-                return curr1
-            if (curr1 is None):
-                curr1 = headB
-            if (curr2 is None):
-                curr2 = headA
-        return curr1
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow = fast = head
+        while(fast and fast.next):
+            slow = slow.next
+            fast = fast.next.next
+            if(slow == fast):
+                return True
+        return False
 
-# Time Coplexicity = O(M + N) => Result = Success
+# Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(1)

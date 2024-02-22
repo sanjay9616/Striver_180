@@ -1,16 +1,14 @@
 # Approach 2: Using Hashing
-
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        hs = set()
-        while(headA):
-            hs.add(headA)
-            headA = headA.next
-        while(headB):
-            if(headB in hs):
-                return headB
-            headB = headB.next
-        return None
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        visitedNodes, curr = set(), head
+        while(curr):
+            if(curr in visitedNodes):
+                return True
+            visitedNodes.add(curr)
+            curr = curr.next
+        return False
+
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(N)

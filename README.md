@@ -1,59 +1,47 @@
-<h2><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/">30. Intersection of Two Linked Lists</a></h2>
+<h2><a href="https://leetcode.com/problems/linked-list-cycle/">31. Linked List Cycle</a></h2>
 
-Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
-For example, the following two linked lists begin to intersect at node c1:
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
 
-<img src="https://assets.leetcode.com/uploads/2021/03/05/160_statement.png" alt="Not Found">
-
-The test cases are generated such that there are no cycles anywhere in the entire linked structure.
-
-Note that the linked lists must retain their original structure after the function returns.
-
-**Custom Judge:** The inputs to the judge are given as follows (your program is not given these inputs):
-
-    • intersectVal - The value of the node where the intersection occurs. This is 0 if there is no intersected node.
-    • listA - The first linked list.
-    • listB - The second linked list.
-    • skipA - The number of nodes to skip ahead in listA (starting from the head) to get to the intersected node.
-    • skipB - The number of nodes to skip ahead in listB (starting from the head) to get to the intersected node.
-
-The judge will then create the linked structure based on these inputs and pass the two heads, headA and headB to your program. If you correctly return the intersected node, then your solution will be accepted.
+Return true if there is a cycle in the linked list. Otherwise, return false.
 
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png" alt="Not Found">
+<img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png" alt="Not Found">
 
-**Input**: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+**Input**: head = [3,2,0,-4], pos = 1
 
-**Output**: Intersected at '8'
+**Output**: true
 
-**Explanation**: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
-From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
-- Note that the intersected node's value is not 1 because the nodes with value 1 in A and B (2nd node in A and 3rd node in B) are different node references. In other words, they point to two different locations in memory, while the nodes with value 8 in A and B (3rd node in A and 4th node in B) point to the same location in memory.
+**Explanation**: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 
 **Example 2:**
 
-<img src="https://assets.leetcode.com/uploads/2021/03/05/160_example_3.png" alt="Not Found">
+<img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test2.png" alt="Not Found">
 
-**Input**: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+**Input**: head = [1,2], pos = 0
 
-**Output**: No intersection
+**Output**: true
 
-**Explanation**: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
-Explanation: The two lists do not intersect, so return null.
+**Explanation**: There is a cycle in the linked list, where the tail connects to the 0th node.
+
+**Example 3:**
+
+<img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist_test3.png" alt="Not Found">
+
+**Input**: head = [1], pos = -1
+
+**Output**: false
+
+**Explanation**: There is no cycle in the linked list.
 
 
 **Constraints**:
 
-    • The number of nodes of listA is in the m.
-    • The number of nodes of listB is in the n.
-    • 1 <= m, n <= 3 * 10^4
-    • 1 <= Node.val <= 10^5
-    • 0 <= skipA < m
-    • 0 <= skipB < n
-    • intersectVal is 0 if listA and listB do not intersect.
-    • intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
+    • The number of the nodes in the list is in the range [0, 104].
+    • -10^5 <= Node.val <= 10^5
+    • pos is -1 or a valid index in the linked-list.
 
-**Follow up:** Could you write a solution that runs in O(m + n) time and use only O(1) memory?
+**Follow up:** Can you solve it using O(1) (i.e. constant) memory?

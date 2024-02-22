@@ -1,8 +1,8 @@
-### Approach 1: Using Two Nested Loops (Brute Force)
+### Approach 1: By Storing length
 
-| Algorithm                     | Time Complexity      | Space Complexity  |
-|------------------------------ | -------------------- | ----------------- |
-| Using Two Nested Loops        | O(M * N)             | O(1)              |
+| Algorithm                            | Time Complexity      | Space Complexity  |
+|------------------------------------- | -------------------- | ----------------- |
+| By Storing length                    | O(N^2)               | O(1)              |
 
 ### Approach 2: Using Hashing
 
@@ -10,21 +10,21 @@
 |------------------------------ | -------------------- | ----------------- |
 | Using Hashing                 | O(N)                 | O(N)              |
 
-### Approach 3: Using Difference In Node Counts
-
-| Algorithm                         | Time Complexity      | Space Complexity  |
-|---------------------------------- | -------------------- | ----------------- |
-| Using Difference In Node Counts   | O(M + N)             | O(1)              |
-
-### Approach 4: Using Two Pointer Technique
-
-| Algorithm                         | Time Complexity      | Space Complexity  |
-|---------------------------------- | -------------------- | ----------------- |
-| Using Two Pointer Technique       | O(M + N)             | O(1)              |
-
-### Approach 5: By Making A Loop In The First List ## NEED TO IMPLEMENT
+### Approach 3: By Modification In Node Structure
 
 | Algorithm                            | Time Complexity      | Space Complexity  |
 |------------------------------------- | -------------------- | ----------------- |
-| By Making A Loop In The First List   | ==========           | =====             |
+| By Modification In Node Structure    | O(N)                 | O(1)              |
+
+### Approach 4: Using Floyd’s Cycle-Finding Algorithm
+
+| Algorithm                               | Time Complexity      | Space Complexity  |
+|---------------------------------------- | -------------------- | ----------------- |
+| Using Floyd’s Cycle-Finding Algorithm   | O(N)                 | O(1)              |
+
+### Approach 5: By Marking visited nodes without modifying Node structure   ### NEED TO IMPLEMENT ###
+
+| Algorithm                                                       | Time Complexity      | Space Complexity  |
+|---------------------------------------------------------------- | -------------------- | ----------------- |
+| By Marking visited nodes without modifying Node structure       | O(N)                 | O(1)              |
 
