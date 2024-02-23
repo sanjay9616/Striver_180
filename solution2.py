@@ -1,16 +1,14 @@
-# Approach 2: Using Stack
+# Approach 2: Floyd's Cycle-Finding algorithm
 class Solution:
-    def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        stack = []
-        curr = head
-        while(curr):
-            stack.append(curr.val)
-            curr = curr.next
-        while(head):
-            if(stack.pop() != head.val):
-                return False
-            head = head.next
-        return True
-
-# Time Coplexicity = O(N + N) = O(N) => Result = Success
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        slow = fast = head
+        while (fast and fast.next):
+            slow, fast = slow.next, fast.next.next
+            if (slow == fast):  # there is a cycle
+                slow = head
+                while (slow != fast):
+                    slow, fast = slow.next, fast.next
+                return slow
+        return None
+# Time Coplexicity = O(N) = O(N) => Result = Success
 # Space Complexity = O(N)

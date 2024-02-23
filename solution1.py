@@ -1,14 +1,13 @@
-# Approach 1: Brute Force
+# Approach 1: Brute Force (Using Hashing)
 class Solution:
-    def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        nodeValue = []
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        visitedNodes = set()
         while (head):
-            nodeValue.append(head.val)
+            if (head in visitedNodes):
+                return head
+            visitedNodes.add(head)
             head = head.next
-        for i in range(0, len(nodeValue)//2, 1):
-            if (nodeValue[i] != nodeValue[len(nodeValue) - i - 1]):
-                return False
-        return True
+        return None
 
-# Time Coplexicity = O(N + N//2) = O(N) => Result = Success
+# Time Coplexicity = O(N) = O(N) => Result = Success
 # Space Complexity = O(N)
