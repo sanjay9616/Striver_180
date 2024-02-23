@@ -1,21 +1,14 @@
 # Approach 1: Brute Force
 class Solution:
-    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
         nodeValue = []
-        curr = head
-        while(curr):
-            nodeValue.append(curr.val)
-            curr = curr.next
-        i = 0
-        while(i < len(nodeValue)):
-            if(i+k < len(nodeValue)+1):
-                nodeValue[i:i+k] = nodeValue[i:i+k][::-1]
-            i += k
-        dummy = curr = ListNode(-1)
-        for i in nodeValue:
-            curr.next = ListNode(i)
-            curr = curr.next
-        return dummy.next
+        while (head):
+            nodeValue.append(head.val)
+            head = head.next
+        for i in range(0, len(nodeValue)//2, 1):
+            if (nodeValue[i] != nodeValue[len(nodeValue) - i - 1]):
+                return False
+        return True
 
-# Time Coplexicity = O(N^2) => Result = Success
+# Time Coplexicity = O(N + N//2) = O(N) => Result = Success
 # Space Complexity = O(N)

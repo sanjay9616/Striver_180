@@ -1,27 +1,16 @@
-# Need to Revise
+# Approach 2: Using Stack
 class Solution:
-    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
-        def getGroupEnd(cur, k):
-            while k > 1 and cur.next:
-                cur = cur.next
-                k -= 1
-            return cur if k == 1 else None
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        stack = []
+        curr = head
+        while(curr):
+            stack.append(curr.val)
+            curr = curr.next
+        while(head):
+            if(stack.pop() != head.val):
+                return False
+            head = head.next
+        return True
 
-        def reverseGroup(start, end):
-            prev, cur, new_group_start = None, start, end.next
-            while cur != new_group_start:
-                cur.next, cur, prev = prev, cur.next, cur
-        dummy = ListNode()
-        prev_group = dummy
-        while head:
-            group_start = head
-            group_end = getGroupEnd(head, k)
-            if not group_end:
-                break
-            next_group_start = group_end.next
-            reverseGroup(group_start, group_end)
-            prev_group.next = group_end
-            prev_group = group_start
-            group_start.next = next_group_start
-            head = next_group_start
-        return dummy.next
+# Time Coplexicity = O(N + N) = O(N) => Result = Success
+# Space Complexity = O(N)
