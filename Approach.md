@@ -4,10 +4,10 @@
 |--------------------------------- | -------------------- | ----------------- |
 | Brute Force                      | O(N)                 | O(N)              |
 
-### Approach 2: Floyd's Cycle-Finding algorithm
+'''
 
-| Algorithm                            | Time Complexity      | Space Complexity  |
-|------------------------------------- | -------------------- | ----------------- |
-| Floyd's Cycle-Finding algorithm      | O(N)                 | O(1)              |
+SOLVE
+
+'''
 
 
