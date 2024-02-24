@@ -4,10 +4,9 @@
 |--------------------------------- | -------------------- | ----------------- |
 | Brute Force                      | O(N)                 | O(N)              |
 
-'''
+### Approach 1: Optimized
 
-SOLVE
-
-'''
-
+| Algorithm                        | Time Complexity      | Space Complexity  |
+|--------------------------------- | -------------------- | ----------------- |
+| Optimized                        | O(N)                 | O(N)              |
 

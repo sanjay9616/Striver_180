@@ -1,28 +1,26 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/flattening-a-linked-list/1">35. Flattening a Linked List</a></h2>
+<h2><a href="https://leetcode.com/problems/rotate-list/description/">36. Rotate List</a></h2>
 
-'''
-
-SOLVE
-
-'''
-
+Given the head of a linked list, rotate the list to the right by k places.
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png" alt="Not Found">
+<img src="https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg" alt="Not Found">
 
-**Input**: head = [3,2,0,-4], pos = 1
+**Input**: head = [1,2,3,4,5], k = 2
 
-**Output**: tail connects to node index 1
+**Output**: [4,5,1,2,3]
 
-**Explanation**: There is a cycle in the linked list, where tail connects to the second node.
+**Example 2:**
 
+<img src="https://assets.leetcode.com/uploads/2020/11/13/roate2.jpg" alt="Not Found">
+
+**Input**: head = [0,1,2], k = 4
+
+**Output**: [2,0,1]
 
 
 **Constraints**:
 
-    • The number of the nodes in the list is in the range [0, 10^4].
-    • -10^5 <= Node.val <= 10^5
-    • pos is -1 or a valid index in the linked-list.
-
-**Follow up:** Can you solve it using O(1) (i.e. constant) memory?
+    • The number of nodes in the list is in the range [0, 500].
+    • -100 <= Node.val <= 100
+    • 0 <= k <= 2 * 10^9
