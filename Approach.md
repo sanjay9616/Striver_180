@@ -1,4 +1,4 @@
-### Approach 1: Most Optimal Solution
+### Approach 1: Most Optimal Solution (Sort + Three Pointers)
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
