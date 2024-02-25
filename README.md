@@ -1,52 +1,24 @@
-<h2><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/">40. Remove Duplicates from Sorted Array</a></h2>
+<h2><a href="https://leetcode.com/problems/max-consecutive-ones/description/">41. Max Consecutive Ones</a></h2>
 
-Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
-
-Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
-
-1. Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums. </br>
-2. Return k.
-
-**Custom Judge:**
-
-The judge will test your solution with the following code: </br>
-
-int[] nums = [...]; // Input array</br>
-int[] expectedNums = [...]; // The expected answer with correct length</br>
-
-int k = removeDuplicates(nums); // Calls your implementation</br>
-
-assert k == expectedNums.length;</br>
-```javascript
-for (int i = 0; i < k; i++) {
-    assert nums[i] == expectedNums[i];
-}
-```
-If all assertions pass, then your solution will be accepted.
-
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
 
 **Example 1:**
 
-**Input**: nums = [1,1,2]
+**Input**: nums = [1,1,0,1,1,1]
 
-**Output**: 2, nums = [1,2,_]
+**Output**: 3
 
-**Explanation**: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+**Explanation**: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
 
 
 **Example 2:**
 
-**Input**: nums = [0,0,1,1,1,2,2,3,3,4]
+**Input**: nums = [1,0,1,1,0,1]
 
-**Output**: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-
-**Explanation**: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+**Output**: 2
 
 
 **Constraints**:
 
-    • 1 <= nums.length <= 3 * 10^4
-    • -100 <= nums[i] <= 100
-    • nums is sorted in non-decreasing order.
+    • 1 <= nums.length <= 10^5
+    • nums[i] is either 0 or 1.
