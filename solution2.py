@@ -1,18 +1,12 @@
-# Approach 2: Precalculation
+# Approach 2: Optimized
 class Solution:
-    def trap(self, height: List[int]) -> int:
-        n = len(height)
-        left, right = [0]*n, [0]*n
-        res = 0
-        left[0] = height[0]
-        for i in range(1, n):
-            left[i] = max(left[i-1], height[i])
-        right[n-1] = height[n-1]
-        for i in range(n-2, -1, -1):
-            right[i] = max(right[i + 1], height[i])
-        for i in range(n):
-            res = res + min(left[i], right[i]) - height[i]
-        return res
+    def removeDuplicates(self, nums: List[int]) -> int:
+        replace = 1
+        for i in range(1, len(nums)):
+            if nums[i-1] != nums[i]:
+                nums[replace] = nums[i]
+                replace += 1
+        return replace
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(N)
+# Space Complexity = O(1)

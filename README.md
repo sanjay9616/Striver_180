@@ -1,28 +1,52 @@
-<h2><a href="https://leetcode.com/problems/4sum/description/">19. Trapping Rain Water</a></h2>
+<h2><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/">40. Remove Duplicates from Sorted Array</a></h2>
 
-Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
+
+1. Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums. </br>
+2. Return k.
+
+**Custom Judge:**
+
+The judge will test your solution with the following code: </br>
+
+int[] nums = [...]; // Input array</br>
+int[] expectedNums = [...]; // The expected answer with correct length</br>
+
+int k = removeDuplicates(nums); // Calls your implementation</br>
+
+assert k == expectedNums.length;</br>
+```javascript
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+```
+If all assertions pass, then your solution will be accepted.
+
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png" alt="not found">
+**Input**: nums = [1,1,2]
 
-**Input**: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+**Output**: 2, nums = [1,2,_]
 
-**Output**: 6
-
-**Explanation**: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+**Explanation**: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
 
 
 **Example 2:**
 
-**Input**: height = [4,2,0,3,2,5]
+**Input**: nums = [0,0,1,1,1,2,2,3,3,4]
 
-**Output**: 9
+**Output**: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 
+**Explanation**: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
 
 
 **Constraints**:
 
-    • n == height.length
-    • 1 <= n <= 2 * 10^4
-    • 0 <= height[i] <= 10^5
+    • 1 <= nums.length <= 3 * 10^4
+    • -100 <= nums[i] <= 100
+    • nums is sorted in non-decreasing order.
