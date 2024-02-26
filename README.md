@@ -1,24 +1,34 @@
-<h2><a href="https://leetcode.com/problems/max-consecutive-ones/description/">41. Max Consecutive Ones</a></h2>
+<h2><a href="https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1">42. N meetings in one room</a></h2>
 
-Given a binary array nums, return the maximum number of consecutive 1's in the array.
+There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i.
+
+What is the maximum number of meetings that can be accommodated in the meeting room when only one meeting can be held in the meeting room at a particular time?
+
+Note: Start time of one chosen meeting can't be equal to the end time of the other chosen meeting.
+
 
 **Example 1:**
 
-**Input**: nums = [1,1,0,1,1,1]
+**Input**: N = 6, start[] = {1,3,0,5,8,5}, end[] =  {2,4,6,7,9,9}
 
-**Output**: 3
+**Output**: 4
 
-**Explanation**: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+**Explanation**: Maximum four meetings can be held with given start and end timings. The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
 
 
 **Example 2:**
 
-**Input**: nums = [1,0,1,1,0,1]
+**Input**: N = 3, start[] = {10, 12, 20}, end[] = {20, 25, 30}
 
-**Output**: 2
+**Output**: 1
+
+**Explanation**: Only one meetings can be held with given start and end timings.
 
 
 **Constraints**:
 
-    • 1 <= nums.length <= 10^5
-    • nums[i] is either 0 or 1.
+    • 1 ≤ N ≤ 10^5
+    • 0 ≤ start[i] < end[i] ≤ 10^5
+
+**Expected Time Complexity** : O(N*LogN)
+**Expected Auxilliary Space** : O(N)

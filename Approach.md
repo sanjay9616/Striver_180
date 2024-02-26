@@ -1,10 +1,18 @@
-### Approach 1: Brute Force
+### Approach 1: Greedy approach
 
-A simple solution is consider every subarray and count 1’s in every subarray. Finally return size of largest subarray with all 1’s. An efficient solution is traverse array from left to right. If we see a 1, we increment count and compare it with maximum so far. If we see a 0, we reset count as 0.
+The idea is to solve the problem using the greedy approach which is the same as <a href="https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/">Activity Selection Problem</a> i.e sort the meetings by their finish time and then start selecting meetings, starting with the one with least end time and then select other meetings such that the start time of the current meeting is greater than the end time of last meeting selected
+
+**Following are some standard algorithms that are Greedy algorithms**
+    • Kruskal’s Minimum Spanning Tree (MST)
+    • Prim’s Minimum Spanning Tree
+    • Dijkstra’s Shortest Path
+    • Huffman Coding:
+    • Dijkstra’s Shortest Path
+
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N)              | O(1)              |
+| Brute Force            | O(N log N)        | O(N)              |
 
 
 

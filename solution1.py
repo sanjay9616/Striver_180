@@ -1,14 +1,15 @@
-# Approach 1: Brute Force
-class Solution:
-    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-        res, count = 0, 0
-        for i in nums:
-            if(i == 0):
-                count = 0
-            else:
-                count += 1
-                res = max(res, count)
-        return res
+# Approach 1: Greedy approach
+
+def maximumMeetings(self, n, start, end):
+    ans, l = [], []
+    for i in range(n):
+        l.append([start[i], end[i]])
+    l.sort(key=lambda x: x[1])
+    ans.append(l[0])
+    for i in range(1, n):
+        if l[i][0] > ans[-1][1]:
+            ans.append(l[i])
+    return len(ans)
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(1)
