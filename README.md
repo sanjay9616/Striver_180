@@ -1,35 +1,28 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1">44. Fractional Knapsack</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/find-minimum-number-of-coins_975277?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">45. Find Minimum Number Of Coins</a></h2>
 
-Given weights and values of N items, we need to put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
+Given an infinite supply of Indian currency i.e. [1, 2, 5, 10, 20, 50, 100, 500, 1000] valued coins and an amount 'N'.
 
-**Note**: Unlike 0/1 knapsack, you are allowed to break the item here. 
+Find the minimum coins needed to make the sum equal to 'N'. You have to return the list containing the value of coins required in decreasing order.
 
+**For Example**: For Amount = 70, the minimum number of coins required is 2 i.e an Rs. 50 coin and a Rs. 20 coin.
+
+**Note**: It is always possible to find the minimum number of coins for the given amount. So, the answer will always exist.
 
 **Example 1:**
 
-**Input**: N = 3, W = 50, value[] = {60,100,120}, weight[] = {10,20,30}
+**Input**: N = 13
 
-**Output**: 240.000000
+**Output**: 10 2 1
 
-**Explanation**: Take the item with value 60 and weight 10, value 100 and weight 20 and split the third item with value 120 and weight 30, to fit it into weight 20. so it becomes (120/30)*20=80, so the total value becomes 60+100+80.0=240.0</br>
-Thus, total maximum value of item we can have is 240.00 from the given capacity of sack.
+**Explanation**: The minimum number of coins to change is 3 {1, 2, 10}.
 
 
 **Example 2:**
 
-**Input**: N = 2, W = 50, value[] = {60,100}, weight[] = {10,20}
+**Input**: N = 50
 
-**Output**: 160.000000
-
-**Explanation**: Take both the items completely, without breaking. Total maximum value of item we can have is 160.00 from the given capacity of sack.
-
-**Your Task**: Complete the function fractionalKnapsack() that receives maximum capacity , array of structure/class and size N and returns a double value representing the maximum value in knapsack.
+**Output**: 50
 
 **Constraints**:
 
-    • 1 <= N <= 10^5
-    • 1 <= W <= 10^9
-    • 1 <= valuei, weighti <= 10^4
-
-**Expected Time Complexity** : O(N * logN)
-**Expected Auxilliary Space** : O(1)
+    • 1 <= 'N' <= 10^5
