@@ -1,8 +1,4 @@
-### Approach 1: Need To Implement
-
-The basic idea of the greedy approach is to calculate the ratio profit/weight for each item and sort the item on the basis of this ratio. Then take the item with the highest ratio and add them as much as we can (can be the whole element or a fraction of it).
-
-This will always give the maximum profit because, in each step it adds an element such that this is the maximum possible profit for that much weight.
+### Approach 1: Already Solved, see README.md file
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
