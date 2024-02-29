@@ -1,34 +1,32 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1">42. N meetings in one room</a></h2>
+<h2><a href="https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1">43. Minimum Platforms</a></h2>
 
-There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) where start[i] is start time of meeting i and end[i] is finish time of meeting i.
+Given arrival and departure times of all trains that reach a railway station. Find the minimum number of platforms required for the railway station so that no train is kept waiting.
 
-What is the maximum number of meetings that can be accommodated in the meeting room when only one meeting can be held in the meeting room at a particular time?
-
-Note: Start time of one chosen meeting can't be equal to the end time of the other chosen meeting.
+Consider that all the trains arrive on the same day and leave on the same day. Arrival and departure time can never be the same for a train but we can have arrival time of one train equal to departure time of the other. At any given instance of time, same platform can not be used for both departure of a train and arrival of another train. In such cases, we need different platforms.
 
 
 **Example 1:**
 
-**Input**: N = 6, start[] = {1,3,0,5,8,5}, end[] =  {2,4,6,7,9,9}
+**Input**: n = 6, arr[] = {0900, 0940, 0950, 1100, 1500, 1800}, dep[] = {0910, 1200, 1120, 1130, 1900, 2000}
 
-**Output**: 4
+**Output**: 3
 
-**Explanation**: Maximum four meetings can be held with given start and end timings. The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
+**Explanation**: Minimum 3 platforms are required to safely arrive and depart all trains.
 
 
 **Example 2:**
 
-**Input**: N = 3, start[] = {10, 12, 20}, end[] = {20, 25, 30}
+**Input**: n = 3, arr[] = {0900, 1100, 1235}, dep[] = {1000, 1200, 1240}
 
 **Output**: 1
 
-**Explanation**: Only one meetings can be held with given start and end timings.
+**Explanation**: Only 1 platform is required to safely manage the arrival and departure of all trains.
 
 
 **Constraints**:
 
-    • 1 ≤ N ≤ 10^5
-    • 0 ≤ start[i] < end[i] ≤ 10^5
+    • 1 ≤ n ≤ 50000
+    • 0000 ≤ A[i] ≤ D[i] ≤ 2359
 
-**Expected Time Complexity** : O(N*LogN)
+**Expected Time Complexity** : O(N * LogN)
 **Expected Auxilliary Space** : O(N)

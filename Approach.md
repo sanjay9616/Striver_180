@@ -1,18 +1,31 @@
-### Approach 1: Greedy approach
-
-The idea is to solve the problem using the greedy approach which is the same as <a href="https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/">Activity Selection Problem</a> i.e sort the meetings by their finish time and then start selecting meetings, starting with the one with least end time and then select other meetings such that the start time of the current meeting is greater than the end time of last meeting selected
-
-**Following are some standard algorithms that are Greedy algorithms**
-    • Kruskal’s Minimum Spanning Tree (MST)
-    • Prim’s Minimum Spanning Tree
-    • Dijkstra’s Shortest Path
-    • Huffman Coding:
-    • Dijkstra’s Shortest Path
+### Approach 1: Brute Froce
+The idea is to take every interval one by one and find the number of intervals that overlap with it</br>
+Arrival time of 1st train is greater then or equal to 2nd tain and departure time of 2nd train is greater then or equal to fiest train.
 
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Brute Force            | O(N log N)        | O(N)              |
+| Brute Force            | O(N^2)            | O(1)              |
+
+### Approach 2: Using Heap
+Store the arrival time and departure time and sort them based on arrival time then check if the arrival time of the next train is smaller than the departure time of the previous train if it is smaller then increment the number of the platforms needed otherwise not.
+
+
+| Algorithm              | Time Complexity   | Space Complexity  |
+|----------------------- | ----------------- | ----------------- |
+| Brute Force            | O(N*log(N))       | O(N)              |
+
+### Approach 3: Using Sorting  ## Need to Implement
+
+| Algorithm              | Time Complexity   | Space Complexity  |
+|----------------------- | ----------------- | ----------------- |
+| Brute Force            | O(N*log(N))       | O(1)              |
+
+### Approach 4: Using Sweep Line Algorithm
+
+| Algorithm              | Time Complexity   | Space Complexity      |
+|----------------------- | ----------------- | --------------------- |
+| Brute Force            | O(N)              | O(N)                  |
 
 
 

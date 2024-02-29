@@ -1,15 +1,16 @@
-# Approach 1: Greedy approach
+# Approach 1: Brute Force
 
-def maximumMeetings(self, n, start, end):
-    ans, l = [], []
+def minimumPlatform(self, n, arr, dep):
+    plat_needed = 1
+    result = 1
     for i in range(n):
-        l.append([start[i], end[i]])
-    l.sort(key=lambda x: x[1])
-    ans.append(l[0])
-    for i in range(1, n):
-        if l[i][0] > ans[-1][1]:
-            ans.append(l[i])
-    return len(ans)
+        plat_needed = 1
+        for j in range(n):
+            if i != j:
+                if (arr[i] >= arr[j] and dep[j] >= arr[i]):
+                    plat_needed += 1
+        result = max(result, plat_needed)
+    return result
 
-# Time Coplexicity = O(N) => Result = Success
+# Time Coplexicity = O(N^2) => Result = TLE
 # Space Complexity = O(1)
