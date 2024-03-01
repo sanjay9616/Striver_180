@@ -1,20 +1,14 @@
-### Approach 1: Using Recursion
+### Approach 1: Using Recursion  ## NEED TO IMPLEMENT
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
 | Using Recursion        | O(2^N)            | O(N)              |
 
-### Approach 2: Iterative Method  ## NEED TO IMPLEMENT
+### Approach 2: Efficient Iterative Method
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Iterative              | O(N * 2^N)        | O(1)              |
-
-### Approach 3: Efficient Iterative Method
-
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Efficient Iterative    | O(2^N)            | O(1)              |
+| Efficient Iterative    | O(2^N * N)        | O(1)              |
 
 
 
