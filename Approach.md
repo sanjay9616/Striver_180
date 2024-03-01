@@ -1,9 +1,6 @@
-### Approach 1: Recursive Approach
+### Approach 1: Optimized
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Using Recursion        | O(N * 2^N)        | O(N)              |
-
-
-
+| Using Recursion        | O(N)              | O(N)              |
 
