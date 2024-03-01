@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/combination-sum/description/">50. Combination Sum II</a></h2>
+<h2><a href="https://leetcode.com/problems/combination-sum-ii/description/">50. Combination Sum II</a></h2>
 
 Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
 
