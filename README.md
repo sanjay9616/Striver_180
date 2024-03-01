@@ -1,34 +1,29 @@
-<h2><a href="https://leetcode.com/problems/permutation-sequence/description/">52. Permutation Sequence</a></h2>
+<h2><a href="https://leetcode.com/problems/permutations/description/">53. Permutations</a></h2>
 
-The set [1, 2, 3, ..., n] contains a total of n! unique permutations.
-
-By listing and labeling all of the permutations in order, we get the following sequence for n = 3:</br>
-
-"123", "132", "213", "231", "312", "321"</br>
-
-Given n and k, return the kth permutation sequence.
+Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 
 **Example 1:**
 
-**Input**: n = 3, k = 3
+**Input**: nums = [1,2,3]
 
-**Output**: "213"
+**Output**: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 
 
 **Example 2:**
 
-**Input**: n = 4, k = 9
+**Input**: nums = [0,1]
 
-**Output**: "2314"
+**Output**: [[0,1],[1,0]]
 
 **Example 3:**
 
-**Input**: n = 3, k = 1
+**Input**: nums = [1]
 
-**Output**: "123"
+**Output**: [[1]]
 
 
 **Constraints**:
 
-    • 1 <= n <= 9
-    • 1 <= k <= n!
+    • 1 <= nums.length <= 6
+    • -10 <= nums[i] <= 10
+    • All the integers of nums are unique.
