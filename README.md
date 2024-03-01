@@ -1,27 +1,22 @@
-<h2><a href="https://leetcode.com/problems/combination-sum-ii/description/">50. Combination Sum II</a></h2>
+<h2><a href="https://leetcode.com/problems/palindrome-partitioning/description/">51. Palindrome Partitioning</a></h2>
 
-Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
-
-Each number in candidates may only be used once in the combination.
-
-**Note**: The solution set must not contain duplicate combinations.
+Given a string s, partition s such that every substringof the partition is a palindrome. Return all possible palindrome partitioning of s.
 
 **Example 1:**
 
-**Input**: candidates = [10,1,2,7,6,1,5], target = 8
+**Input**: s = "aab"
 
-**Output**: [[1,1,6],[1,2,5],[1,7],[2,6]]
+**Output**: [["a","a","b"],["aa","b"]]
 
 
 **Example 2:**
 
-**Input**: candidates = [2,5,2,1,2], target = 5
+**Input**: s = "a"
 
-**Output**: [[1,2,2],[5]]
+**Output**: [["a"]]
 
 
 **Constraints**:
 
-    • 1 <= candidates.length <= 100
-    • 1 <= candidates[i] <= 50
-    • 1 <= target <= 30
+    • 1 <= s.length <= 16
+    • s contains only lowercase English letters.
