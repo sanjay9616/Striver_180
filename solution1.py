@@ -1,25 +1,17 @@
-# Approach 1: Linear Search
+# Approach 1: Brute Force
 
-def NthRoot(n: int, m: int) -> int:
-    for i in range(m, 0, -1):
-        if(i ** n == m):
-            return i
-    return -1
+def median(matrix: [[int]], m: int, n: int) -> int:
+    l = []
+    for i in range(m):
+        for j in range(n):
+            l.append(matrix[i][j])
+    l.sort()
+    mid = len(l) // 2
+    if (len(l) % 2 == 0):
+        median = (l[mid-1] + l[mid]) / 2
+    else:
+        median = l[mid]
+    return median
 
-# Time Coplexicity = O(M * log(N)) => Result = TLE
-# Space Complexity = O(1)
-
-
-
-# Approach 1: Linear Search (similar to above but optimized)
-
-def NthRoot(n: int, m: int) -> int:
-    for i in range(1, m+1):
-        if(i ** n == m):
-            return i
-        elif(i ** n > m):
-            return -1
-    return -1
-
-# Time Coplexicity = < O(M * log(N)) => Result = Success
-# Space Complexity = O(1)
+# Time Coplexicity = O((M * N) + (M + N) * log(M + N)) = O((M + N) * log(M + N)) => Result = Partially Accepted
+# Space Complexity = O(M + N)
