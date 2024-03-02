@@ -1,12 +1,18 @@
-### Approach 1: Brute Force
+### Approach 1: Linear Search
 
-| Algorithm              | Time Complexity                    | Space Complexity  |
-|----------------------- | ---------------------------------- | ----------------- |
-| Linear Search          | O((M + N) * log(M + N))            | O(M + N)          |
+| Algorithm              | Time Complexit     | Space Complexity  |
+|----------------------- | ------------------ | ----------------- |
+| Linear Search          | O(N)               | O(1)              |
 
-### Approach 1: Binary Search ## NEED TO REVISE
+### Approach 2: Using XOR
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Binary Search          | O(M * lon(N))     | O(1)              |
+| Using XOR              | O(N)              | O(1)              |
+
+### Approach 3: Binary Search
+
+| Algorithm              | Time Complexity   | Space Complexity  |
+|----------------------- | ----------------- | ----------------- |
+| Binary Search          | O(log(N))         | O(1)              |
 
