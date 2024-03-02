@@ -4,13 +4,7 @@
 |----------------------- | ------------------ | ----------------- |
 | Linear Search          | O(N)               | O(1)              |
 
-### Approach 2: Using XOR
-
-| Algorithm              | Time Complexity   | Space Complexity  |
-|----------------------- | ----------------- | ----------------- |
-| Using XOR              | O(N)              | O(1)              |
-
-### Approach 3: Binary Search
+### Approach 2: Binary Search
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
