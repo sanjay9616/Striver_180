@@ -1,23 +1,32 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/rat-in-a-maze-_8842357?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">57. Rat In a Maze</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/1062679?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">59. Find Nth Root Of M</a></h2>
 
-You are given a N*N maze with a rat placed at 'mat[0][0]'. Find all paths that rat can follow to reach its destination i.e. mat[N-1][N-1]. The directions in which the rat can move are 'U'(up), 'D'(down), 'L' (left), 'R' (right).
+You are given two positive integers 'n' and 'm'. You have to return the 'nth' root of 'm', i.e. 'm(1/n)'. If the 'nth root is not an integer, return -1.
 
-In the given maze, each cell can have a value of either 0 or 1. Cells with a value of 0 are considered blocked, which means the rat cannot enter or traverse through them. On the other hand, cells with a value of 1 are open, indicating that the rat is allowed to enter and move through those cells.
-
-
-**Example**:
-
-mat:{{1, 0, 0, 0},
-     {1, 1, 0, 1},
-     {1, 1, 0, 0},
-     {0, 1, 1, 1}}
-
-All possible paths are:</br>
-DDRDRR (in red)</br>
-DRDDRR (in green)</br>
-
-<img src="https://files.codingninjas.in/untitled-21-28443.jpg" alt="not found">
+**Note**: 'nth' root of an integer 'm' is a number, which, when raised to the power 'n', gives 'm' as a result.
 
 
-**Explanation**: The given adjacency matrix tells us that 1 is connected to 2 and 2 is connected to 3. We can use three different colors  color all three nodes.
-Hence we return true.
+**Example**: Input: ‘n’ = 3, ‘m’ = 27
+
+**Output**: 3
+
+**Explanation**: 3rd Root of 27 is 3, as (3)^3 equals 27.
+
+**Sample Input 1**: 3 27
+
+**Sample Output 1**: 3
+
+**Explanation For Sample Input 1**: 3rd Root of 27 is 3, as (3)^3 equals 27.
+
+**Sample Input 2**: 4 69
+
+**Sample Output 2**: -1
+
+**Explanation For Sample Input 2**: 4th Root of 69 is not an integer, hence -1.
+
+**Expected Time Complexity**: Try to do this in O(log(n+m)).
+
+**Constraints**:
+
+1 <= n <= 30
+1 <= m <= 10^9
+Time Limit: 1 sec.
