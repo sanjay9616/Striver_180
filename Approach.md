@@ -1,8 +1,16 @@
-### Approach 1: Using Backtracking  ## Need to IMPLEMENT
-
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230814111826/Backtracking.png" alt="not found">
+let x is the solution:</br>
+=> x = (m)^(1/n), where n > 0 </br>
+=> x^n = m, such that x is always less then m. </br>
+Final Approach: Iterate m to 1 and find a number x, such then x^n shoul equal to m. </br>
+### Approach 1: Linear Search
 
 | Algorithm              | Time Complexity   | Space Complexity  |
 |----------------------- | ----------------- | ----------------- |
-| Using Backtracking     | O(N * N!)         | O(N^2)            |
+| Linear Search          | O(M * log(N))     | O(1)              |
+
+### Approach 1: Binary Search
+
+| Algorithm              | Time Complexity   | Space Complexity  |
+|----------------------- | ----------------- | ----------------- |
+| Binary Search          | O(log(N))         | O(1)              |
 

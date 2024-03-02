@@ -27,6 +27,6 @@ You are given two positive integers 'n' and 'm'. You have to return the 'nth' ro
 
 **Constraints**:
 
-1 <= n <= 30
-1 <= m <= 10^9
-Time Limit: 1 sec.
+    • 1 <= n <= 30
+    • 1 <= m <= 10^9
+    • Time Limit: 1 sec.
