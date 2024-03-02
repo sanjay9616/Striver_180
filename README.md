@@ -1,37 +1,23 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/m-coloring-problem_981273?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">56. M-Coloring Problem</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/rat-in-a-maze-_8842357?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">57. Rat In a Maze</a></h2>
 
-You are given an undirected graph as an adjacency matrix consisting of 'v' vertices and an integer 'm'.
+You are given a N*N maze with a rat placed at 'mat[0][0]'. Find all paths that rat can follow to reach its destination i.e. mat[N-1][N-1]. The directions in which the rat can move are 'U'(up), 'D'(down), 'L' (left), 'R' (right).
 
-You need to return 'YES' if you can color the graph using at most 'm' colors so that no two adjacent vertices are the same. Else, return 'NO'.
+In the given maze, each cell can have a value of either 0 or 1. Cells with a value of 0 are considered blocked, which means the rat cannot enter or traverse through them. On the other hand, cells with a value of 1 are open, indicating that the rat is allowed to enter and move through those cells.
 
-**For example**:
 
-**Input**:</br>
-If the given adjacency matrix is:</br>
-[0 1 0]</br>
-[1 0 1]</br>
-[0 1 0] and 'm' = 3.</br>
+**Example**:
 
-<img src="https://files.codingninjas.in/ex1-28434.png" alt="not found">
+mat:{{1, 0, 0, 0},
+     {1, 1, 0, 1},
+     {1, 1, 0, 0},
+     {0, 1, 1, 1}}
 
-**Output**: YES
+All possible paths are:</br>
+DDRDRR (in red)</br>
+DRDDRR (in green)</br>
+
+<img src="https://files.codingninjas.in/untitled-21-28443.jpg" alt="not found">
+
 
 **Explanation**: The given adjacency matrix tells us that 1 is connected to 2 and 2 is connected to 3. We can use three different colors  color all three nodes.
 Hence we return true.
-
-
-**Example 1:**
-
-**Input**:
-3 2 </br>
-0 1 0 </br>
-1 0 1 </br>
-0 1 0 </br>
-
-**Output**: NO
-
-**Constraints**:
-
-    • 1 ≤ v ≤ 20
-    • 1 ≤ m ≤ v
-    • Time Limit: 1 sec
