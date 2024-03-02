@@ -1,30 +1,33 @@
-<h2><a href="https://leetcode.com/problems/n-queens/description/">54. N-Queens</a></h2>
+<h2><a href="https://leetcode.com/problems/sudoku-solver/description/">55. Sudoku Solver</a></h2>
 
-The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+Write a program to solve a Sudoku puzzle by filling the empty cells.
 
-Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
+A sudoku solution must satisfy all of the following rules:
 
-Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+1. Each of the digits 1-9 must occur exactly once in each row.</br>
+1. Each of the digits 1-9 must occur exactly once in each column.</br>
+1. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.</br>
+
+The '.' character indicates empty cells.
 
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2020/11/13/queens.jpg" alt="not found">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" alt="not found">
 
-**Input**: n = 4
+**Input**: board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 
-**Output**: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
-
-**Explanation**: There exist two distinct solutions to the 4-queens puzzle as shown above
+**Output**: [["5","3","4","6","7","8","9","1","2"],["6","7","2","1","9","5","3","4","8"],["1","9","8","3","4","2","5","6","7"],["8","5","9","7","6","1","4","2","3"],["4","2","6","8","5","3","7","9","1"],["7","1","3","9","2","4","8","5","6"],["9","6","1","5","3","7","2","8","4"],["2","8","7","4","1","9","6","3","5"],["3","4","5","2","8","6","1","7","9"]]
 
 
-**Example 2:**
+**Explanation**: The input board is shown above and the only valid solution is shown below:
 
-**Input**: n = 1
-
-**Output**: [["Q"]]
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/250px-Sudoku-by-L2G-20050714_solution.svg.png" alt="not found">
 
 
 **Constraints**:
 
-    • 1 <= n <= 9
+    • board.length == 9
+    • board[i].length == 9
+    • board[i][j] is a digit or '.'
+    • It is guaranteed that the input board has only one solution.
