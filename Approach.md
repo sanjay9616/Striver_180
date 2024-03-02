@@ -10,7 +10,7 @@
 |----------------------- | ----------------- | ----------------- |
 | Two Pointer            | O(N + M)          | O(N + M)          |
 
-### Approach 3: Binary Search  ## NEED TO REVISE
+### Approach 3: Binary Search  ## NEED TO IMPLEMENT
 
 | Algorithm              | Time Complexity      | Space Complexity  |
 |----------------------- | -------------------- | ----------------- |

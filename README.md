@@ -1,30 +1,27 @@
-<h2><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/description/">63. Median of Two Sorted Arrays</a></h2>
+<h2><a href="https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1">64. K-th element of two Arrays</a></h2>
 
-Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
-
-The overall run time complexity should be O(log (m+n)).
+Given two sorted arrays arr1 and arr2 of size N and M respectively and an element K. The task is to find the element that would be at the kth position of the final sorted array.
 
 **Example 1**:
 
-**Input**: nums1 = [1,3], nums2 = [2]
+**Input**: arr1[] = {2, 3, 6, 7, 9}, arr2[] = {1, 4, 8, 10}, k = 5
 
-**Output**: 2.00000
+**Output**: 6
 
-**Expanation**: merged array = [1,2,3] and median is 2.
+**Expanation**: The final sorted array would be - {1, 2, 3, 4, 6, 7, 8, 9, 10}, The 5th element of this array is 6.
 
 **Example 2**:
 
-**Input**: nums1 = [1,2], nums2 = [3,4]
+**Input**: arr1[] = {100, 112, 256, 349, 770}, arr2[] = {72, 86, 113, 119, 265, 445, 892}, k = 7
 
-**Output**: 2.50000
+**Output**: 256
 
-**Explanation**: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+**Explanation**: Final sorted array is - {72, 86, 100, 112,113, 119, 256, 265, 349, 445, 770, 892}, 7th element of this array is 256.
 
 **Constraints**:
 
-    • nums1.length == m
-    • nums2.length == n
-    • 0 <= m <= 1000
-    • 0 <= n <= 1000
-    • 1 <= m + n <= 2000
-    • -10^6 <= nums1[i], nums2[i] <= 10^6
+    • 1 <= N, M <= 10^6
+    • 0 <= arr1i, arr2i < INT_MAX
+    • 1 <= K <= N+M
+    • Expected Time Complexity: O(Log(N) + Log(M))
+    • Expected Auxiliary Space: O(Log (N))
