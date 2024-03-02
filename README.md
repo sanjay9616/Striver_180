@@ -1,29 +1,30 @@
-<h2><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/description/">62. Search in Rotated Sorted Array</a></h2>
+<h2><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/description/">63. Median of Two Sorted Arrays</a></h2>
 
-There is an integer array nums sorted in ascending order (with distinct values).
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
-Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
-
-Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
-
-You must write an algorithm with O(log n) runtime complexity.
+The overall run time complexity should be O(log (m+n)).
 
 **Example 1**:
 
-**Input**: nums = [4,5,6,7,0,1,2], target = 0
+**Input**: nums1 = [1,3], nums2 = [2]
 
-**Output**: -1
+**Output**: 2.00000
+
+**Expanation**: merged array = [1,2,3] and median is 2.
 
 **Example 2**:
 
-**Input**: nums = [1], target = 0
+**Input**: nums1 = [1,2], nums2 = [3,4]
 
-**Output**: -1
+**Output**: 2.50000
+
+**Explanation**: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 
 **Constraints**:
 
-    • 1 <= nums.length <= 5000
-    • -10^4 <= nums[i] <= 10^4
-    • All values of nums are unique.
-    • nums is an ascending array that is possibly rotated.
-    • -10^4 <= target <= 10^4
+    • nums1.length == m
+    • nums2.length == n
+    • 0 <= m <= 1000
+    • 0 <= n <= 1000
+    • 1 <= m + n <= 2000
+    • -10^6 <= nums1[i], nums2[i] <= 10^6

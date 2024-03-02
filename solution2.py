@@ -1,25 +1,31 @@
-# Approach 2: Binary Search
-
+# Approach 2: Two Pointer
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = (left + right) // 2
-            if nums[mid] == target:
-                return mid
-            # Check if left half is sorted
-            if nums[left] <= nums[mid]:
-                if nums[left] <= target < nums[mid]:
-                    right = mid - 1
-                else:
-                    left = mid + 1
-            # Otherwise, right half is sorted
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        n1, n2 = len(nums1), len(nums2)
+        i, j = 0, 0
+        l = []
+        while (i < n1 and j < n2):
+            if (nums1[i] < nums2[j]):
+                l.append(nums1[i])
+                i += 1
+            elif (nums1[i] == nums2[j]):
+                l.append(nums1[i])
+                l.append(nums2[j])
+                i += 1
+                j += 1
             else:
-                if nums[mid] < target <= nums[right]:
-                    left = mid + 1
-                else:
-                    right = mid - 1
-        return -1
+                l.append(nums2[j])
+                j += 1
+        while (i < n1):
+            l.append(nums1[i])
+            i += 1
+        while (j < n2):
+            l.append(nums2[j])
+            j += 1
+        if (len(l) % 2 == 1):
+            return l[len(l) // 2]
+        else:
+            return (l[len(l) // 2 - 1] + l[len(l) // 2]) / 2
 
-# Time Coplexicity =  O(log(N)) => Result = Success
-# Space Complexity = O(1)
+# Time Coplexicity =  O(N + M) => Result = Success
+# Space Complexity = O(N + M)
