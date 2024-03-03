@@ -1,27 +1,38 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1">64. K-th element of two Arrays</a></h2>
+<h2><a href="https://www.interviewbit.com/problems/allocate-books/">65. Allocate Books</a></h2>
 
-Given two sorted arrays arr1 and arr2 of size N and M respectively and an element K. The task is to find the element that would be at the kth position of the final sorted array.
+Given an array of integers A of size N and an integer B.
+
+The College library has N books. The ith book has A[i] number of pages.
+
+You have to allocate books to B number of students so that the maximum number of pages allocated to a student is minimum.
+
+1. A book will be allocated to exactly one student. </br>
+2. Each student has to be allocated at least one book. </br>
+3. Allotment should be in contiguous order, for example: A student cannot be allocated book 1 and book 3, skipping book 2. </br>
+
+Calculate and return that minimum possible number.
+
+**NOTE**: Return -1 if a valid assignment is not possible.
 
 **Example 1**:
 
-**Input**: arr1[] = {2, 3, 6, 7, 9}, arr2[] = {1, 4, 8, 10}, k = 5
+**Input**:A = [12, 34, 67, 90], B = 2
 
-**Output**: 6
+**Output**: 113
 
-**Expanation**: The final sorted array would be - {1, 2, 3, 4, 6, 7, 8, 9, 10}, The 5th element of this array is 6.
+**Explanation**: There are two students. Books can be distributed in following fashion : </br>
+1. [12] and [34, 67, 90] Max number of pages is allocated to student 2 with 34 + 67 + 90 = 191 pages </br>
+2. [12, 34] and [67, 90] Max number of pages is allocated to student 2 with 67 + 90 = 157 pages </br>
+3. [12, 34, 67] and [90] Max number of pages is allocated to student 1 with 12 + 34 + 67 = 113 pages Of the 3 cases, Option 3 has the minimum pages = 113.
+
 
 **Example 2**:
 
-**Input**: arr1[] = {100, 112, 256, 349, 770}, arr2[] = {72, 86, 113, 119, 265, 445, 892}, k = 7
+**Input**: A = [5, 17, 100, 11], B = 4
 
-**Output**: 256
-
-**Explanation**: Final sorted array is - {72, 86, 100, 112,113, 119, 256, 265, 349, 445, 770, 892}, 7th element of this array is 256.
+**Output**: 100
 
 **Constraints**:
 
-    • 1 <= N, M <= 10^6
-    • 0 <= arr1i, arr2i < INT_MAX
-    • 1 <= K <= N+M
-    • Expected Time Complexity: O(Log(N) + Log(M))
-    • Expected Auxiliary Space: O(Log (N))
+    • 1 <= N <= 105
+    •  1 <= A[i], B <= 105
