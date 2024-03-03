@@ -1,38 +1,46 @@
-<h2><a href="https://www.interviewbit.com/problems/allocate-books/">65. Allocate Books</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/aggressive-cows_1082559?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">66. Aggressive Cows</a></h2>
 
-Given an array of integers A of size N and an integer B.
+You are given an array 'arr' consisting of 'n' integers which denote the position of a stall.
 
-The College library has N books. The ith book has A[i] number of pages.
+You are also given an integer 'k' which denotes the number of aggressive cows.
 
-You have to allocate books to B number of students so that the maximum number of pages allocated to a student is minimum.
+You are given the task of assigning stalls to 'k' cows such that the minimum distance between any two of them is the maximum possible.
 
-1. A book will be allocated to exactly one student. </br>
-2. Each student has to be allocated at least one book. </br>
-3. Allotment should be in contiguous order, for example: A student cannot be allocated book 1 and book 3, skipping book 2. </br>
+Print the maximum possible minimum distance.
 
-Calculate and return that minimum possible number.
+**Example**:
 
-**NOTE**: Return -1 if a valid assignment is not possible.
+**Input**: 'n' = 3, 'k' = 2 and 'arr' = {1, 2, 3}
+
+**Output**: 2
+
+**Explanation**: The maximum possible minimum distance will be 2 when 2 cows are placed at positions {1, 3}. Here distance between cows is 2.
 
 **Example 1**:
 
-**Input**:A = [12, 34, 67, 90], B = 2
+**Input**:
 
-**Output**: 113
+6 4 </br>
+0 3 4 7 10 9 </br>
 
-**Explanation**: There are two students. Books can be distributed in following fashion : </br>
-1. [12] and [34, 67, 90] Max number of pages is allocated to student 2 with 34 + 67 + 90 = 191 pages </br>
-2. [12, 34] and [67, 90] Max number of pages is allocated to student 2 with 67 + 90 = 157 pages </br>
-3. [12, 34, 67] and [90] Max number of pages is allocated to student 1 with 12 + 34 + 67 = 113 pages Of the 3 cases, Option 3 has the minimum pages = 113.
+**Output**: 3
+
+**Explanation**: The maximum possible minimum distance between any two cows will be 3 when 4 cows are placed at positions {0, 3, 7, 10}. Here distance between cows are 3, 4 and 3 respectively.
 
 
 **Example 2**:
 
-**Input**: A = [5, 17, 100, 11], B = 4
+**Input**:
 
-**Output**: 100
+5 2 </br>
+4 2 1 3 6 </br>
+
+**Output**: 5
 
 **Constraints**:
 
-    • 1 <= N <= 105
-    •  1 <= A[i], B <= 105
+    • 2 <= 'n' <= 10 ^ 5
+    • 2 <= 'k' <= n
+    • 0 <= 'arr[i]' <= 10 ^ 9
+    • Time Limit: 1 sec.
+    • Can you solve this in O(n * log(n)) time complexity?
