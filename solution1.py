@@ -1,6 +1,8 @@
 # Approach 1: Brute Force
 
-# NEED TO IMPLEMENT
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return sorted(nums, reverse=True)[k-1]
 
-# Time Coplexicity = O((N + M) * log(N + M)) => Result = Success
-# Space Complexity = O(N + M)
+# Time Coplexicity = O(N * log(N)) => Result = Success
+# Space Complexity = O(1)
