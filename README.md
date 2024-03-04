@@ -1,40 +1,25 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/merge-k-sorted-arrays_975379">70. Merge K Sorted Arrays</a></h2>
+<h2><a href="https://leetcode.com/problems/top-k-frequent-elements/description/">71. Top K Frequent Elements</a></h2>
 
-You have been given ‘K’ different arrays/lists, which are sorted individually (in ascending order). You need to merge all the given arrays/list such that the output array/list should be sorted in ascending order.
+Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
 
 **Example 1**:
 
-**Input**: </br>
-1 </br>
-2 </br>
-3  </br>
-3 5 9 </br>
-4 </br>
-1 2 3 8 </br>
+**Input**:nums = [1,1,1,2,2,3], k = 2
 
-**Output**: 1 2 3 3 5 8 9 
+**Output**: [1,2]
 
 **Example 2**:
 
-**Input**: </br>
-1 </br>
-4 </br>
-3 </br>
-1 5 9 </br>
-2 </br>
-45 90 </br>
-5 </br>
-2 6 78 100 234 </br>
-1 </br>
-0 </br>
+**Input**: nums = [1], k = 1
 
-**Output**: 0 1 2 5 6 9 45 78 90 100 234
+**Output**: [1]
 
 **Constraints**:
 
-    • 1 <= T <= 5
-    • 1 <= K <= 5
-    • 1 <= N <= 20
-    • -10^5 <= DATA <= 10^5
-    • Time Limit: 1 sec
+    • 1 <= nums.length <= 10^5
+    • -10^4 <= nums[i] <= 10^4
+    • k is in the range [1, the number of unique elements in the array].
+    • It is guaranteed that the answer is unique.
+
+**Follow up**: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
