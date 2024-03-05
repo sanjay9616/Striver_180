@@ -1,19 +1,19 @@
-# Approach 1: Implement Queue using Arrays
-class Queue:
+# Approach 1: Implement Stack using Queues  ## NEED TO REVISE
+class MyStack:
+
     def __init__(self):
-        self.front = 0
-        self.rear = 0
-        self.arr = [0] * 100001
+        self.q = deque()
 
-    #  Enqueue (add) element 'e' at the end of the queue.
-    def enqueue(self, e: int) -> None:
-        self.arr[self.rear] = e
-        self.rear += 1
+    def push(self, x: int) -> None:
+        self.q.append(x)
+        for _ in range(len(self.q) - 1):
+            self.q.append(self.q.popleft())
 
-    #  Dequeue (retrieve) the element from the front of the queue.
-    def dequeue(self) -> int:
-        if self.front == self.rear:  # The queue is empty.
-            return -1
-        element = self.arr[self.front]
-        self.front += 1
-        return element
+    def pop(self) -> int:
+        return self.q.popleft()
+
+    def top(self) -> int:
+        return self.q[0]
+
+    def empty(self) -> bool:
+        return len(self.q) == 0
