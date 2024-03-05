@@ -1,4 +1,4 @@
-### Approach 1: Stack Implementation Using Array
+### Approach 1: Implement Queue using Arrays
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |

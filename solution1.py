@@ -1,36 +1,19 @@
-# Approach 1: Stack Implementation using Array
-class Stack:
-    def __init__(self, n: int):
-        self.myStack = [0] * n
-        self.stackSize = -1
-        self.n = n
+# Approach 1: Implement Queue using Arrays
+class Queue:
+    def __init__(self):
+        self.front = 0
+        self.rear = 0
+        self.arr = [0] * 100001
 
-    def push(self, num: int):
-        if self.stackSize != self.n - 1:
-            self.stackSize += 1
-            self.myStack[self.stackSize] = num
+    #  Enqueue (add) element 'e' at the end of the queue.
+    def enqueue(self, e: int) -> None:
+        self.arr[self.rear] = e
+        self.rear += 1
 
-    def pop(self) -> int:
-        if self.stackSize != -1:
-            self.stackSize -= 1
-            return self.myStack[self.stackSize + 1]
-        else:
+    #  Dequeue (retrieve) the element from the front of the queue.
+    def dequeue(self) -> int:
+        if self.front == self.rear:  # The queue is empty.
             return -1
-
-    def top(self) -> int:
-        if self.stackSize != -1:
-            return self.myStack[self.stackSize]
-        else:
-            return -1
-
-    def isEmpty(self) -> int:
-        if self.stackSize != -1:
-            return 0
-        else:
-            return 1
-
-    def isFull(self) -> int:
-        if self.stackSize != self.n - 1:
-            return 0
-        else:
-            return 1
+        element = self.arr[self.front]
+        self.front += 1
+        return element
