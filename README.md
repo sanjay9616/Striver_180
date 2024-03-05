@@ -1,38 +1,32 @@
-<h2><a href="https://leetcode.com/problems/implement-stack-using-queues/description/">74. Implement Stack using Queues</a></h2>
+<h2><a href="https://leetcode.com/problems/valid-parentheses/description/">75. Valid Parentheses</a></h2>
 
-Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-Implement the MyStack class: </br>
-1. void push(int x) Pushes element x to the top of the stack. </br>
-2. int pop() Removes the element on the top of the stack and returns it. </br>
-3. int top() Returns the element on the top of the stack. </br>
-4. boolean empty() Returns true if the stack is empty, false otherwise. </br>
-
-**Notes**:
-
-1. You must use only standard operations of a queue, which means that only push to back, peek/pop from front, size and is empty operations are valid.
-
-2. Depending on your language, the queue may not be supported natively. You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue's standard operations.
+An input string is valid if: </br>
+1. Open brackets must be closed by the same type of brackets. </br>
+2. Open brackets must be closed in the correct order. </br>
+3. Every close bracket has a corresponding open bracket of the same type. </br>
 
 **Example 1**:
 
-**Input** ["MyStack", "push", "push", "top", "pop", "empty"], [[], [1], [2], [], [], []]
+**Input** s = "()"
 
-**Output**: [null, null, null, 2, 2, false]
+**Output**: true
 
-**Explanation**
+**Example 1**:
 
-MyStack myStack = new MyStack(); </br>
-myStack.push(1); </br>
-myStack.push(2); </br>
-myStack.top(); // return 2 </br>
-myStack.pop(); // return 2 </br>
-myStack.empty(); // return False </br>
+**Input** s = "()[]{}"
+
+**Output**: true
+
+**Example 1**:
+
+**Input** s = "(]"
+
+**Output**: false
+
 
 **Constraints**:
 
-    • 1 <= x <= 9
-    • At most 100 calls will be made to push, pop, top, and empty.
-    • All the calls to pop and top are valid.
-
-**Follow-up**: Can you implement the stack using only one queue?
+    • 1 <= s.length <= 10^4
+    • s consists of parentheses only '()[]{}'

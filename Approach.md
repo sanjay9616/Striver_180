@@ -1,5 +1,5 @@
-### Approach 1: Implement Stack using Queues  ## NEED TO REVISE
+### Approach 1: Using Stack
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| -----------            | -------------            | ----              |
+| Using Stack            | O(N)                     | O(N)              |
