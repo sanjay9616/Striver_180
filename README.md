@@ -1,32 +1,40 @@
-<h2><a href="https://leetcode.com/problems/valid-parentheses/description/">75. Valid Parentheses</a></h2>
+<h2><a href="https://leetcode.com/problems/next-greater-element-i/description/">76. Next Greater Element I</a></h2>
 
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
 
-An input string is valid if: </br>
-1. Open brackets must be closed by the same type of brackets. </br>
-2. Open brackets must be closed in the correct order. </br>
-3. Every close bracket has a corresponding open bracket of the same type. </br>
+You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
 
-**Example 1**:
+For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.
 
-**Input** s = "()"
-
-**Output**: true
+Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
 
 **Example 1**:
 
-**Input** s = "()[]{}"
+**Input** nums1 = [4,1,2], nums2 = [1,3,4,2]
 
-**Output**: true
+**Output**: [-1,3,-1]
 
-**Example 1**:
+**Explanation**: The next greater element for each value of nums1 is as follows: </br>
+- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1. </br>
+- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3. </br>
+- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1. </br>
 
-**Input** s = "(]"
+**Example 2**:
 
-**Output**: false
+**Input** nums1 = [2,4], nums2 = [1,2,3,4]
 
+**Output**: [3,-1]
+
+**Explanation**: The next greater element for each value of nums1 is as follows: </br>
+- 2 is underlined in nums2 = [1,2,3,4]. The next greater element is 3. </br>
+- 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1. </br>
+- 
 
 **Constraints**:
 
-    • 1 <= s.length <= 10^4
-    • s consists of parentheses only '()[]{}'
+    • 1 <= nums1.length <= nums2.length <= 1000
+    • 0 <= nums1[i], nums2[i] <= 10^4
+    • All integers in nums1 and nums2 are unique.
+    • All the integers of nums1 also appear in nums2
+
+**Follow up**: Could you find an O(nums1.length + nums2.length) solution?
