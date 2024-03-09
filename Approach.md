@@ -1,4 +1,4 @@
-### Approach 1: HashMap  ### NEED TO REVISE
+### Approach 1: HashMap  ### NEED TO IMPLEMENT
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
