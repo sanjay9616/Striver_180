@@ -2,5 +2,5 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(N^2)                   | O(1)              |
+| Using Stack            | O(N)                     | O(1)              |
 

@@ -1,39 +1,52 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/sort-a-stack_985275?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">77. Sort a Stack</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/immediate-smaller-element-_1062597?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">78. Immediate Smaller Element</a></h2>
 
-You’re given a stack consisting of 'N' integers. Your task is to sort this stack in descending order using recursion.
+You are given an integer array 'a' of size 'n'.
 
-We can only use the following functions on this stack S.
+For each element in the array, check whether the immediate right element of the array is smaller or not.
 
-is_empty(S) : Tests whether stack is empty or not. </br>
-push(S) : Adds a new element to the stack. </br>
-pop(S) : Removes top element from the stack. </br>
-top(S) : Returns value of the top element. Note that this function does not remove elements from the stack.</br>
+If the next element is smaller, update the current index to that element. If not, then -1. The last element does not have any elements on its right.
 
-**Note** :
+**Example** :
 
-1) Use of any loop constructs like while, for..etc is not allowed. </br>
-2) The stack may contain duplicate integers. </br>
-3) The stack may contain any integer i.e it may either be negative, positive or zero. </br>
+Input: 'a' = [4, 7, 8, 2, 3, 1] </br>
+Output: Modified array 'a' = [-1, -1, 2, -1, 1, -1] </br>
+Explanation: In the array 'a': </br>
+4 has 7 on its right. Since 7 is not smaller, we update 4 to -1. </br>
+7 has 8 on its right. Since 8 is not smaller, we update 7 to -1. </br>
+8 has 2 on its right. Since 2 is smaller than 8, we update 8 to 2. </br>
+2 has 3 on its right. Since 3 is not smaller, we update 2 to -1. </br>
+3 has 1 on its right. Since 1 is smaller than 3, we update 3 to 1. </br>
+1 does not have any element on right. So we update 1 to -1. </br>
 
 **Example 1**:
 
-**Input** nums1 = [5, -2, 9, -7, 3]
+**Input** nums1 = [4, 7, 8, 2, 3, 1]
 
-**Output**: [9, 5, 3, -2, -7]
+**Output**: [-1, -1, 2, -1, 1, -1 ]
 
-**Explanation**: 9 Is the largest element, hence it’s present at the top. Similarly 5>3, 3>-2 and -7 being the smallest element is present at the last.
+**Explanation**: In the array 'a': </br>
+4 has 7 on its right. Since 7 is not smaller, we update 4 to -1. </br>
+7 has 8 on its right. Since 8 is not smaller, we update 7 to -1. </br>
+8 has 2 on its right. Since 2 is smaller than 8, we update 8 to 2. </br>
+2 has 3 on its right. Since 3 is not smaller, we update 2 to -1. </br>
+3 has 1 on its right. Since 1 is smaller than 3, we update 3 to 1. </br>
+1 does not have any element on right. So we update 1 to -1. </br>
 
 **Example 2**:
 
-**Input** nums1 = [-3, 14, 18, -5, 30]
+**Input** nums1 = [1, 2, 3, 4]
 
-**Output**: [30, 18, 14, -3, -5]
+**Output**: [-1, -1, -1, -1 ]
 
-**Explanation**: 30 is the largest element, hence it’s present at the top. Similarly, 18>14, 14>-3 and -5 being the smallest element is present at the last.
+**Example 3**:
+
+**Input** nums1 = [4, 3, 2, 1]
+
+**Output**: [3, 2, 1, -1]
 
 **Constraints**:
 
-    • 1 <= 'T' <= 100
-    • 1 <=  'N' <= 100
-    • 1 <= |'V'| <= 10^9, Where |V| denotes the absolute value of any stack element.
-    • Time limit: 1 sec
+    • 1 <= 'n' <= 10 ^ 5
+    • 1 <= 'a[i]' <= 10 ^ 9
+    • Time Limit : 1 sec
+    • The expected time complexity is O(n).
