@@ -1,27 +1,24 @@
-<h2><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/description/">81. Largest Rectangle in Histogram</a></h2>
+<h2><a href="https://leetcode.com/problems/sliding-window-maximum/description/">82. Sliding Window Maximum</a></h2>
 
-Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+
+Return the max sliding window.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg" alt="not found">
+**Input**: nums = [1,3,-1,-3,5,3,6,7], k = 3
 
-**Input**: heights = [2,1,5,6,2,3]
-
-**Output**: 10
-
-**Explanation**: The above is a histogram where width of each bar is 1. The largest rectangle is shown in the red area, which has an area = 10 units.
+**Output**: [3,3,5,5,6,7]
 
 **Example 2**:
 
-<img src="https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg" alt="not found">
+**Input**: nums = [1], k = 1
 
-**Input**: heights = [2,4]
-
-**Output**: 4
+**Output**: [1]
 
 
 **Constraints**:
 
-    • 1 <= heights.length <= 10^5
-    • 0 <= heights[i] <= 104
+    • 1 <= nums.length <= 10^5
+    • -10^4 <= nums[i] <= 10^4
+    • 1 <= k <= nums.length

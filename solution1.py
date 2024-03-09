@@ -1,13 +1,10 @@
 # Approach 1: Brute Force
 class Solution:
-    def largestRectangleArea(self, heights: List[int]) -> int:
-        res = float('-inf')
-        for i in range(len(heights)):
-            minHeight = float('inf')
-            for j in range(i, len(heights)):
-                minHeight = min(minHeight, heights[j])
-                res = max(res, minHeight * (j - i + 1))
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        for i in range(len(nums) - k + 1):
+            res.append(max(nums[i:i+k]))
         return res
 
-# Time Coplexicity = O(N^2) => Result = TLE
+# Time Coplexicity = O(N * k) => Result = TLE
 # Space Complexity = O(1)
