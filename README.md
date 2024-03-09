@@ -1,24 +1,37 @@
-<h2><a href="https://leetcode.com/problems/sliding-window-maximum/description/">82. Sliding Window Maximum</a></h2>
+<h2><a href="https://leetcode.com/problems/min-stack/description/">83. Min Stack</a></h2>
 
-You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
-Return the max sliding window.
+Implement the MinStack class:
+
+1. MinStack() initializes the stack object. </br>
+2. void push(int val) pushes the element val onto the stack. </br>
+3. void pop() removes the element on the top of the stack. </br>
+4. int top() gets the top element of the stack. </br>
+5. int getMin() retrieves the minimum element in the stack. </br>
+
+You must implement a solution with O(1) time complexity for each function.
 
 **Example 1**:
 
-**Input**: nums = [1,3,-1,-3,5,3,6,7], k = 3
+**Input**: ["MinStack","push","push","push","getMin","pop","top","getMin"], [[],[-2],[0],[-3],[],[],[],[]]
 
-**Output**: [3,3,5,5,6,7]
+**Output**: [null,null,null,null,-3,null,0,-2]
 
-**Example 2**:
+**Explanation**:
 
-**Input**: nums = [1], k = 1
-
-**Output**: [1]
+MinStack minStack = new MinStack(); </br>
+minStack.push(-2);</br>
+minStack.push(0);</br>
+minStack.push(-3);</br>
+minStack.getMin(); // return -3</br>
+minStack.pop();</br>
+minStack.top();    // return 0</br>
+minStack.getMin(); // return -2</br>
 
 
 **Constraints**:
 
-    • 1 <= nums.length <= 10^5
-    • -10^4 <= nums[i] <= 10^4
-    • 1 <= k <= nums.length
+    • -2^31 <= val <= 2^31 - 1
+    • Methods pop, top and getMin operations will always be called on non-empty stacks.
+    • At most 3 * 10^4 calls will be made to push, pop, top, and getMin.

@@ -2,6 +2,6 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(N * K)                 | O(1)              |
+| Using Stack            | O(1)                     | O(N)              |
 
 
