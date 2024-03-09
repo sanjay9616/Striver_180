@@ -1,52 +1,38 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/immediate-smaller-element-_1062597?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">78. Immediate Smaller Element</a></h2>
+<h2><a href="https://leetcode.com/problems/lru-cache/description/">79. LRU Cache</a></h2>
 
-You are given an integer array 'a' of size 'n'.
+Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 
-For each element in the array, check whether the immediate right element of the array is smaller or not.
+Implement the LRUCache class:
 
-If the next element is smaller, update the current index to that element. If not, then -1. The last element does not have any elements on its right.
+1. LRUCache(int capacity) Initialize the LRU cache with positive size capacity. </br>
+2. int get(int key) Return the value of the key if the key exists, otherwise return -1. </br>
+3. void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key. </br>
 
-**Example** :
-
-Input: 'a' = [4, 7, 8, 2, 3, 1] </br>
-Output: Modified array 'a' = [-1, -1, 2, -1, 1, -1] </br>
-Explanation: In the array 'a': </br>
-4 has 7 on its right. Since 7 is not smaller, we update 4 to -1. </br>
-7 has 8 on its right. Since 8 is not smaller, we update 7 to -1. </br>
-8 has 2 on its right. Since 2 is smaller than 8, we update 8 to 2. </br>
-2 has 3 on its right. Since 3 is not smaller, we update 2 to -1. </br>
-3 has 1 on its right. Since 1 is smaller than 3, we update 3 to 1. </br>
-1 does not have any element on right. So we update 1 to -1. </br>
+The functions get and put must each run in O(1) average time complexity.
 
 **Example 1**:
 
-**Input** nums1 = [4, 7, 8, 2, 3, 1]
+**Input**
+["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"] </br>
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
 
-**Output**: [-1, -1, 2, -1, 1, -1 ]
+**Output**: [null, null, null, 1, null, -1, null, -1, 3, 4]
 
-**Explanation**: In the array 'a': </br>
-4 has 7 on its right. Since 7 is not smaller, we update 4 to -1. </br>
-7 has 8 on its right. Since 8 is not smaller, we update 7 to -1. </br>
-8 has 2 on its right. Since 2 is smaller than 8, we update 8 to 2. </br>
-2 has 3 on its right. Since 3 is not smaller, we update 2 to -1. </br>
-3 has 1 on its right. Since 1 is smaller than 3, we update 3 to 1. </br>
-1 does not have any element on right. So we update 1 to -1. </br>
-
-**Example 2**:
-
-**Input** nums1 = [1, 2, 3, 4]
-
-**Output**: [-1, -1, -1, -1 ]
-
-**Example 3**:
-
-**Input** nums1 = [4, 3, 2, 1]
-
-**Output**: [3, 2, 1, -1]
+**Explanation**
+LRUCache lRUCache = new LRUCache(2); </br>
+lRUCache.put(1, 1); // cache is {1=1} </br>
+lRUCache.put(2, 2); // cache is {1=1, 2=2} </br>
+lRUCache.get(1);    // return 1 </br>
+lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3} </br>
+lRUCache.get(2);    // returns -1 (not found) </br>
+lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3} </br>
+lRUCache.get(1);    // return -1 (not found) </br>
+lRUCache.get(3);    // return 3 </br>
+lRUCache.get(4);    // return 4 </br>
 
 **Constraints**:
 
-    • 1 <= 'n' <= 10 ^ 5
-    • 1 <= 'a[i]' <= 10 ^ 9
-    • Time Limit : 1 sec
-    • The expected time complexity is O(n).
+    • 1 <= capacity <= 3000
+    • 0 <= key <= 10^4
+    • 0 <= value <= 10^5
+    • At most 2 * 10^5 calls will be made to get and put

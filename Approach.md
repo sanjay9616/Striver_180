@@ -1,6 +1,6 @@
-### Approach 1: Brute Force  ### NEED TO IMPLEMENT
+### Approach 1: HashMap  ### NEED TO REVISE
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(N)                     | O(1)              |
+| Using Stack            | O(1)                     | O(1)              |
 
