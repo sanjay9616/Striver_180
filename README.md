@@ -1,28 +1,27 @@
-<h2><a href="https://leetcode.com/problems/longest-common-prefix/description/">92. Longest Common Prefix</a></h2>
+<h2><a href="https://leetcode.com/problems/repeated-string-match/description/">93. Repeated String Match</a></h2>
 
 
-Write a function to find the longest common prefix string amongst an array of strings.
+Given two strings a and b, return the minimum number of times you should repeat string a so that string b is a substring of it. If it is impossible for b​​​​​​ to be a substring of a after repeating it, return -1.
 
-If there is no common prefix, return an empty string "".
+**Notice**: string "abc" repeated 0 times is "", repeated 1 time is "abc" and repeated 2 times is "abcabc".
 
 
 **Example 1:**
 
-**Input**: strs = ["flower","flow","flight"]
+**Input**: a = "abcd", b = "cdabcdab"
 
-**Output**: "fl"
+**Output**: 3
+
+**Explanation**: We return 3 because by repeating a three times "abcdabcdabcd", b is a substring of it.
 
 **Example 2:**
 
-**Input**: strs = ["dog","racecar","car"]
+**Input**: a = "a", b = "aa"
 
-**Output**: ""
-
-**Explanation**:There is no common prefix among the input strings.
+**Output**: 2
 
 
 **Constraints**:
 
-    • 1 <= strs.length <= 200
-    • 0 <= strs[i].length <= 200
-    • strs[i] consists of only lowercase English letters.
+    • 1 <= a.length, b.length <= 10^4
+    • a and b consist of lowercase English letters.

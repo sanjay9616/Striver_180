@@ -1,16 +1,11 @@
-# Approach 1: By Sorting
+# Approach 1: Brute Force
 
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        strs.sort()
-        first = strs[0]
-        last = strs[-1]
-        res = ""
-        for i in range(min(len(first), len(last))):
-            if(first[i] != last[i]):
-                return res
-            res += first[i]
-        return res
+    def repeatedStringMatch(self, a: str, b: str) -> int:
+        for i in range(len(b)//len(a), len(b)//len(a)+3):
+            if (b in a * i):
+                return i
+        return -1
 
-# Time Coplexicity = O(N * log(N)) => Result = Success
-# Space Complexity = O(1)
+# Time Coplexicity = O(1) => Result = Success
+# Space Complexity = O(N)
