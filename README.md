@@ -1,43 +1,38 @@
-<h2><a href="https://leetcode.com/problems/rotting-oranges/description/">84. Rotting Oranges</a></h2>
+<h2><a href="https://leetcode.com/problems/online-stock-span/description/">85. Online Stock Span</a></h2>
 
-You are given an m x n grid where each cell can have one of three values:
+Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
 
-1. 0 representing an empty cell, </br>
-2. 1 representing a fresh orange, or </br>
-3. 2 representing a rotten orange. </br>
+The span of the stock's price in one day is the maximum number of consecutive days (starting from that day and going backward) for which the stock price was less than or equal to the price of that day.
 
-Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.
+1. For example, if the prices of the stock in the last four days is [7,2,1,2] and the price of the stock today is 2, then the span of today is 4 because starting from today, the price of the stock was less than or equal 2 for 4 consecutive days.
 
-Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.
+2. Also, if the prices of the stock in the last four days is [7,34,1,2] and the price of the stock today is 8, then the span of today is 3 because starting from today, the price of the stock was less than or equal 8 for 3 consecutive days.
+
+Implement the StockSpanner class:
+
+1. StockSpanner() Initializes the object of the class.
+
+2. int next(int price) Returns the span of the stock's price given that today's price is price.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2019/02/16/oranges.png" alt="not found">
+**Input**: ["StockSpanner", "next", "next", "next", "next", "next", "next", "next"], [[], [100], [80], [60], [70], [60], [75], [85]]
 
-**Input**: grid = [[2,1,1],[1,1,0],[0,1,1]]
+**Output**: [null, 1, 1, 1, 2, 1, 4, 6]
 
-**Output**: 4
 
-**Example 2**:
-
-**Input**: grid = [[2,1,1],[0,1,1],[1,0,1]]
-
-**Output**: -1
-
-**Explanation**: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
-
-**Example 3**:
-
-**Input**: grid = [[0,2]]
-
-**Output**: 0
-
-**Explanation**: Since there are already no fresh oranges at minute 0, the answer is just 0.
+**Explanation**:
+StockSpanner stockSpanner = new StockSpanner(); </br>
+stockSpanner.next(100); // return 1 </br>
+stockSpanner.next(80);  // return 1 </br>
+stockSpanner.next(60);  // return 1 </br>
+stockSpanner.next(70);  // return 2 </br>
+stockSpanner.next(60);  // return 1 </br>
+stockSpanner.next(75);  // return 4, because the last 4 prices (including today's price of 75) were less than or equal to today's price. </br>
+stockSpanner.next(85);  // return 6 </br>
 
 
 **Constraints**:
 
-    • m == grid.length
-    • n == grid[i].length
-    • 1 <= m, n <= 10
-    • grid[i][j] is 0, 1, or 2.
+    • 1 <= price <= 10^5
+    • At most 10^4 calls will be made to next.

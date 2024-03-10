@@ -1,13 +1,7 @@
-### Approach 1: Using BFS ### NEED TO IMPLEMENT
+### Approach 1: Using Stack
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(-)                     | O(-)              |
-
-### Approach 2: Using DFS ### NEED TO IMPLEMENT
-
-| Algorithm              | Time Complexity          | Space Complexity  |
-|----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(-)                     | O(-)              |
+| Using Stack            | O(N)                     | O(N)              |
 
 
