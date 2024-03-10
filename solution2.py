@@ -1,4 +1,4 @@
-# Approach 1: Brute Force
+# Approach 1: Using Two Pointer
 
 class Solution:
     def solve(self, A):
@@ -10,5 +10,5 @@ class Solution:
             res += 1
         return res
 
-# Time Coplexicity = O(N^2) => Result = TLE
+# Time Coplexicity = O(N) or o(N^2) => Result = TLE
 # Space Complexity = O(1)

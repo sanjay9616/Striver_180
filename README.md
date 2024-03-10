@@ -1,26 +1,28 @@
-<h2><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/">94. Find the Index of the First Occurrence in a String</a></h2>
+<h2><a href="https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/">95. Minimum Characters required to make a String Palindromic</a></h2>
 
-Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Given a string A. The only operation allowed is to insert characters at the beginning of the string. </br>
+Find how many minimum characters are needed to be inserted to make the string a palindrome string.
 
 
 **Example 1:**
 
-**Input**: haystack = "sadbutsad", needle = "sad"
+**Input**: A = "ABC"
 
-**Output**: 0
+**Output**: 2
 
-**Explanation**: "sad" occurs at index 0 and 6. The first occurrence is at index 0, so we return 0.
+**Explanation**: Insert 'B' at beginning, string becomes: "BABC". </br>
+Insert 'C' at beginning, string becomes: "CBABC".
 
 **Example 2:**
 
-**Input**: haystack = "leetcode", needle = "leeto"
+**Input**: A = "AACECAAAA"
 
-**Output**: -1
+**Output**: 2
 
-**Explanation**: "leeto" did not occur in "leetcode", so we return -1.
+**Explanation**: Insert 'A' at beginning, string becomes: "AAACECAAAA". </br>
+Insert 'A' at beginning, string becomes: "AAAACECAAAA".
 
 
 **Constraints**:
 
-    • 1 <= haystack.length, needle.length <= 10^4
-    • haystack and needle consist of only lowercase English characters.
+    • 1 <= |A| <= 106
