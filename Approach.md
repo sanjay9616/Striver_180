@@ -1,7 +1,14 @@
-### Approach 1: Using Stack ## NEED TO IMPLEMENT
+### Approach 1: Brute Force (One Line)
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Stack            | O(N^2)                   | O(1)              |
+| Brute Force            | O(N)                     | O(N)              |
+
+### Approach 2: Two Pinter
+
+| Algorithm              | Time Complexity          | Space Complexity  |
+|----------------------- | ------------------------ | ----------------- |
+| Two Pinter             | O(N)                     | O(1)              |
+
 
 

@@ -1,7 +1,9 @@
-# Approach 1: Briute Force
+# Approach 1: Briute Force (One Line)
 
-## NEED TO IMPLEMENT
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(s.split()[::-1])
 
 
-# Time Coplexicity = O(N^2 * k) => Result = TLE
-# Space Complexity = O(2N)
+# Time Coplexicity = O(N) => Result = TLE
+# Space Complexity = O(N)
