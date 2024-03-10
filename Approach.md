@@ -2,7 +2,7 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Brute Force            | O(N^3)                   | O(1)              |
+| Brute Force            | O(N)                     | O(1)              |
 
 
 

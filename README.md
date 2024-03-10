@@ -1,56 +1,74 @@
-<h2><a href="https://leetcode.com/problems/roman-to-integer/description/">90. Roman to Integer</a></h2>
-
-<h2><a href="https://leetcode.com/problems/integer-to-roman/submissions/1199714221/">90. Integer to Roman</a></h2>
+<h2><a href="https://leetcode.com/problems/roman-to-integer/description/">91. String to Integer (atoi) / STRSTR</a></h2>
 
 
-Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
 
-| Symbol          | Value       |
-|---------------- | ----------- |
-| I               | 1           |
-| V               | 5           |
-| X               | 10          |
-| L               | 50          |
-| C               | 100         |
-| D               | 500         |
-| M               | 1000        |
+The algorithm for myAtoi(string s) is as follows:
 
-For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+1. Read in and ignore any leading whitespace. </br>
 
-Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+2. Check if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present </br>
 
-1. I can be placed before V (5) and X (10) to make 4 and 9. </br>
-2. X can be placed before L (50) and C (100) to make 40 and 90. </br>
-3. C can be placed before D (500) and M (1000) to make 400 and 900. </br>
+3. Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored. </br>
+
+4. Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2). </br>
+
+5. If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1. </br>
+
+6. Return the integer as the final result. </br>
+
+**Note**:
+
+1. Only the space character ' ' is considered a whitespace character. </br>
+2. Do not ignore any characters other than the leading whitespace or the rest of the string after the digits. </br>
+
 
 
 **Example 1:**
 
-**Input**: s = "III"
+**Input**: s = "42"
 
-**Output**: 3
+**Output**: 42
 
-**Explanation**: III = 3.
+**Explanation**:
+
+The underlined characters are what is read in, the caret is the current reader position. </br>
+Step 1: "42" (no characters read because there is no leading whitespace) </br>
+Step 2: "42" (no characters read because there is neither a '-' nor '+') </br>
+Step 3: "42" ("42" is read in) </br>
+The parsed integer is 42. </br>
+Since 42 is in the range [-231, 231 - 1], the final result is 42. </br>
 
 **Example 2:**
 
-**Input**: s = "LVIII"
+**Input**: s = "   -42"
 
-**Output**: 58
+**Output**: -42
 
-**Explanation**: L = 50, V= 5, III = 3.
+**Explanation**:
+
+Step 1: "   -42" (leading whitespace is read and ignored) </br>
+Step 2: "   -42" ('-' is read, so the result should be negative) </br>
+Step 3: "   -42" ("42" is read in)
+The parsed integer is -42. </br>
+Since -42 is in the range [-231, 231 - 1], the final result is -42. </br>
 
 **Example 2:**
 
-**Input**: s = "MCMXCIV"
+**Input**: s = "4193 with words"
 
-**Output**: 1994
+**Output**: 4193
 
-**Explanation**: M = 1000, CM = 900, XC = 90 and IV = 4.
+**Explanation**:
+
+Step 1: "4193 with words" (no characters read because there is no leading whitespace) </br>
+Step 2: "4193 with words" (no characters read because there is neither a '-' nor '+') </br>
+Step 3: "4193 with words" ("4193" is read in; reading stops because the next character is a non-digit) </br>
+The parsed integer is 4193. </br>
+Since 4193 is in the range [-231, 231 - 1], the final result is 4193. </br>
 
 
 **Constraints**:
 
-    • 1 <= s.length <= 15
-    • s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
-    • It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+    • 0 <= s.length <= 200
+    • s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
