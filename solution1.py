@@ -1,26 +1,20 @@
-# Approach 1: Using Stack
+# Approach 1: Briute Force
 
-class StockSpanner:
+def maxMinWindow(arr, n):
+    INT_MIN = -maxsize - 1
+    INT_MAX = maxsize
+    answer = [INT_MIN] * n
+    for i in range(n):
+        for j in range(i, n):
+            start = i
+            end = j
+            temp = INT_MAX
+            for k in range(start, end+1):
+                temp = min(temp, arr[k])
+            length = end - start
+            answer[length] = max(answer[length], temp)
+    return answer
 
-    def __init__(self):
-        self.span = []
-        self.stock = []
 
-    def next(self, price: int) -> int:
-        if (self.stock == []):
-            self.stock.append(price)
-            self.span.append(1)
-            return 1
-        count = 1
-        while (self.stock):
-            if (self.stock[-1] <= price):
-                count += self.span.pop()
-                self.stock.pop()
-            else:
-                break
-        self.stock.append(price)
-        self.span.append(count)
-        return count
-
-# Time Coplexicity = O(N) => Result = Success
+# Time Coplexicity = O(N^2 * k) => Result = TLE
 # Space Complexity = O(2N)

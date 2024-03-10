@@ -1,38 +1,54 @@
-<h2><a href="https://leetcode.com/problems/online-stock-span/description/">85. Online Stock Span</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/max-of-min_982935?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">86. Maximum of minimum for every window size</a></h2>
 
-Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
+You are given an array of ‘N’ integers, you need to find the maximum of minimum for every window size. The size of the window should vary from 1 to ‘N’ only.
 
-The span of the stock's price in one day is the maximum number of consecutive days (starting from that day and going backward) for which the stock price was less than or equal to the price of that day.
+For example:
 
-1. For example, if the prices of the stock in the last four days is [7,2,1,2] and the price of the stock today is 2, then the span of today is 4 because starting from today, the price of the stock was less than or equal 2 for 4 consecutive days.
+ARR = [1,2,3,4] </br>
+Minimums of window size 1 = min(1), min(2), min(3), min(4) = 1,2,3,4 </br>
+Maximum among (1,2,3,4)  is 4 </br>
 
-2. Also, if the prices of the stock in the last four days is [7,34,1,2] and the price of the stock today is 8, then the span of today is 3 because starting from today, the price of the stock was less than or equal 8 for 3 consecutive days.
+Minimums of window size 2 = min(1,2), min(2,3),   min(3,4) = 1,2,3 </br>
+Maximum among (1,2,3) is 3 </br>
 
-Implement the StockSpanner class:
+Minimums of window size 3 = min(1,2,3), min(2,3,4) = 1,2 </br>
+Maximum among (1,2) is 2 </br>
 
-1. StockSpanner() Initializes the object of the class.
-
-2. int next(int price) Returns the span of the stock's price given that today's price is price.
+Minimums of window size 4 = min(1,2,3,4) = 1 </br>
+Maximum among them is 1 </br>
+The output array should be [4,3,2,1]. </br>
 
 **Example 1**:
 
-**Input**: ["StockSpanner", "next", "next", "next", "next", "next", "next", "next"], [[], [100], [80], [60], [70], [60], [75], [85]]
+**Input**: </br>
+2 </br>
+4 </br>
+1 2 3 4 </br>
+5 </br>
+3 3 4 2 4  </br>
 
-**Output**: [null, 1, 1, 1, 2, 1, 4, 6]
+**Output**: </br>
+4 3 2 1 </br>
+4 3 3 2 2 </br>
 
+**Example 2**:
 
-**Explanation**:
-StockSpanner stockSpanner = new StockSpanner(); </br>
-stockSpanner.next(100); // return 1 </br>
-stockSpanner.next(80);  // return 1 </br>
-stockSpanner.next(60);  // return 1 </br>
-stockSpanner.next(70);  // return 2 </br>
-stockSpanner.next(60);  // return 1 </br>
-stockSpanner.next(75);  // return 4, because the last 4 prices (including today's price of 75) were less than or equal to today's price. </br>
-stockSpanner.next(85);  // return 6 </br>
+**Input**: </br>
+2 </br>
+5 </br>
+45 -2 42 5 -11  </br>
+6 </br>
+-2 12 -1 1 20 1   </br>
+
+**Output**: </br>
+45 5 -2 -2 -11 </br>
+20 1  1 -1 -1 -2 </br>
 
 
 **Constraints**:
 
-    • 1 <= price <= 10^5
-    • At most 10^4 calls will be made to next.
+    • 1 <= T <= 100
+    • 1 <= N <= 10 ^ 4 
+    • -10 ^ 9 <= ARR[i] <= 10 ^ 9
+    • Where ‘T’ is the number of test cases, ‘N’ is the size of the array and ‘ARR[i]’ is the size of the array elements.
+    • Time Limit: 1 sec
