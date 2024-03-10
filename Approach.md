@@ -2,7 +2,7 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| By Sorting             | O(1)                     | O(N)              |
+| By Sorting             | O(N)                     | O(1)              |
 
 
 ### Approach 2: Rabin Karp Algorithms  ### NEED TO IMPLEMENT

@@ -1,27 +1,26 @@
-<h2><a href="https://leetcode.com/problems/repeated-string-match/description/">93. Repeated String Match</a></h2>
+<h2><a href="https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/">94. Find the Index of the First Occurrence in a String</a></h2>
 
-
-Given two strings a and b, return the minimum number of times you should repeat string a so that string b is a substring of it. If it is impossible for b​​​​​​ to be a substring of a after repeating it, return -1.
-
-**Notice**: string "abc" repeated 0 times is "", repeated 1 time is "abc" and repeated 2 times is "abcabc".
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
 
 **Example 1:**
 
-**Input**: a = "abcd", b = "cdabcdab"
+**Input**: haystack = "sadbutsad", needle = "sad"
 
-**Output**: 3
+**Output**: 0
 
-**Explanation**: We return 3 because by repeating a three times "abcdabcdabcd", b is a substring of it.
+**Explanation**: "sad" occurs at index 0 and 6. The first occurrence is at index 0, so we return 0.
 
 **Example 2:**
 
-**Input**: a = "a", b = "aa"
+**Input**: haystack = "leetcode", needle = "leeto"
 
-**Output**: 2
+**Output**: -1
+
+**Explanation**: "leeto" did not occur in "leetcode", so we return -1.
 
 
 **Constraints**:
 
-    • 1 <= a.length, b.length <= 10^4
-    • a and b consist of lowercase English letters.
+    • 1 <= haystack.length, needle.length <= 10^4
+    • haystack and needle consist of only lowercase English characters.

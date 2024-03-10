@@ -1,11 +1,12 @@
 # Approach 1: Brute Force
 
 class Solution:
-    def repeatedStringMatch(self, a: str, b: str) -> int:
-        for i in range(len(b)//len(a), len(b)//len(a)+3):
-            if (b in a * i):
+    def strStr(self, haystack: str, needle: str) -> int:
+        n1, n2 = len(haystack), len(needle)
+        for i in range(n1 - n2 + 1):
+            if (needle == haystack[i:i+n2]):
                 return i
         return -1
 
-# Time Coplexicity = O(1) => Result = Success
-# Space Complexity = O(N)
+# Time Coplexicity = O(N) => Result = Success
+# Space Complexity = O(1)
