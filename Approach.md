@@ -1,8 +1,8 @@
-### Approach 1: Brute Force
+### Approach 1: By Sorting
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Brute Force            | O(N)                     | O(1)              |
+| By Sorting             | O(N * log(N))            | O(1)              |
 
 
 
