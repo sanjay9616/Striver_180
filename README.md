@@ -1,23 +1,56 @@
-<h2><a href="https://leetcode.com/problems/longest-palindromic-substring/description/">89. Longest Palindromic Substring</a></h2>
+<h2><a href="https://leetcode.com/problems/roman-to-integer/description/">90. Roman to Integer</a></h2>
 
-Given a string s, return the longest palindromic substring in s.
+<h2><a href="https://leetcode.com/problems/integer-to-roman/submissions/1199714221/">90. Integer to Roman</a></h2>
+
+
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+| Symbol          | Value       |
+|---------------- | ----------- |
+| I               | 1           |
+| V               | 5           |
+| X               | 10          |
+| L               | 50          |
+| C               | 100         |
+| D               | 500         |
+| M               | 1000        |
+
+For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+
+1. I can be placed before V (5) and X (10) to make 4 and 9. </br>
+2. X can be placed before L (50) and C (100) to make 40 and 90. </br>
+3. C can be placed before D (500) and M (1000) to make 400 and 900. </br>
+
 
 **Example 1:**
 
-**Input**: s = "babad"
+**Input**: s = "III"
 
-**Output**: "bab"
+**Output**: 3
 
-**Explanation**: "aba" is also a valid answer.
+**Explanation**: III = 3.
 
 **Example 2:**
 
-**Input**: s = "cbbd"
+**Input**: s = "LVIII"
 
-**Output**: "bb"
+**Output**: 58
+
+**Explanation**: L = 50, V= 5, III = 3.
+
+**Example 2:**
+
+**Input**: s = "MCMXCIV"
+
+**Output**: 1994
+
+**Explanation**: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
 **Constraints**:
 
-    • 1 <= s.length <= 1000
-    • s consist of only digits and English letters.
+    • 1 <= s.length <= 15
+    • s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
+    • It is guaranteed that s is a valid roman numeral in the range [1, 3999].
