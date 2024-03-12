@@ -1,28 +1,25 @@
-<h2><a href="https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/">95. Minimum Characters required to make a String Palindromic</a></h2>
+<h2><a href="https://leetcode.com/problems/valid-anagram/description/">96. Valid Anagram</a></h2>
 
-Given a string A. The only operation allowed is to insert characters at the beginning of the string. </br>
-Find how many minimum characters are needed to be inserted to make the string a palindrome string.
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
 **Example 1:**
 
-**Input**: A = "ABC"
+**Input**: s = "anagram", t = "nagaram"
 
-**Output**: 2
-
-**Explanation**: Insert 'B' at beginning, string becomes: "BABC". </br>
-Insert 'C' at beginning, string becomes: "CBABC".
+**Output**: true
 
 **Example 2:**
 
-**Input**: A = "AACECAAAA"
+**Input**: s = "rat", t = "car"
 
-**Output**: 2
-
-**Explanation**: Insert 'A' at beginning, string becomes: "AAACECAAAA". </br>
-Insert 'A' at beginning, string becomes: "AAAACECAAAA".
+**Output**: false
 
 
 **Constraints**:
 
-    • 1 <= |A| <= 106
+    • 1 <= s.length, t.length <= 5 * 104
+    • s and t consist of lowercase English letters.
+
+**Follow up**: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?

@@ -1,14 +1,10 @@
 # Approach 1: Brute Force
-
 class Solution:
-    def solve(self, A):
-        res = 0
-        while (len(A) > 0):
-            if (A == A[::-1]):
-                return res
-            A = A[:-1]
-            res += 1
-        return res
+    def isAnagram(self, s: str, t: str) -> bool:
+        for i in set(s + t):
+            if (s.count(i) != t.count(i)):
+                return False
+        return True
 
-# Time Coplexicity = O(N^2) => Result = TLE
-# Space Complexity = O(1)
+# Time Coplexicity = O(N^2) => Result = Success
+# Space Complexity = O(N)

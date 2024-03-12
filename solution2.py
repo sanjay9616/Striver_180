@@ -1,14 +1,7 @@
-# Approach 1: Using Two Pointer
-
+# Approach 2: Using Sorting
 class Solution:
-    def solve(self, A):
-        res = 0
-        while (len(A) > 0):
-            if (A == A[::-1]):
-                return res
-            A = A[:-1]
-            res += 1
-        return res
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
 
-# Time Coplexicity = O(N) or o(N^2) => Result = TLE
+# Time Coplexicity = O(N * log(N)) => Result = Success
 # Space Complexity = O(1)

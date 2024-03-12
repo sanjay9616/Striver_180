@@ -2,22 +2,22 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Brute Force            | O(N^2)                   | O(1)              |
+| Brute Force            | O(N^2)                   | O(N)              |
 
-### Approach 2: Using Two Pinter
+### Approach 2: By Sorting
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
 | Two Pointer            | O(N) or o(N^2)           | O(1)              |
 
 
-### Approach 3: LPS Array of KMP Algorithm  ### NEED TO IMPLEMENT
+### Approach 3: Using HasMap
 
 | Algorithm              | Time Complexity    | Space Complexity        |
 |----------------------- | ------------------ | ----------------------- |
-| KMP                    | O(N)               | O(N)                    |
+| KMP                    | O(N)               | O(2N)                    |
 
-### Approach 4: Z array of Z algorithm.   ### NEED TO IMPLEMENT
+### Approach 4: Using HasMap (Space Optimized)
 
 | Algorithm              | Time Complexity    | Space Complexity        |
 |----------------------- | ------------------ | ----------------------- |
