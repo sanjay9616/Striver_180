@@ -1,6 +1,6 @@
-<h2><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/description/">99. Binary Tree Preorder Traversal</a></h2>
+<h2><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/description/">100. Binary Tree Postorder Traversal</a></h2>
 
-Given the root of a binary tree, return the preorder traversal of its nodes' values.
+Given the root of a binary tree, return the postorder traversal of its nodes' values.
 
 **Example 1:**
 
@@ -8,7 +8,7 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 
 **Input**: root = [1,null,2,3]
 
-**Output**: [1,2,3]
+**Output**: [3,2,1]
 
 **Example 2:**
 
