@@ -1,7 +1,7 @@
-### Approach 1: Brute Force
+### Approach 1: Using Recursion
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Brute Force            | O(M + N)                 | O(1)              |
+| Using Recursion        | O(N)                     | O(h)              |
 
 

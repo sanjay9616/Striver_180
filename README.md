@@ -1,45 +1,31 @@
-<h2><a href="https://leetcode.com/problems/compare-version-numbers/description/">97. Compare Version Numbers</a></h2>
+<h2><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/description/">98. Binary Tree Inorder Traversal</a></h2>
 
-Given two version numbers, version1 and version2, compare them.
-
-Version numbers consist of one or more revisions joined by a dot '.'. Each revision consists of digits and may contain leading zeros. Every revision contains at least one character. Revisions are 0-indexed from left to right, with the leftmost revision being revision 0, the next revision being revision 1, and so on. For example 2.5.33 and 0.1 are valid version numbers.
-
-To compare version numbers, compare their revisions in left-to-right order. Revisions are compared using their integer value ignoring any leading zeros. This means that revisions 1 and 001 are considered equal. If a version number does not specify a revision at an index, then treat the revision as 0. For example, version 1.0 is less than version 1.1 because their revision 0s are the same, but their revision 1s are 0 and 1 respectively, and 0 < 1.
-
-Return the following:
-
-1. If version1 < version2, return -1. </br>
-2. If version1 > version2, return 1. </br>
-3. Otherwise, return 0.
+Given the root of a binary tree, return the inorder traversal of its nodes' values.
 
 **Example 1:**
 
-**Input**: version1 = "1.01", version2 = "1.001"
+<img src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" alt="not found">
 
-**Output**: 0
+**Input**: root = [1,null,2,3]
 
-**Explanation**: Ignoring leading zeroes, both "01" and "001" represent the same integer "1".
+**Output**: [1,3,2]
 
 **Example 2:**
 
-**Input**: version1 = "1.0", version2 = "1.0.0"
+**Input**: root = []
 
-**Output**: 0
-
-**Explanation**: version1 does not specify revision 2, which means it is treated as "0".
+**Output**: []
 
 **Example 3:**
 
-**Input**: version1 = "0.1", version2 = "1.1"
+**Input**: root = [1]
 
-**Output**: -1
-
-**Explanation**: version1's revision 0 is "0", while version2's revision 0 is "1". 0 < 1, so version1 < version2.
+**Output**: [1]
 
 
 **Constraints**:
 
-    • 1 <= version1.length, version2.length <= 500
-    • version1 and version2 only contain digits and '.'.
-    • version1 and version2 are valid version numbers.
-    • All the given revisions in version1 and version2 can be stored in a 32-bit integer.
+    • The number of nodes in the tree is in the range [0, 100].
+    • -100 <= Node.val <= 100.
+
+**Follow up**: Recursive solution is trivial, could you do it iteratively?
