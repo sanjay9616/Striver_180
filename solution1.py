@@ -1,22 +1,17 @@
 # Approach 1: Using DFS
-class BinaryTreeNode:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
 
-def getLeftView(root) -> list:
-    res = []
-    def dfs(root, level):
-        if (root is None):
-            return
-        if (level == len(res)):
-            res.append(root.data)
-        dfs(root.left, level + 1)
-        dfs(root.right, level + 1)
-        return
-    dfs(root, 0)
-    return res
+        def dfs(root, level):
+            if (not root):
+                return
+            if (level == len(res)):
+                res.append(root.val)
+            dfs(root.right, level + 1)
+            dfs(root.left, level + 1)
+        dfs(root, 0)
+        return res
 
 
 # Time Coplexicity = O(N) => Result = Success

@@ -1,28 +1,29 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/920519?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">101. Left View Of a Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/binary-tree-right-side-view/description/">102. Binary Tree Right Side View</a></h2>
 
-You have been given a binary tree of integers. You are supposed to find the left view of the binary tree. The left view of a binary tree is the set of all nodes that are visible when the binary tree is viewed from the left side.
-
-**Example:**
-
-<img src="https://files.codingninjas.in/leftview_0-6345.png" alt="not found">
-
-**Output**: [5, 7, 14, 25]
+Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
 
 **Example 1:**
 
-**Input**: root = [3, 4, -1, -1, -1]
+<img src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg" alt="not found">
 
-**Output**: [3, 4]
+**Input**: root = [1,2,3,null,5,null,4]
+
+**Output**: [1,3,4]
 
 **Example 2:**
 
-**Input**: root = [2, 8, 7, -1, 5, -1, -1, 1, -1, -1, -1]
+**Input**: root = [1,null,3]
 
-**Output**: [2, 8, 5, 1]
+**Output**: [1,3]
+
+**Example 3:**
+
+**Input**: root = []
+
+**Output**: []
 
 
 **Constraints**:
 
-    • 1 <= T <= 100
-    • 0 <= N <= 3000
-    • 1 <= data <= 10^5 and data!=-1
+    • The number of nodes in the tree is in the range [0, 100].
+    • -100 <= Node.val <= 100
