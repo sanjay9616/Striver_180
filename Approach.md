@@ -1,19 +1,19 @@
-### Approach 1: Using Recursion
+### Approach 1: Using Recursion (DFS)
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
 | Using Recursion        | O(N)                     | O(h)              |
 
-### Approach 2: Iterative ### Need To Implement
+### Approach 2: Using Level Order Traversal ### Need To Implement
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N)                     | O(h)              |
+| Level Order Traversal  | O(N)                     | O(N)              |
 
-### Approach 3: Morris traversal ### Need To Implement
+### Approach 3: Using queue and a null pointer ### Need To Implement
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N)                     | O(h)              |
+| Using Recursion        | O(N)                     | O(N)              |
 
 
