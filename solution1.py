@@ -1,26 +1,26 @@
 # Approach 1: Using DFS
 
-from typing import List
+class Solution:
+    def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        levelWiseIndex = {}
 
-
-def dfs(root, result: List[str], curr: str) -> None:
-    if root is None:
-        return
-    if len(curr) == 0:
-        curr += str(root.data)
-    else:
-        curr += " " + str(root.data)
-    if root.left is None and root.right is None:
-        result.append(curr)
-    dfs(root.left, result, curr)
-    dfs(root.right, result, curr)
-
-
-def allRootToLeaf(root) -> List[str]:
-    result = []
-    dfs(root, result, "")
-    return result
+        def dfs(root, level, index):
+            if (root):
+                if (level in levelWiseIndex):
+                    levelWiseIndex[level].append(index)
+                else:
+                    levelWiseIndex[level] = [index]
+                dfs(root.left, level + 1, 2 * index)
+                dfs(root.right, level + 1, 2 * index + 1)
+            return
+        dfs(root, 0, 1)
+        res = 0
+        print(levelWiseIndex)
+        for level in levelWiseIndex:
+            res = max(
+                res, max(levelWiseIndex[level]) - min(levelWiseIndex[level]) + 1)
+        return res
 
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(h) => height of the tree
+# Space Complexity = O(h + 2^h) => height of the tree
