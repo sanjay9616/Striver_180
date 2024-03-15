@@ -1,16 +1,44 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/all-root-to-leaf-paths-in-binary-tree._983599?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">107. All Root to Leaf Paths In Binary Tree.</a></h2>
+<h2><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/description/">108. Maximum Width of Binary Tree</a></h2>
 
-You are given an arbitrary binary tree consisting of 'N' nodes numbered from 1 to 'N'. Your task is to print all the root to leaf paths of the binary tree.
+Given the root of a binary tree, return the maximum width of the given tree.
 
-A leaf of a binary tree is the node which does not have a left child and a right child.
+The maximum width of a tree is the maximum width among all levels.
+
+The width of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes), where the null nodes between the end-nodes that would be present in a complete binary tree extending down to that level are also counted into the length calculation.
+
+It is guaranteed that the answer will in the range of a 32-bit signed integer.
 
 **Example 1:**
 
-<img src="https://files.codingninjas.in/screenshot-from-2020-11-06-15-04-33-5639.png" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2021/05/03/width1-tree.jpg" alt="not found">
 
-**Output**: [[1, 2, 4],[1, 2, 5],[3, 5]]
+**Input**: root = [1,3,2,5,3,null,9]
+
+**Output**: 4
+
+**Explanation**: The maximum width exists in the third level with length 4 (5,3,null,9).
+
+**Example 2:**
+
+<img src="https://assets.leetcode.com/uploads/2022/03/14/maximum-width-of-binary-tree-v3.jpg" alt="not found">
+
+**Input**: root = [1,3,2,5,null,null,9,6,null,7]
+
+**Output**: 7
+
+**Explanation**: The maximum width exists in the fourth level with length 7 (6,null,null,null,null,null,7).
+
+**Example 3:**
+
+<img src="https://assets.leetcode.com/uploads/2021/05/03/width3-tree.jpg" alt="not found">
+
+**Input**: root = [1,3,2,5]
+
+**Output**: 2
+
+**Explanation**: The maximum width exists in the second level with length 2 (3,2).
 
 **Constraints**:
 
-    • 1 <= N <= 3*10^3
-    • Time Limit : 1 sec
+    • The number of nodes in the tree is in the range [1, 3000].
+    • -100 <= Node.val <= 100
