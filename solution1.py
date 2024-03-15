@@ -1,25 +1,26 @@
 # Approach 1: Using DFS
 
-class Solution:
-    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
-        l = []
+from typing import List
 
-        def dfs(root, level, axis):
-            if (root):
-                l.append([level, axis, root.val])
-                dfs(root.left, level + 1, axis - 1)
-                dfs(root.right, level + 1, axis + 1)
-            return
-        dfs(root, 0, 0)
-        # Sort it axis wise and then level wise Store all values with same column
-        l = sorted(l, key=lambda x: (x[1], x[0], x[2]))
-        d = {}
-        for i, j, k in l:
-            if (j in d):
-                d[j].append(k)
-            else:
-                d[j] = [k]
-        return list(d.values())
+
+def dfs(root, result: List[str], curr: str) -> None:
+    if root is None:
+        return
+    if len(curr) == 0:
+        curr += str(root.data)
+    else:
+        curr += " " + str(root.data)
+    if root.left is None and root.right is None:
+        result.append(curr)
+    dfs(root.left, result, curr)
+    dfs(root.right, result, curr)
+
+
+def allRootToLeaf(root) -> List[str]:
+    result = []
+    dfs(root, result, "")
+    return result
+
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h) => height of the tree
