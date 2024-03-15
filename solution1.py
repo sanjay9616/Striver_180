@@ -1,22 +1,25 @@
 # Approach 1: Using DFS
 
-def getTreeTraversal(root):
-    def inOrderTraversal(root):
-        if (not root):
-            return []
-        return inOrderTraversal(root.left) + [root.data] + inOrderTraversal(root.right)
+class Solution:
+    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
+        l = []
 
-    def preOrderTraversal(root):
-        if (not root):
-            return []
-        return [root.data] + preOrderTraversal(root.left) + preOrderTraversal(root.right)
-
-    def postOrderTraversal(root):
-        if (not root):
-            return []
-        return postOrderTraversal(root.left) + postOrderTraversal(root.right) + [root.data]
-    return [inOrderTraversal(root), preOrderTraversal(root), postOrderTraversal(root)]
-    pass
+        def dfs(root, level, axis):
+            if (root):
+                l.append([level, axis, root.val])
+                dfs(root.left, level + 1, axis - 1)
+                dfs(root.right, level + 1, axis + 1)
+            return
+        dfs(root, 0, 0)
+        # Sort it axis wise and then level wise Store all values with same column
+        l = sorted(l, key=lambda x: (x[1], x[0], x[2]))
+        d = {}
+        for i, j, k in l:
+            if (j in d):
+                d[j].append(k)
+            else:
+                d[j] = [k]
+        return list(d.values())
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h) => height of the tree
