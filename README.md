@@ -1,26 +1,11 @@
-<h2><a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/">115. Binary Tree Zigzag Level Order Traversal</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/boundary-traversal-of-binary-tree_790725?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">116. Boundary Traversal of Binary Tree</a></h2>
 
-Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).
+You are given a binary tree having 'n' nodes.
 
-**Example 1:**
+The boundary nodes of a binary tree include the nodes from the left and right boundaries and the leaf nodes, each node considered once.
 
-<img src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" alt="not found">
+Figure out the boundary nodes of this binary tree in an Anti-Clockwise direction starting from the root node.
 
-**Input**: root = [3,9,20,null,null,15,7]
-
-**Output**: [[3],[20,9],[15,7]]
-
-**Example 2:**
-
-**Input**: root = [1]
-
-**Output**: [[1]]
-
-**Example 3:**
-
-**Input**: root = []
-
-**Output**: []
 
 **Constraints**:
 
