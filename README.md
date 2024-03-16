@@ -1,24 +1,28 @@
-<h2><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/description/">110. Maximum Depth of Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/diameter-of-binary-tree/">111. Diameter of Binary Tree</a></h2>
 
-Given the root of a binary tree, return its maximum depth.
+Given the root of a binary tree, return the length of the diameter of the tree.
 
-A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+The length of a path between two nodes is represented by the number of edges between them.
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2021/03/06/diamtree.jpg" alt="not found">
 
-**Input**: root = [3,9,20,null,null,15,7]
+**Input**: root = [1,2,3,4,5]
 
 **Output**: 3
 
+**Explanation**: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+
 **Example 2:**
 
-**Input**: root = [1,null,2]
+**Input**: root = [1,2]
 
-**Output**: 2
+**Output**: 1
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [0, 104].
+    • The number of nodes in the tree is in the range [0, 10^4].
     • -100 <= Node.val <= 100
