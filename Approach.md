@@ -1,8 +1,8 @@
-### Approach 1: Using Recursion (DFS) ### Need To Implement
+### Approach 1: Using Recursion (DFS)
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N * log(N))            | O(N + 2^N)              |
+| Using Recursion        | O(N * log(N))            | O(N)              |
 
 ### Approach 2: Using Level Order Traversal ### Need To Implement
 

@@ -1,13 +1,34 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/boundary-traversal-of-binary-tree_790725?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf">116. Boundary Traversal of Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/description/">117. Binary Tree Maximum Path Sum</a></h2>
 
-You are given a binary tree having 'n' nodes.
+A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
 
-The boundary nodes of a binary tree include the nodes from the left and right boundaries and the leaf nodes, each node considered once.
+The path sum of a path is the sum of the node's values in the path.
 
-Figure out the boundary nodes of this binary tree in an Anti-Clockwise direction starting from the root node.
+Given the root of a binary tree, return the maximum path sum of any non-empty path.
+
+
+**Example 1:**
+
+<img src="https://assets.leetcode.com/uploads/2020/10/13/exx1.jpg" alt="not found">
+
+**Input**: root = [1,2,3]
+
+**Output**: 6
+
+**Explanation**: The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6.
+
+**Example 2:**
+
+<img src="https://assets.leetcode.com/uploads/2020/10/13/exx2.jpg" alt="not found">
+
+**Input**: root = [-10,9,20,null,null,15,7]
+
+**Output**: 42
+
+**Explanation**: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
 
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [0, 2000].
-    • -100 <= Node.val <= 100
+    • The number of nodes in the tree is in the range [1, 3 * 10^4].
+    • -1000 <= Node.val <= 1000
