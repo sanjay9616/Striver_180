@@ -1,32 +1,39 @@
-<h2><a href="https://leetcode.com/problems/balanced-binary-tree/description/">112. Balanced Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/">113. Lowest Common Ancestor of a Binary Tree</a></h2>
 
-Given a binary tree, determine if it is height-balanced.
+Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
-**Height-Balanced** - A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="not found">
 
-**Input**: root = [3,9,20,null,null,15,7]
+**Input**: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 
-**Output**: true
+**Output**: 3
+
+**Explanation**: The LCA of nodes 5 and 1 is 3.
 
 **Example 2:**
 
-<img src="https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="not found">
 
-**Input**: root = [1,2,2,3,3,null,null,4,4]
+**Input**: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 
-**Output**: false
+**Output**: 5
+
+**Explanation**: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 
 **Example 3:**
 
-**Input**: root = []
+**Input**: root = [1,2], p = 1, q = 2
 
-**Output**: true
+**Output**: 1
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [0, 5000].
-    • -10^4 <= Node.val <= 10^4
+    • The number of nodes in the tree is in the range [2, 105].
+    • -10^9 <= Node.val <= 10^9
+    • All Node.val are unique.
+    • p != q
+    • p and q will exist in the tree.
