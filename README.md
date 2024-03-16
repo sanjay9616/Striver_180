@@ -1,39 +1,34 @@
-<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/">113. Lowest Common Ancestor of a Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/same-tree/description/">114. Same Tree</a></h2>
 
-Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+Given the roots of two binary trees p and q, write a function to check if they are the same or not.
 
-According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg" alt="not found">
 
-**Input**: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+**Input**: p = [1,2,3], q = [1,2,3]
 
-**Output**: 3
-
-**Explanation**: The LCA of nodes 5 and 1 is 3.
+**Output**: true
 
 **Example 2:**
 
-<img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg" alt="not found">
 
-**Input**: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+**Input**: p = [1,2], q = [1,null,2]
 
-**Output**: 5
-
-**Explanation**: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+**Output**: false
 
 **Example 3:**
 
-**Input**: root = [1,2], p = 1, q = 2
+<img src="https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg" alt="not found">
 
-**Output**: 1
+**Input**: p = [1,2,1], q = [1,1,2]
+
+**Output**: false
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [2, 105].
-    • -10^9 <= Node.val <= 10^9
-    • All Node.val are unique.
-    • p != q
-    • p and q will exist in the tree.
+    • The number of nodes in both trees is in the range [0, 100].
+    • -10^4 <= Node.val <= 10^4
