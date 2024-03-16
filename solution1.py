@@ -1,24 +1,22 @@
 # Approach 1: Using DFS
 
 class Solution:
-    def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        levelWiseIndex = {}
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        levelWiseNode = {}
 
-        def dfs(root, level, index):
+        def dfs(root, level):
             if (root):
-                if (level in levelWiseIndex):
-                    levelWiseIndex[level].append(index)
+                if (level in levelWiseNode):
+                    levelWiseNode[level].append(root.val)
                 else:
-                    levelWiseIndex[level] = [index]
-                dfs(root.left, level + 1, 2 * index)
-                dfs(root.right, level + 1, 2 * index + 1)
+                    levelWiseNode[level] = [root.val]
+                dfs(root.left, level + 1)
+                dfs(root.right, level + 1)
             return
-        dfs(root, 0, 1)
-        res = 0
-        print(levelWiseIndex)
-        for level in levelWiseIndex:
-            res = max(
-                res, max(levelWiseIndex[level]) - min(levelWiseIndex[level]) + 1)
+        dfs(root, 0)
+        res = []
+        for level in sorted(levelWiseNode.keys()):
+            res.append(levelWiseNode[level])
         return res
 
 
