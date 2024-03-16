@@ -1,28 +1,32 @@
-<h2><a href="https://leetcode.com/problems/diameter-of-binary-tree/">111. Diameter of Binary Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/balanced-binary-tree/description/">112. Balanced Binary Tree</a></h2>
 
-Given the root of a binary tree, return the length of the diameter of the tree.
+Given a binary tree, determine if it is height-balanced.
 
-The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-
-The length of a path between two nodes is represented by the number of edges between them.
+**Height-Balanced** - A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2021/03/06/diamtree.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg" alt="not found">
 
-**Input**: root = [1,2,3,4,5]
+**Input**: root = [3,9,20,null,null,15,7]
 
-**Output**: 3
-
-**Explanation**: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+**Output**: true
 
 **Example 2:**
 
-**Input**: root = [1,2]
+<img src="https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg" alt="not found">
 
-**Output**: 1
+**Input**: root = [1,2,2,3,3,null,null,4,4]
+
+**Output**: false
+
+**Example 3:**
+
+**Input**: root = []
+
+**Output**: true
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [0, 10^4].
-    • -100 <= Node.val <= 100
+    • The number of nodes in the tree is in the range [0, 5000].
+    • -10^4 <= Node.val <= 10^4
