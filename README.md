@@ -1,29 +1,32 @@
-<h2><a href="https://leetcode.com/problems/search-in-a-binary-search-tree/description/">125. Search in a Binary Search Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/">126. Convert Sorted Array to Binary Search Tree</a></h2>
 
-You are given the root of a binary search tree (BST) and an integer val.
-
-Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
+Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2021/01/12/tree1.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2021/02/18/btree1.jpg" alt="not found">
 
-**Input**: root = [4,2,7,1,3], val = 2
+**Input**: nums = [-10,-3,0,5,9]
 
-**Output**: [2,1,3]
+**Output**: [0,-3,9,-10,null,5]
+
+**Explanation**: [0,-10,5,null,-3,null,9] is also accepted:
+
+<img src="https://assets.leetcode.com/uploads/2021/02/18/btree2.jpg" alt="not found">
 
 **Example 2**:
 
-<img src="https://assets.leetcode.com/uploads/2021/01/12/tree2.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2021/02/18/btree.jpg" alt="not found">
 
-**Input**: root = [4,2,7,1,3], val = 5
+**Input**: nums = [1,3]
 
-**Output**: []
+**Output**: [3,1]
+
+**Explanation**: [1,null,3] and [3,1] are both height-balanced BSTs.
 
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [1, 5000].
-    • 1 <= Node.val <= 10^7
-    • root is a binary search tree.
-    • 1 <= val <= 10^7
+    • 1 <= nums.length <= 10^4
+    • -10^4 <= nums[i] <= 10^4
+    • nums is sorted in a strictly increasing order.
