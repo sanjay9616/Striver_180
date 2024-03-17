@@ -1,34 +1,29 @@
-<h2><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/description/">117. Binary Tree Maximum Path Sum</a></h2>
+<h2><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/">118. Construct Binary Tree from Preorder and Inorder Traversal</a></h2>
 
-A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
-
-The path sum of a path is the sum of the node's values in the path.
-
-Given the root of a binary tree, return the maximum path sum of any non-empty path.
+Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
 
 
 **Example 1:**
 
-<img src="https://assets.leetcode.com/uploads/2020/10/13/exx1.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2021/02/19/tree.jpg" alt="not found">
 
-**Input**: root = [1,2,3]
+**Input**: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
 
-**Output**: 6
-
-**Explanation**: The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6.
+**Output**: [3,9,20,null,null,15,7]
 
 **Example 2:**
 
-<img src="https://assets.leetcode.com/uploads/2020/10/13/exx2.jpg" alt="not found">
+**Input**: preorder = [-1], inorder = [-1]
 
-**Input**: root = [-10,9,20,null,null,15,7]
-
-**Output**: 42
-
-**Explanation**: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
+**Output**: [-1]
 
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [1, 3 * 10^4].
-    • -1000 <= Node.val <= 1000
+    • 1 <= preorder.length <= 3000
+    • inorder.length == preorder.length
+    • -3000 <= preorder[i], inorder[i] <= 3000
+    • preorder and inorder consist of unique values.
+    • Each value of inorder also appears in preorder.
+    • preorder is guaranteed to be the preorder traversal of the tree.
+    • inorder is guaranteed to be the inorder traversal of the tree.
