@@ -1,12 +1,14 @@
 # Approach 1: Using Recursion (DFS) ## Solve Again
 class Solution:
-    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
-        if(not nums):
+    def bstFromPreorder(self, preorder: List[int]) -> Optional[TreeNode]:
+        if (not preorder):
             return None
-        mid = len(nums)//2
-        root = TreeNode(nums[mid])
-        root.left = self.sortedArrayToBST(nums[:mid])
-        root.right = self.sortedArrayToBST(nums[mid + 1:])
+        root = TreeNode(preorder[0])
+        i = 1
+        while (i < len(preorder) and preorder[0] > preorder[i]):
+            i += 1
+        root.left = self.bstFromPreorder(preorder[1:i])
+        root.right = self.bstFromPreorder(preorder[i:])
         return root
 
 # Time Coplexicity = O(N) => Result = Success
