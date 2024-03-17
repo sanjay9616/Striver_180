@@ -1,13 +1,20 @@
-# Approach 1: Using DFS
-class Solution:
-    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        def dfs(left, right):
-            if (not left and not right):
-                return True
-            if (not left or not right):
-                return False
-            return left.val == right.val and dfs(left.left, right.right) and dfs(left.right, right.left)
-        return dfs(root.left, root.right)
+# Approach 1: Using Recursion (DFS) ## Solve Again
+  class Solution:
+       def __init__(self):
+            self.prev = None
+
+        def flatten(self, root: TreeNode) -> None:
+            """
+            Do not return anything, modify root in-place instead.
+            """
+            if not root:
+                return
+            self.flatten(root.right)  # Recursively flatten the right subtree
+            self.flatten(root.left)  # Recursively flatten the left subtree
+            root.right = self.prev  # Set the right child to the previously flattened node
+            root.left = None  # Set the left child to None
+            self.prev = root  # Update the previously flattened node to be the current node
+
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h)
