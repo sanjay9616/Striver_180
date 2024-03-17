@@ -1,31 +1,5 @@
-<h2><a href="https://leetcode.com/problems/symmetric-tree/description/">121. Flatten Binary Tree to Linked List</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/invert-a-binary-tree_1281382?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">122. Invert a Binary Tree</a></h2>
 
-Given the root of a binary tree, flatten the tree into a "linked list":
-
-1. The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
-
-2. The "linked list" should be in the same order as a pre-order traversal of the binary tree.
-
-
-**Example 1:**
-
-<img src="https://assets.leetcode.com/uploads/2021/01/14/flaten.jpg" alt="not found">
-
-**Input**: root = [1,2,5,3,4,null,6]
-
-**Output**: [1,null,2,null,3,null,4,null,5,null,6]
-
-**Example 2:**
-
-**Input**: root = []
-
-**Output**: []
-
-**Example 3:**
-
-**Input**: root = [0]
-
-**Output**: [0]
 
 
 **Constraints**:
