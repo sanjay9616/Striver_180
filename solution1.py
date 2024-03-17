@@ -1,12 +1,12 @@
 # Approach 1: Using DFS
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        if (not preorder or not inorder):
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> Optional[TreeNode]:
+        if (not inorder or not postorder):
             return None
-        root = TreeNode(preorder[0])
+        root = TreeNode(postorder[-1])
         index = inorder.index(root.val)
-        root.left = self.buildTree(preorder[1:index + 1], inorder[:index])
-        root.right = self.buildTree(preorder[index + 1:], inorder[index + 1:])
+        root.left = self.buildTree(inorder[:index], postorder[:index])
+        root.right = self.buildTree(inorder[index + 1:], postorder[index:-1])
         return root
 
 # Time Coplexicity = O(N) => Result = Success
