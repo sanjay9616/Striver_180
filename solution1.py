@@ -1,13 +1,17 @@
-# Approach 1: Using Recursion (DFS)
+# Approach 1: Using DFS
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        def isValid(root, leftRange, rightRange):
-            if (not root):
-                return True
-            if (not (leftRange < root.val and rightRange > root.val)):
-                return False
-            return isValid(root.left, leftRange, root.val) and isValid(root.right, root.val, rightRange)
-        return isValid(root, float('-inf'), float('inf'))
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if (not root):
+            return None
+        if (root == p or root == q):
+            return root  # I see one of the targets! I will inform my caller!
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        if (not left):
+            return right  # Didnt find anything in the left, must be in right
+        if (not right):
+            return left  # Didnt find anything in the right, must be in the left
+        return root  # Found something in both! Hence this is the one!
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(1)
+# Space Complexity = O(h) => height of the tree

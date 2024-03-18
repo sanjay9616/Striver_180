@@ -1,33 +1,40 @@
-<h2><a href="https://leetcode.com/problems/validate-binary-search-tree/description/">128. Validate Binary Search Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">129. Lowest Common Ancestor of a Binary Search Tree</a></h2>
 
-Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
 
-A valid BST is defined as follows:
-
-1. The left subtree of a node contains only nodes with keys less than the node's key. </br>
-2. The right subtree of a node contains only nodes with keys greater than the node's key. </br>
-3. Both the left and right subtrees must also be binary search trees.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2018/12/14/binarysearchtree_improved.png" alt="not found">
 
-**Input**: root = [2,1,3]
+**Input**: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
 
-**Output**: true
+**Output**: 6
+
+**Explanation**: The LCA of nodes 2 and 8 is 6.
 
 **Example 2**:
 
-<img src="https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2018/12/14/binarysearchtree_improved.png" alt="not found">
 
-**Input**: root = [5,1,4,null,null,3,6]
+**Input**: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
 
-**Output**: false
+**Output**: 2
 
-**Explanation**: The root node's value is 5 but its right child's value is 4.
+**Explanation**: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+
+**Example 3**:
+
+**Input**: root = [2,1], p = 2, q = 1
+
+**Output**: 2
 
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [1, 104].
-    • -2^31 <= Node.val <= 2^31 - 1
+    • The number of nodes in the tree is in the range [2, 10^5].
+    • -10^9 <= Node.val <= 10^9
+    • All Node.val are unique
+    • p != q
+    • p and q will exist in the BST.
