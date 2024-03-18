@@ -1,40 +1,29 @@
-<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">129. Lowest Common Ancestor of a Binary Search Tree</a></h2>
+<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">130. Predecessor And Successor In BST</a></h2>
 
-Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
+You have been given a binary search tree of integers with ‘N’ nodes. You are also given 'KEY' which represents data of a node of this tree.
 
-According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Your task is to return the predecessor and successor of the given node in the BST.
+
+1. The predecessor of a node in BST is that node that will be visited just before the given node in the inorder traversal of the tree. If the given node is visited first in the inorder traversal, then its predecessor is NULL.
+
+2. The successor of a node in BST is that node that will be visited immediately after the given node in the inorder traversal of the tree. If the given node is visited last in the inorder traversal, then its successor is NULL.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2018/12/14/binarysearchtree_improved.png" alt="not found">
+<img src="https://files.codingninjas.in/screenshot-14-5921.png" alt="not found">
 
-**Input**: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+**Input**: root = [15, 10, 20, 8, 12, 16, 25, -1, -1, -1, -1, -1, -1, -1, -1], key = 10
 
-**Output**: 6
-
-**Explanation**: The LCA of nodes 2 and 8 is 6.
+**Output**: [8, 12]
 
 **Example 2**:
 
-<img src="https://assets.leetcode.com/uploads/2018/12/14/binarysearchtree_improved.png" alt="not found">
+**Input**: root = [10, 5, -1, -1, -1], key = 5
 
-**Input**: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
-
-**Output**: 2
-
-**Explanation**: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
-
-**Example 3**:
-
-**Input**: root = [2,1], p = 2, q = 1
-
-**Output**: 2
+**Output**: [-1, 10]
 
 
 **Constraints**:
 
-    • The number of nodes in the tree is in the range [2, 10^5].
-    • -10^9 <= Node.val <= 10^9
-    • All Node.val are unique
-    • p != q
-    • p and q will exist in the BST.
+    • 1 <= N <= 10^4
+    • 1 <= data <= 10^7

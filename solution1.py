@@ -1,17 +1,19 @@
 # Approach 1: Using DFS
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+def predecessorSuccessor(root, key):
+    def inorder(root):
         if (not root):
-            return None
-        if (root == p or root == q):
-            return root  # I see one of the targets! I will inform my caller!
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
-        if (not left):
-            return right  # Didnt find anything in the left, must be in right
-        if (not right):
-            return left  # Didnt find anything in the right, must be in the left
-        return root  # Found something in both! Hence this is the one!
+            return []
+        return inorder(root.left) + [root.data] + inorder(root.right)
+    inorderArray = inorder(root)
+    predecessor = -1
+    successor = -1
+    for i in range(len(inorderArray)):
+        if inorderArray[i] < key:
+            predecessor = inorderArray[i]
+    for i in range(len(inorderArray) - 1, -1, -1):
+        if inorderArray[i] > key:
+            successor = inorderArray[i]
+    return (predecessor, successor)
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h) => height of the tree
