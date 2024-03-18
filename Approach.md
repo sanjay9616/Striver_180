@@ -2,7 +2,7 @@
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N)                     | O(h)              |
+| Using Recursion        | O(N)                     | O(1)              |
 
 ### Approach 2: Using Level Order Traversal ### Need To Implement
 

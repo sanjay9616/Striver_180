@@ -1,15 +1,13 @@
-# Approach 1: Using Recursion (DFS) ## Solve Again
+# Approach 1: Using Recursion (DFS)
 class Solution:
-    def bstFromPreorder(self, preorder: List[int]) -> Optional[TreeNode]:
-        if (not preorder):
-            return None
-        root = TreeNode(preorder[0])
-        i = 1
-        while (i < len(preorder) and preorder[0] > preorder[i]):
-            i += 1
-        root.left = self.bstFromPreorder(preorder[1:i])
-        root.right = self.bstFromPreorder(preorder[i:])
-        return root
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        def isValid(root, leftRange, rightRange):
+            if (not root):
+                return True
+            if (not (leftRange < root.val and rightRange > root.val)):
+                return False
+            return isValid(root.left, leftRange, root.val) and isValid(root.right, root.val, rightRange)
+        return isValid(root, float('-inf'), float('inf'))
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(h)
+# Space Complexity = O(1)
