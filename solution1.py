@@ -1,19 +1,34 @@
 # Approach 1: Using DFS
-def predecessorSuccessor(root, key):
-    def inorder(root):
-        if (not root):
-            return []
-        return inorder(root.left) + [root.data] + inorder(root.right)
-    inorderArray = inorder(root)
-    predecessor = -1
-    successor = -1
-    for i in range(len(inorderArray)):
-        if inorderArray[i] < key:
-            predecessor = inorderArray[i]
-    for i in range(len(inorderArray) - 1, -1, -1):
-        if inorderArray[i] > key:
-            successor = inorderArray[i]
-    return (predecessor, successor)
+import sys
+
+
+def floorInBST(root, X):
+    if root is None:
+        return sys.maxsize
+    if root.data == X:
+        return root.data
+    if root.data > X:
+        return floorInBST(root.left, X)
+    floorValue = floorInBST(root.right, X)
+    if floorValue <= X:
+        return floorValue
+    else:
+        return root.data
+
+## ----------------------- Iterative Solution -------------------------------##
+
+def floorInBST(root, x):
+    if not root:
+        return -1
+    while root:
+        if root.data == x:
+            return root.data
+        if root.data < x:
+            floor = root.data
+            root = root.right
+        else:
+            root = root.left
+    return floor
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h) => height of the tree

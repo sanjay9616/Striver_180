@@ -1,29 +1,18 @@
-<h2><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">130. Predecessor And Successor In BST</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/floor-from-bst_920457?source=youtube&campaign=Striver_Tree_Videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=Striver_Tree_Videos&leftPanelTabValue=PROBLEM">131. Floor in BST</a></h2>
 
-You have been given a binary search tree of integers with ‘N’ nodes. You are also given 'KEY' which represents data of a node of this tree.
+You are given a BST (Binary search tree) with’ N’ number of nodes and a value ‘X’. Your task is to find the greatest value node of the BST which is smaller than or equal to ‘X’.
 
-Your task is to return the predecessor and successor of the given node in the BST.
+Note :‘X’ is not smaller than the smallest node of BST .
 
-1. The predecessor of a node in BST is that node that will be visited just before the given node in the inorder traversal of the tree. If the given node is visited first in the inorder traversal, then its predecessor is NULL.
+For example:
 
-2. The successor of a node in BST is that node that will be visited immediately after the given node in the inorder traversal of the tree. If the given node is visited last in the inorder traversal, then its successor is NULL.
+<img src="https://files.codingninjas.in/bst-11214.png" alt="not found">
 
-**Example 1**:
-
-<img src="https://files.codingninjas.in/screenshot-14-5921.png" alt="not found">
-
-**Input**: root = [15, 10, 20, 8, 12, 16, 25, -1, -1, -1, -1, -1, -1, -1, -1], key = 10
-
-**Output**: [8, 12]
-
-**Example 2**:
-
-**Input**: root = [10, 5, -1, -1, -1], key = 5
-
-**Output**: [-1, 10]
-
+**Output**: In the above example, For the given BST  and X = 7, the greatest value node of the BST  which is smaller than or equal to  7 is 6.
 
 **Constraints**:
 
-    • 1 <= N <= 10^4
-    • 1 <= data <= 10^7
+    • 1 <= T <= 5
+    • 1 <= N <= 5 * 10 ^ 3
+    • 1 <= nodeVal[i] <= 10 ^ 9
+    • Time Limit: 1 sec.
