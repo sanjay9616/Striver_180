@@ -2,33 +2,35 @@
 import sys
 
 
-def floorInBST(root, X):
+def findCeil(root, x):
     if root is None:
-        return sys.maxsize
-    if root.data == X:
+        return -1
+    if root.data == x:
         return root.data
-    if root.data > X:
-        return floorInBST(root.left, X)
-    floorValue = floorInBST(root.right, X)
-    if floorValue <= X:
-        return floorValue
+    if root.data < x:
+        return findCeil(root.right, x)
+    ceilValue = findCeil(root.left, x)
+    if ceilValue >= x:
+        return ceilValue
     else:
         return root.data
 
 ## ----------------------- Iterative Solution -------------------------------##
 
-def floorInBST(root, x):
-    if not root:
+
+def findCeil(root, x):
+    if (not root):
         return -1
-    while root:
-        if root.data == x:
+    ceil = -1
+    while (root):
+        if (root.data == x):
             return root.data
-        if root.data < x:
-            floor = root.data
-            root = root.right
-        else:
+        if (root.data > x):
+            ceil = root.data
             root = root.left
-    return floor
+        else:
+            root = root.right
+    return ceil
 
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(h) => height of the tree

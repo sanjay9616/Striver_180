@@ -1,18 +1,27 @@
-<h2><a href="https://www.codingninjas.com/studio/problems/floor-from-bst_920457?source=youtube&campaign=Striver_Tree_Videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=Striver_Tree_Videos&leftPanelTabValue=PROBLEM">131. Floor in BST</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/ceil-from-bst_920464?source=youtube&campaign=Striver_Tree_Videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=Striver_Tree_Videos">132. Ceil from BST</a></h2>
 
-You are given a BST (Binary search tree) with’ N’ number of nodes and a value ‘X’. Your task is to find the greatest value node of the BST which is smaller than or equal to ‘X’.
+Ninja is given a binary search tree and an integer. Now he is given a particular key in the tree and returns its ceil value. Can you help Ninja solve the problem?
 
-Note :‘X’ is not smaller than the smallest node of BST .
+**Note**:
 
+Ceil of an integer is the closest integer greater than or equal to a given number.
 For example:
+arr[] = {1, 2, 5, 7, 8, 9}, key = 3.
+The closest integer greater than 3 in the given array is 5. So, its ceil value in the given array is 5.
 
-<img src="https://files.codingninjas.in/bst-11214.png" alt="not found">
+**For example:**
 
-**Output**: In the above example, For the given BST  and X = 7, the greatest value node of the BST  which is smaller than or equal to  7 is 6.
+<img src="https://ninjasfiles.s3.amazonaws.com/0000000000000742.PNG" alt="not found">
+
+for the above tree </br>
+X=2, ceil = 3 </br>
+X=7, ceil = 8 </br>
+X=12, ceil = 13 </br>
 
 **Constraints**:
 
-    • 1 <= T <= 5
-    • 1 <= N <= 5 * 10 ^ 3
-    • 1 <= nodeVal[i] <= 10 ^ 9
+    • 1 <= T <= 10
+    • 1 <= N <= 10^5
+    • 0 <= node data <= 10^9
+    • 1 <= X <= 10^9
     • Time Limit: 1 sec.
