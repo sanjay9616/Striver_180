@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/submissions/1208281475/">133. Kth Smallest Element in a BST</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/920438?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">134. Kth lagest Element in a BST</a></h2>
 
 Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
 
@@ -8,7 +8,7 @@ Given the root of a binary search tree, and an integer k, return the kth smalles
 
 **Input**: root = [3,1,4,null,2], k = 1
 
-**Output**: 1
+**Output**: 4
 
 **Example 2**:
 
@@ -16,7 +16,7 @@ Given the root of a binary search tree, and an integer k, return the kth smalles
 
 **Input**: root = [5,3,6,2,4,null,null,1], k = 3
 
-**Output**: 3
+**Output**: 4
 
 
 **Constraints**:
