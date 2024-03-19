@@ -1,14 +1,22 @@
-# Approach 1: Using DFS
-import sys
-
-
-def KthLargestNumber(root, k):
-    def dfs(root):
-        if (not root):
-            return []
-        return dfs(root.left) + [root.data] + dfs(root.right)
-    arr = dfs(root)
-    return arr[len(arr) - k] if (len(arr) >= k) else -1
+# Approach 1: Using Inorder
+class Solution:
+    def findTarget(self, root: Optional[TreeNode], k: int) -> bool:
+        def inorder(root):
+            if(not root):
+                return []
+            return inorder(root.left) + [root.val] + inorder(root.right)
+        arr = inorder(root)
+        n = len(arr)
+        i, j = 0, n - 1
+        while(i < j):
+            currSum = arr[i] + arr[j]
+            if(currSum < k):
+                i +=1
+            elif(currSum == k):
+                return True
+            else:
+                j -= 1
+        return False
 
 # Time Coplexicity = O(N) => Result = Success
-# Space Complexity = O(h) => height of the tree
+# Space Complexity = O(N) => height of the tree
