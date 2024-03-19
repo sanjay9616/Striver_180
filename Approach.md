@@ -1,13 +1,7 @@
-### Approach 1: Using Inorder
+### Approach 1: Using Stack
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N)                     | O(N)              |
-
-### Approach 1: Using Recursion (DFS)
-
-| Algorithm              | Time Complexity          | Space Complexity  |
-|----------------------- | ------------------------ | ----------------- |
-| Using Recursion        | O(N)                     | O(N)              |
+| Using Recursion        | O(N)                     | O(1)              |
 
 
