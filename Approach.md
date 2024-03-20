@@ -1,4 +1,4 @@
-### Approach 1: Using Stack
+### Approach 1: Using dfs
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |

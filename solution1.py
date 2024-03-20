@@ -1,21 +1,23 @@
-# Approach 1: Using Stack
-class BSTIterator:
-    def __init__(self, root: TreeNode):
-        self.stack = []
-        while root:
-            self.stack.append(root)
-            root = root.left
+# Approach 1: Using Stack #Revise
+class Solution:
+    def maxSumBST(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        self.sum = 0
 
-    def next(self) -> int:
-        node = self.stack.pop()
-        if node.right:
-            current = node.right
-            while current:
-                self.stack.append(current)
-                current = current.left
-        return node.val
+        def dfs(cur):
+            left, leftMin, leftMax = dfs(cur.left) if cur.left else (
+                0, float('inf'), float('-inf'))
+            right, rightMin, rightMax = dfs(cur.right) if cur.right else (
+                0, float('inf'), float('-inf'))
+            if left is not None and right is not None:
+                if cur.val > leftMax and cur.val < rightMin:
+                    s = cur.val + left + right
+                    self.sum = max(self.sum, s)
+                    return s, min(cur.val, leftMin), max(cur.val, rightMax)
+            return (None, None, None)
+        dfs(root)
+        return self.sum
 
-    def hasNext(self) -> bool:
-        return len(self.stack) > 0
 # Time Coplexicity = O(N) => Result = Success
 # Space Complexity = O(1) => height of the tree
