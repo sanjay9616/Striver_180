@@ -1,38 +1,32 @@
-<h2><a href="https://leetcode.com/problems/find-median-from-data-stream/description/">140. Find Median from Data Stream</a></h2>
+<h2><a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/description/">141. Kth Largest Element in a Stream</a></h2>
 
-The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
+Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
-1. For example, for arr = [2,3,4], the median is 3. </br>
-2. For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5. </br>
+Implement KthLargest class:
 
-Implement the MedianFinder class:
-
-1. **MedianFinder()** initializes the MedianFinder object. </br>
-2. **void addNum(int num)** adds the integer num from the data stream to the data structure. </br>
-3. **double findMedian()** returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
+1. **KthLargest(int k, int[] nums)** Initializes the object with the integer k and the stream of integers nums. </br>
+2. **int add(int val)** Appends the integer val to the stream and returns the element representing the kth largest element in the stream.
 
 **Example 1**:
 
-**Input**: ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"], [[], [1], [2], [], [3], []]
+**Input**: ["KthLargest", "add", "add", "add", "add", "add"], [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
 
-**Output**: [null, null, null, 1.5, null, 2.0]
+**Output**: [null, 4, 5, 5, 8, 8]
 
 **Explanation**:
 
-MedianFinder medianFinder = new MedianFinder(); </br>
-medianFinder.addNum(1);    // arr = [1] </br>
-medianFinder.addNum(2);    // arr = [1, 2] </br>
-medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2) </br>
-medianFinder.addNum(3);    // arr[1, 2, 3] </br>
-medianFinder.findMedian(); // return 2.0 </br>
+KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]); </br>
+kthLargest.add(3);   // return 4 </br>
+kthLargest.add(5);   // return 5 </br>
+kthLargest.add(10);  // return 5 </br>
+kthLargest.add(9);   // return 8 </br>
+kthLargest.add(4);   // return 8 </br>
 
 **Constraints**:
 
-    • -10^5 <= num <= 10^5
-    • There will be at least one element in the data structure before calling findMedian.
-    • At most 5 * 104 calls will be made to addNum and findMedian.
-
-**Follow up**:
-
-    • If all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
-    • If 99% of all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
+    • 1 <= k <= 10^4
+    • 0 <= nums.length <= 10^4
+    • -10^4 <= nums[i] <= 10^4
+    • -10^4 <= val <= 10^4
+    • At most 10^4 calls will be made to add.
+    • It is guaranteed that there will be at least k elements in the array when you search for the kth element.
