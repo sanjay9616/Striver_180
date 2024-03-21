@@ -1,14 +1,10 @@
 # Approach 1: Brute Force
 
-class KthLargest:
+def countDistinctElements(arr, k):
+    res = []
+    for i in range(len(arr) - k + 1):
+        res.append(len(set(arr[i:i+k])))
+    return res
 
-    def __init__(self, k: int, nums: List[int]):
-        self.k = k
-        self.nums = nums
-
-    def add(self, val: int) -> int:
-        self.nums.append(val)
-        return sorted(self.nums)[len(self.nums) - self.k]
-
-# Time Coplexicity = O(N * log(N)) => Result = TLE
+# Time Coplexicity = O(N^2) => Result = Success
 # Space Complexity = O(1)
