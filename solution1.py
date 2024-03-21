@@ -1,10 +1,9 @@
 # Approach 1: Brute Force
 
-def countDistinctElements(arr, k):
-    res = []
-    for i in range(len(arr) - k + 1):
-        res.append(len(set(arr[i:i+k])))
-    return res
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        nums.sort(reverse=True)
+        return nums[k-1]
 
-# Time Coplexicity = O(N^2) => Result = Success
+# Time Coplexicity = O(N * log(N)) => Result = Success
 # Space Complexity = O(1)
