@@ -1,4 +1,4 @@
-### Approach 1: Using dfs
+### Approach 1: Using dfs #Solve
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
