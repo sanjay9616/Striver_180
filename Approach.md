@@ -1,7 +1,7 @@
-### Approach 1: Using DFS
+### Approach 1: Using BFS
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Brute Force            | O(V + E)                 | O(V)              |
+| Using BFS              | O(V + E)                 | O(V)              |
 
 
