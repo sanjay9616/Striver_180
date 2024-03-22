@@ -1,38 +1,34 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1">147. BFS of graph</a></h2>
+<h2><a href="https://leetcode.com/problems/course-schedule/description/">148. Course Schedule</a></h2>
+OR
+<h2><a href="https://www.codingninjas.com/studio/problems/1062670?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">148. Cycle Detection In Undirected Graph</a></h2>
 
-Given a directed graph. The task is to do Breadth First Traversal of this graph starting from 0.
-Note: One can move from node u to node v only if there's an edge from u to v. Find the BFS traversal of the graph starting from the 0th vertex, from left to right according to the input graph. Also, you should only take nodes directly or indirectly connected from Node 0 in consideration.
+There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+
+For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+
+Return true if you can finish all courses. Otherwise, return fals
 
 **Example 1**:
 
-<img src="https://media.geeksforgeeks.org/img-practice/PROD/addEditProblem/700217/Web/Other/e0eb5630-5d6c-493a-9b1e-d16d40f10b01_1685086421.png" alt="not found">
+**Input**: numCourses = 2, prerequisites = [[1,0]]
 
-**Input**: V = 5, E = 4, adj = {{1,2,3},{},{4},{},{}}
+**Output**: true
 
-**Output**: 0 1 2 3 4
-
-**Explanation**:
-0 is connected to 1 , 2 , 3. </br>
-2 is connected to 4. </br>
-so starting from 0, it will go to 1 then 2 </br>
-then 3. After this 2 to 4, thus bfs will be 0 1 2 3 4. </br>
+**Explanation**: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 
 **Example 2**:
 
-<img src="https://media.geeksforgeeks.org/img-practice/PROD/addEditProblem/700217/Web/Other/e0eb5630-5d6c-493a-9b1e-d16d40f10b01_1685086421.png" alt="not found">
+**Input**: numCourses = 2, prerequisites = [[1,0],[0,1]]
 
-**Input**: V = 3, E = 2, adj = {{1,2},{},{}}
+**Output**: false
 
-**Output**: 0 1 2
-
-**Explanation**:
-0 is connected to 1 , 2. </br>
-so starting from 0, it will go to 1 then 2, </br>
-thus bfs will be 0 1 2. </br>
+**Explanation**: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 
 
 **Constraints**:
 
-    • 1 ≤ V, E ≤ 10^4
-    • Expected Time Complexity: O(V + E)
-    • Expected Auxiliary Space: O(V)
+    • 1 <= numCourses <= 2000
+    • 0 <= prerequisites.length <= 5000
+    • prerequisites[i].length == 2
+    • 0 <= ai, bi < numCourses
+    • All the pairs prerequisites[i] are unique.
