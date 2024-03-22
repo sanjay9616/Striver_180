@@ -1,37 +1,62 @@
-<h2><a href="https://leetcode.com/problems/flood-fill/description/">144. Flood Fill</a></h2>
+<h2><a href="https://leetcode.com/problems/clone-graph/description/">145. Clone Graph</a></h2>
 
-An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
+Given a reference of a node in a connected undirected graph.
 
-You are also given three integers sr, sc, and color. You should perform a flood fill on the image starting from the pixel image[sr][sc].
+Return a deep copy (clone) of the graph.
 
-To perform a flood fill, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color), and so on. Replace the color of all of the aforementioned pixels with color.
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
 
-Return the modified image after performing the flood fill.
+```c
+class Node {
+    public int val;
+    public List<Node> neighbors;
+}
+```
+
+**Test case format**:
+
+For simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.
+
+An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
+
+The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2021/06/01/flood1-grid.jpg" alt="not found">
+<img src="https://assets.leetcode.com/uploads/2019/11/04/133_clone_graph_question.png" alt="not found">
 
-**Input**: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
+**Input**: adjList = [[2,4],[1,3],[2,4],[1,3]]
 
-**Output**: [[2,2,2],[2,2,0],[2,0,1]]
+**Output**: [[2,4],[1,3],[2,4],[1,3]]
 
-**Explanation**: From the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.
-Note the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.
+**Explanation**: There are 4 nodes in the graph. </br>
+1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4). </br>
+2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3). </br>
+3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4). </br>
+4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3). </br>
 
 **Example 2**:
 
-**Input**: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
+<img src="https://assets.leetcode.com/uploads/2020/01/07/graph.png" alt="not found">
 
-**Output**: [[0,0,0],[0,0,0]]
+**Input**: adjList = [[]]
 
-**Explanation**: The starting pixel is already colored 0, so no changes are made to the image.
+**Output**: [[]]
+
+**Explanation**: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
+
+**Example 3**:
+
+**Input**: adjList = []
+
+**Output**: []
+
+**Explanation**: This an empty graph, it does not have any nodes.
 
 **Constraints**:
 
-    • m == image.length
-    • m == image.length
-    • 1 <= m, n <= 50
-    • 0 <= image[i][j], color < 2^16
-    • 0 <= sr < m
-    • 0 <= sc < n
+    • The number of nodes in the graph is in the range [0, 100].
+    • 1 <= Node.val <= 100
+    • Node.val is unique for each node.
+    • There are no repeated edges and no self-loops in the graph.
+    • The Graph is connected and all nodes can be visited starting from the given node.
