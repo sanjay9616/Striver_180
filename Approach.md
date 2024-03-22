@@ -4,7 +4,7 @@
 |----------------------- | ------------------------ | ----------------- |
 | Using BFS              | O(V + E)                 | O(V)              |
 
-### Approach 2: Using BFS (Detect a cycle in undirected Graph) ## NEED TO IMPLEMENT
+### Approach 2: Using BFS - Kahn's Algorithm
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
