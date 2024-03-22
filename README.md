@@ -1,62 +1,47 @@
-<h2><a href="https://leetcode.com/problems/clone-graph/description/">145. Clone Graph</a></h2>
+<h2><a href="https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1">146. DFS of Graph</a></h2>
 
-Given a reference of a node in a connected undirected graph.
+You are given a connected undirected graph. Perform a Depth First Traversal of the graph.
 
-Return a deep copy (clone) of the graph.
-
-Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
-
-```c
-class Node {
-    public int val;
-    public List<Node> neighbors;
-}
-```
-
-**Test case format**:
-
-For simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.
-
-An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
-
-The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
+**Note**: Use the recursive approach to find the DFS traversal of the graph starting from the 0th vertex from left to right according to the graph.
 
 **Example 1**:
 
-<img src="https://assets.leetcode.com/uploads/2019/11/04/133_clone_graph_question.png" alt="not found">
+<img src="https://media.geeksforgeeks.org/img-practice/graph-1659528381.png" alt="not found">
 
-**Input**: adjList = [[2,4],[1,3],[2,4],[1,3]]
+**Input**: V = 5 , adj = [[2,3,1] , [0], [0,4], [0], [2]]
 
-**Output**: [[2,4],[1,3],[2,4],[1,3]]
+**Output**: 0 2 4 3 1
 
-**Explanation**: There are 4 nodes in the graph. </br>
-1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4). </br>
-2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3). </br>
-3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4). </br>
-4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3). </br>
+**Explanation**:
+0 is connected to 2, 3, 1. </br>
+1 is connected to 0. </br>
+2 is connected to 0 and 4. </br>
+3 is connected to 0. </br>
+4 is connected to 2. </br>
+so starting from 0, it will go to 2 then 4, </br>
+and then 3 and 1. </br>
+Thus dfs will be 0 2 4 3 1. </br>
 
 **Example 2**:
 
-<img src="https://assets.leetcode.com/uploads/2020/01/07/graph.png" alt="not found">
+<img src="https://media.geeksforgeeks.org/img-practice/graph(1)-1659528893.png" alt="not found">
 
-**Input**: adjList = [[]]
+**Input**: V = 4, adj = [[1,3], [2,0], [1], [0]]
 
-**Output**: [[]]
+**Output**: 0 1 2 3
 
-**Explanation**: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
+**Explanation**:
+0 is connected to 1 , 3. </br>
+1 is connected to 0, 2. </br>
+2 is connected to 1. </br>
+3 is connected to 0. </br>
+so starting from 0, it will go to 1 then 2 </br>
+then back to 0 then 0 to 3 </br>
+thus dfs will be 0 1 2 3. </br>
 
-**Example 3**:
-
-**Input**: adjList = []
-
-**Output**: []
-
-**Explanation**: This an empty graph, it does not have any nodes.
 
 **Constraints**:
 
-    • The number of nodes in the graph is in the range [0, 100].
-    • 1 <= Node.val <= 100
-    • Node.val is unique for each node.
-    • There are no repeated edges and no self-loops in the graph.
-    • The Graph is connected and all nodes can be visited starting from the given node.
+    • 1 ≤ V, E ≤ 10^4
+    • Expected Time Complexity: O(V + E)
+    • Expected Auxiliary Space: O(V)
