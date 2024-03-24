@@ -1,31 +1,39 @@
-<h2><a href="https://leetcode.com/problems/longest-increasing-subsequence/description/">151. Longest Increasing Subsequence</a></h2>
+<h2><a href="https://leetcode.com/problems/longest-common-subsequence/description/">152. Longest Common Subsequence</a></h2>
 
-Given an integer array nums, return the length of the longest strictly increasing subsequence.
+Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+
+A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+
+    • For example, "ace" is a subsequence of "abcde".
+
+A common subsequence of two strings is a subsequence that is common to both strings.
 
 **Example 1**:
 
-**Input**: nums = [10,9,2,5,3,7,101,18]
+**Input**: text1 = "abcde", text2 = "ace"
 
-**Output**: 4
+**Output**: 3
 
-**Explanation**: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+**Explanation**: The longest common subsequence is "ace" and its length is 3.
 
 **Example 2**:
 
-**Input**: nums = [0,1,0,3,2,3]
+**Input**: text1 = "abc", text2 = "abc"
 
 **Output**: 4
 
+**Explanation**: The longest common subsequence is "abc" and its length is 3.
+
 **Example 3**:
 
-**Input**: nums = [7,7,7,7,7,7,7]
+**Input**: text1 = "abc", text2 = "def"
 
-**Output**: 1
+**Output**: 0
+
+**Explanation**: There is no such common subsequence, so the result is 0.
 
 
 **Constraints**:
 
-    • 1 <= nums.length <= 2500
-    • -10^4 <= nums[i] <= 10^4
-
-**Follow up**: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
+    • 1 <= text1.length, text2.length <= 1000
+    • text1 and text2 consist of only lowercase English characters.
