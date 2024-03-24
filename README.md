@@ -1,39 +1,28 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/topological-sort/1">149. Topological sort</a></h2>
+<h2><a href="https://leetcode.com/problems/maximum-product-subarray/description/">150. Maximum Product Subarray</a></h2>
 
-Given a Directed Acyclic Graph (DAG) with V vertices and E edges, Find any Topological Sorting of that Graph.
+Given an integer array nums, find a subarray that has the largest product, and return the product.
+
+The test cases are generated so that the answer will fit in a 32-bit integer.
 
 **Example 1**:
 
-<img src="https://media.geeksforgeeks.org/img-practice/PROD/addEditProblem/700255/Web/Other/24aa5d54-bc1f-489c-bd2d-ad02ddccdf31_1684492511.png" alt="not found">
+**Input**: nums = [2,3,-2,4]
 
-**Output**: 1
+**Output**: 6
 
-**Explanation**:
-The output 1 denotes that the order is </br>
-valid. So, if you have, implemented </br>
-your function correctly, then output </br>
-would be 1 for all test cases. </br>
-One possible Topological order for the </br>
-graph is 3, 2, 1, 0.
+**Explanation**: [2,3] has the largest product 6.
 
 **Example 2**:
 
-<img src="https://media.geeksforgeeks.org/img-practice/PROD/addEditProblem/700255/Web/Other/c35bb1d1-130c-49aa-a17e-118181d7bdcd_1684492512.png" alt="not found">
+**Input**: nums = [-2,0,-1]
 
-**Output**: 1
+**Output**: 0
 
-**Explanation**:
-The output 1 denotes that the order is </br>
-valid. So, if you have, implemented </br>
-your function correctly, then output </br>
-would be 1 for all test cases. </br>
-One possible Topological order for the </br>
-graph is 5, 4, 2, 1, 3, 0.
+**Explanation**: The result cannot be 2, because [-2,-1] is not a subarray.
 
 
 **Constraints**:
 
-    • 2 ≤ V ≤ 10^4
-    • 1 ≤ E ≤ (N*(N-1))/2
-    • Expected Time Complexity: O(V + E).
-    • Expected Auxiliary Space: O(V).
+    • 1 <= nums.length <= 2 * 10^4
+    • -10 <= nums[i] <= 10
+    • The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.

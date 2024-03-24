@@ -1,13 +1,18 @@
-### Approach 1: Using DFS (Detect a cycle in undirected Graph) ## NEED TO IMPLEMENT
+### Approach 1: Brute Force
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using BFS              | O(V + E)                 | O(V)              |
+| Brute Force            | O(N^2)                   | O(1)              |
 
-### Approach 2: Using BFS - Kahn's Algorithm
+### Approach 2: Modification of Kadane’s Algorithm
 
 | Algorithm              | Time Complexity          | Space Complexity  |
 |----------------------- | ------------------------ | ----------------- |
-| Using BFS              | O(V + E)                 | O(V)              |
+| Kadane’s Algorithm     | O(N)                     | O(1)              |
 
+### Approach 3: Using Traversal From Starting and End of an Array
+
+| Algorithm                                       | Time Complexity          | Space Complexity  |
+|------------------------------------------------ | ------------------------ | ----------------- |
+| Traversal From Starting and End of an Array     | O(N)                     | O(1)              |
 
