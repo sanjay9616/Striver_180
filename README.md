@@ -1,39 +1,42 @@
-<h2><a href="https://leetcode.com/problems/longest-common-subsequence/description/">152. Longest Common Subsequence</a></h2>
+<h2><a href="https://www.codingninjas.com/studio/problems/1072980?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website">153. 0 1 Knapsack</a></h2>
 
-Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+A thief is robbing a store and can carry a maximum weight of ‘W’ into his knapsack. There are 'N' items available in the store and the weight and value of each item is known to the thief. Considering the constraints of the maximum weight that a knapsack can carry, you have to find the maximum profit that a thief can generate by stealing items.
 
-A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+Note: The thief is not allowed to break the items.
 
-    • For example, "ace" is a subsequence of "abcde".
+For example, N = 4, W = 10 and the weights and values of items are weights = [6, 1, 5, 3] and values = [3, 6, 1, 4]. Then the best way to fill the knapsack is to choose items with weight 6, 1 and 3. The total value of knapsack = 3 + 6 + 4 = 13.
 
-A common subsequence of two strings is a subsequence that is common to both strings.
+
 
 **Example 1**:
 
-**Input**: text1 = "abcde", text2 = "ace"
+**Input**: </br>
+1 </br>
+4 5 </br>
+1 2 4 5 </br>
+5 4 8 6 </br>
 
-**Output**: 3
+**Output**: 13
 
-**Explanation**: The longest common subsequence is "ace" and its length is 3.
+**Explanation**: The most optimal way to fill the knapsack is to choose items with weight 4 and value 8, weight 1 and value 5.
+
+The total value of the knapsack =  8 + 5 = 13.
 
 **Example 2**:
 
-**Input**: text1 = "abc", text2 = "abc"
+**Input**: </br>
+1 </br>
+5 100 </br>
+20 24 36 40 42 </br>
+12 35 41 25 32 </br>
 
-**Output**: 4
-
-**Explanation**: The longest common subsequence is "abc" and its length is 3.
-
-**Example 3**:
-
-**Input**: text1 = "abc", text2 = "def"
-
-**Output**: 0
-
-**Explanation**: There is no such common subsequence, so the result is 0.
+**Output**: 101
 
 
 **Constraints**:
 
-    • 1 <= text1.length, text2.length <= 1000
-    • text1 and text2 consist of only lowercase English characters.
+    • 1 <= T <= 10
+    • 1 <= N <= 10^3
+    • 1 <= W <= 10^3
+    • 1<= weights <=10^3
+    • 1 <= values <= 10^3
